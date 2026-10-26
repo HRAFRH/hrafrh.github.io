@@ -1,0 +1,1 @@
+Software logos: Devicon, https://github.com/devicons/devicon (MIT). Python, C++, Linux, Raspberry Pi, Git, Adobe Photoshop and Illustrator marks belong to their respective owners. Logos identify tools used, without implying endorsement.

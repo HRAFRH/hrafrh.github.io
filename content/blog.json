@@ -58,5 +58,225 @@
         "The delivered checks were CAD and preparation checks. Physical structural validation, final equipment fits and flight testing remain separate activities. No manufactured aircraft or flight result is implied by the documentation package."
       ]
     ]
+  },
+  {
+    "id": "vision-to-landing-target",
+    "case": "precision-landing",
+    "title": "From camera detections to a landing-target interface",
+    "intro": "Planning a Jetson Nano and AprilTag precision-landing proof of concept.",
+    "sections": [
+      [
+        "Define each coordinate frame",
+        "The proposal connected tag detection and pose estimation to a flight-controller interface. Camera calibration, target dimensions and coordinate transforms were explicit parts of the architecture, because a detected marker alone is not a usable control input."
+      ],
+      [
+        "Design the handoff",
+        "I documented the MAVLink integration path, setup requirements and acceptance criteria. The accompanying illustrations show the proposed data path, pose-estimation checks and staged test plan."
+      ],
+      [
+        "Verify in stages",
+        "This delivery was an architecture and implementation proposal. It did not establish completed hardware integration or flight validation. The test plan separates offline review, bench work and supervised trials."
+      ]
+    ]
+  },
+  {
+    "id": "rover-motor-interfaces",
+    "case": "rover",
+    "title": "Connecting an autopilot to rover motor control",
+    "intro": "CUAV X7, dual VESC and ArduRover integration.",
+    "sections": [
+      [
+        "Connect the control chain",
+        "My work linked the CUAV X7 autopilot, ArduRover configuration and dual VESC motor-control interfaces. The focus was the path between commanded vehicle motion and the motor controllers."
+      ],
+      [
+        "Keep the system view",
+        "Motor control also depends on the communication and configuration around it. I worked on those interfaces alongside broader coordination and docking concepts."
+      ],
+      [
+        "Identify the delivered scope",
+        "The delivered work covered motor-control integration and platform configuration. Docking and coordination remained concept work, rather than an operational autonomous service."
+      ]
+    ]
+  },
+  {
+    "id": "docking-actuator-interfaces",
+    "case": "drone-rover-docking",
+    "title": "Building the interfaces for a drone-to-rover dock",
+    "intro": "Actuators, isolated power and autopilot trigger logic.",
+    "sections": [
+      [
+        "Start at the mechanism",
+        "The docking architecture used four synchronized actuators. I developed the motor-driver and isolated power interfaces needed to connect that mechanism to the rest of the system."
+      ],
+      [
+        "Connect the trigger logic",
+        "The integration path combined CUAV X7+ AUX and RC-PWM interfaces with sensor inputs and MAVLink handshakes. This made the control handoff an explicit part of the proof of concept."
+      ],
+      [
+        "Separate the dock from full autonomy",
+        "The result was a docking proof of concept and an integration path. It was not evidence of an autonomous moving-rover landing or delivery service."
+      ]
+    ]
+  },
+  {
+    "id": "rescue-vessel-control-chain",
+    "case": "rescue-usv",
+    "title": "Mapping the control chain of a rescue vessel",
+    "intro": "System architecture, engine interfaces and navigation planning.",
+    "sections": [
+      [
+        "Work across vessel subsystems",
+        "I prepared the architecture and BOM around rudder and throttle control, power, safety equipment and navigation. The work included CUAV V6X and ArduRover configuration planning."
+      ],
+      [
+        "Make interfaces visible",
+        "The documentation specified RTK, AIS, NMEA2000, companion compute and communications interfaces. Original engine, rudder and controller photographs provide physical context for the integration work."
+      ],
+      [
+        "Describe the evidence accurately",
+        "The engagement supports design, documentation and integration responsibilities. It does not establish measured sea-trial performance, a certified autonomy level or an operational rescue deployment."
+      ]
+    ]
+  },
+  {
+    "id": "fpv-build-planning",
+    "case": "bom",
+    "title": "Planning a repeatable FPV workshop",
+    "intro": "Component compatibility, supplier research and build quantities.",
+    "sections": [
+      [
+        "Plan more than one aircraft",
+        "I prepared equipment and component plans for 3-inch, 5-inch and 7-inch FPV configurations. Each configuration needed a coherent set of parts rather than a list of individually attractive components."
+      ],
+      [
+        "Organize the handoff",
+        "Four structured workbooks covered workshop equipment and the three aircraft configurations. They organized component options, compatibility questions, supplier research and production quantities."
+      ],
+      [
+        "Keep planning distinct from assembly",
+        "The verified delivery was the planning and documentation package. It does not imply that every item was procured or every planned configuration assembled."
+      ]
+    ]
+  },
+  {
+    "id": "baseboard-design-handoff",
+    "case": "baseboard-review",
+    "title": "Making a baseboard review actionable",
+    "intro": "Connectivity, interfaces and the source assets needed for handoff.",
+    "sections": [
+      [
+        "Review connections together",
+        "I reviewed schematic and PCB connectivity, interface routing, power questions and connectors with the engineer. The contribution was review and coordination around the design."
+      ],
+      [
+        "Track the missing assets",
+        "The handoff checklist also covered libraries, footprints and connector 3D models. Those source assets mattered to making the project portable and the correction list usable."
+      ],
+      [
+        "Keep ownership precise",
+        "This was engineering review and coordination. Sole PCB design ownership, board manufacture and successful bring-up are not claimed."
+      ]
+    ]
+  },
+  {
+    "id": "fixed-wing-simulation-workflow",
+    "case": "mini-talon-simulation",
+    "title": "Testing a fixed-wing mission in simulation",
+    "intro": "Mini Talon, Gazebo, ArduPlane and QGroundControl.",
+    "sections": [
+      [
+        "Set up the virtual aircraft",
+        "I configured the Mini Talon model and a virtual runway in Gazebo. The simulation connected to ArduPlane and QGroundControl so the aircraft model and mission workflow could be considered together."
+      ],
+      [
+        "Prepare the mission",
+        "The work included AUTO-mode waypoint missions and parameter checks. This provided a repeatable environment for examining mission preparation before physical flight work."
+      ],
+      [
+        "Keep simulation results in context",
+        "The delivery was a simulation and mission-testing workflow. A successful simulated mission is not physical flight-test evidence."
+      ]
+    ]
+  },
+  {
+    "id": "surface-vessel-system-tradeoffs",
+    "case": "usv-system-study",
+    "title": "Comparing surface-vessel system choices",
+    "intro": "Propulsion, control interfaces and equipment planning.",
+    "sections": [
+      [
+        "Compare the whole system",
+        "I compared propulsion and control-system options while organizing equipment interfaces. The goal was to develop a coherent preliminary system study."
+      ],
+      [
+        "Make the planning usable",
+        "Supplier-linked material, an equipment comparison, a planning cost model and a technical presentation supported the handoff. Vessel equipment was kept distinct from reusable workshop and test tools."
+      ],
+      [
+        "Preserve the project boundary",
+        "This was concept and planning work. It was separate from the twin-waterjet electronics integration project and did not establish a constructed or commissioned vessel."
+      ]
+    ]
+  },
+  {
+    "id": "altitude-diagnostic-boundaries",
+    "case": "gps-denied-altitude",
+    "title": "Investigating altitude without GPS",
+    "intro": "Log analysis, interface discussion and comparative tuning.",
+    "sections": [
+      [
+        "Review the observed behaviour",
+        "I provided log-analysis and configuration support, with comparative Pixhawk-based tuning experiments to inform the troubleshooting discussion."
+      ],
+      [
+        "Discuss the interface",
+        "The work considered Raspberry Pi and barometric-data interface options. The client implemented the custom firmware and reported bench operation of the virtual barometer."
+      ],
+      [
+        "Attribute the implementation correctly",
+        "My contribution was diagnostic support, configuration guidance and test observations. The client firmware implementation and a final flight-validation campaign are not claimed as my work."
+      ]
+    ]
+  },
+  {
+    "id": "heavy-lift-log-review",
+    "case": "heavy-lift",
+    "title": "Reading the response of a heavy-lift multirotor",
+    "intro": "Remote analysis and live flight-test discussions.",
+    "sections": [
+      [
+        "Look across the recorded response",
+        "I reviewed PID and rate tracking alongside motor imbalance, vibration, clipping, estimator and compass faults, GPS behaviour and battery response. The work connected symptoms across the aircraft systems."
+      ],
+      [
+        "Support the next test",
+        "Remote discussions with the test team combined log findings, filter and PID recommendations, configuration checks and follow-up review. The support also included separate Matek H743 and CUAV X7+ platform engagements."
+      ],
+      [
+        "Describe the relationship carefully",
+        "The portfolio records support to a DARPA Lift Challenge participating team. It does not imply employment by DARPA, endorsement or a competition result."
+      ]
+    ]
+  },
+  {
+    "id": "surface-vessel-electronics",
+    "case": "usv",
+    "title": "Organizing electronics on an uncrewed surface vessel",
+    "intro": "Power distribution, navigation and control integration.",
+    "sections": [
+      [
+        "Build around interfaces",
+        "The electronics work connected vessel power, control and navigation equipment. The case study shows the documented responsibilities and the original project enclosure photographs."
+      ],
+      [
+        "Show the integration context",
+        "The power and navigation boxes make the electrical packaging visible alongside the system description. They are original project photographs, rather than a substitute rendering of a finished vessel."
+      ],
+      [
+        "Follow the project record",
+        "The full case study describes the contribution, delivered work and validation scope. Photographs provide integration context; they are not a performance measurement."
+      ]
+    ]
   }
 ]

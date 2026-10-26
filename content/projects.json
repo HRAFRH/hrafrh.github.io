@@ -417,7 +417,25 @@
     "caption": "Project photo to be added.",
     "gallery": [],
     "papers": [],
-    "photo_verified": false
+    "photo_verified": false,
+    "work_samples": [
+      {
+        "src": "media/work-samples/precision-architecture.jpg",
+        "caption": "Proposed precision-landing data and control paths."
+      },
+      {
+        "src": "media/work-samples/precision-pose.jpg",
+        "caption": "Pose-estimation design notes and proposed checks."
+      },
+      {
+        "src": "media/work-samples/precision-interface.jpg",
+        "caption": "Proposed MAVLink LANDING_TARGET interface contract."
+      },
+      {
+        "src": "media/work-samples/precision-test-plan.jpg",
+        "caption": "Staged test plan, from offline checks to supervised trials."
+      }
+    ]
   },
   {
     "id": "copter-safety-documentation",
