@@ -1,23 +1,19 @@
-# Achraf Rahibe | Engineering Portfolio
+# Achraf RAHIBE | Engineering Portfolio
 
 [Visit the portfolio](https://hrafrh.github.io/)
 
-UAV and avionics systems engineering, with project work across aircraft, ground robots, surface vessels and supporting electronics.
+Five platform portfolios present UAV and avionics engineering across VTOL and fixed-wing aircraft, rotorcraft, ground robotics, surface vessels and machine vision. The 27 detailed records sit inside these main portfolios, with modeling, fabrication, wiring, configuration, analysis and testing presented in context.
 
-## Project library
+## Maintain the site
 
-15 documented project entries covering integration, configuration, diagnostic analysis, design development and engineering review. Each case identifies the actual contribution, delivered work and validation status.
+Edit content/projects.json for the detailed engineering records and content/collections.json for the five platform portfolios. Asset mappings are in content/platform-media.json. Add verified photos or clearly labeled diagrams under docs/media/. Keep record IDs stable so old links remain usable.
 
-Only verified project photographs are displayed. Projects without a matching real photograph have a blank photo area for future additions.
+Run python build_portfolio.py. It generates the detailed records and then executes build_collections.py to assemble the main platform pages. Commit the source and generated docs directory. GitHub Pages publishes main, /docs.
 
-## Update the website
+Blog entries are maintained in the generator and content/additional-blog.json. Report metadata is in content/papers.json and content/vtol-media.json.
 
-Edit content/projects.json or content/papers.json. Add real photographs under docs/assets/. Keep project IDs stable, run python build_portfolio.py, and commit the updated docs files.
+## Public material
 
-GitHub Pages publishes the main branch, /docs folder. The website address is https://hrafrh.github.io/.
+Photographs, technical illustrations and edited report samples are labeled according to their role. Private conversations, raw flight logs, restricted reports, credentials, client costs and private source files are excluded. Client identities are omitted from the project narratives.
 
-## Public content
-
-The repository includes public portfolio material and edited report work samples. Private conversations, raw flight logs, restricted reports, client costs and private design files are excluded.
-
-Personal portfolio layout inspired by https://nikoweaver.github.io/. Project descriptions and supplied photographs relate to Achraf's own work.
+The visual direction is inspired by https://nikoweaver.github.io/. Project descriptions and supplied photographs relate to Achraf's own work. Software logos retain their owners' trademarks; sources are recorded in docs/assets/logos/ATTRIBUTION.txt.
