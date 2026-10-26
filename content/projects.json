@@ -1,0 +1,373 @@
+[
+  {
+    "id": "heavy-lift",
+    "category": "Air / UAV & UAS",
+    "title": "Heavy-lift UAV integration",
+    "context": "FARASHA SYSTEMS",
+    "status": "Integration and architecture concepts",
+    "problem": "Connect propulsion, avionics and payload interfaces within aircraft constraints.",
+    "delivery": "Electrical integration decisions and test preparation, including 14S and Li-ion/BMS concepts.",
+    "scope": "Scope: avionics integration and electrical architecture concepts.",
+    "contribution": "Worked on modular multirotor architecture, propulsion sizing, high-current wiring and flight-computer/sensor interfaces. Connected GNSS/RTK, telemetry, ESC and companion-computer interfaces; coordinated technical decisions and test preparation.",
+    "image": "",
+    "caption": "Project photo to be added.",
+    "domain": "air",
+    "tags": [
+      "Multirotor",
+      "Electrical architecture",
+      "GNSS/RTK"
+    ],
+    "gallery": [],
+    "papers": [],
+    "photo_verified": false
+  },
+  {
+    "id": "multirotor",
+    "category": "Air / UAV & UAS",
+    "title": "Multirotor configuration and tuning",
+    "context": "Professional and independent engineering",
+    "status": "Configuration and test support",
+    "problem": "Investigate unstable response and establish repeatable configuration checks.",
+    "delivery": "Platform configuration, tuning changes and corrective recommendations for subsequent testing.",
+    "scope": "Scope: autopilot configuration, tuning and log-based troubleshooting.",
+    "contribution": "Configured CUAV X7+ 30-inch and Matek H743 17-inch quadcopters. Reviewed PID response, filtering and vibration; supported sensor/ESC calibration, flight modes and failsafes. Used logs to structure corrective changes.",
+    "image": "assets/multirotor.jpg",
+    "caption": "Platform context from the supplied project collection; no performance metric is implied.",
+    "domain": "air",
+    "tags": [
+      "ArduPilot",
+      "CUAV / Matek",
+      "PID / FFT"
+    ],
+    "gallery": [
+      {
+        "src": "assets/multirotor.jpg",
+        "caption": "Platform context from the supplied project collection; no performance metric is implied."
+      },
+      {
+        "src": "assets/multirotor-wiring.jpg",
+        "caption": "Wiring and avionics integration context."
+      }
+    ],
+    "papers": [],
+    "photo_verified": true
+  },
+  {
+    "id": "fixed-wing",
+    "category": "Air / UAV & UAS",
+    "title": "Fixed-wing mission and payload integration",
+    "context": "Professional UAV engineering",
+    "status": "Mission and interface integration",
+    "problem": "Connect navigation, telemetry and payload interfaces for fixed-wing missions.",
+    "delivery": "Mission configuration and interface integration with preparation for further testing.",
+    "scope": "The 4 kg payload figure describes the project use case.",
+    "contribution": "Configured Pixhawk 6C missions and worked on a Pixhawk 6X aircraft for an approximately 4 kg payload use case. Integrated sensors, telemetry and GNSS/RTK using Mission Planner and QGroundControl workflows.",
+    "image": "assets/fixed-wing.jpg",
+    "caption": "Platform context from the supplied project collection; no performance metric is implied.",
+    "domain": "air",
+    "tags": [
+      "Pixhawk 6C / 6X",
+      "Mission Planner",
+      "Payload interfaces"
+    ],
+    "gallery": [
+      {
+        "src": "assets/fixed-wing.jpg",
+        "caption": "Platform context from the supplied project collection; no performance metric is implied."
+      },
+      {
+        "src": "assets/air-field.jpg",
+        "caption": "Fixed-wing platform in a field-test context."
+      }
+    ],
+    "papers": [],
+    "photo_verified": true
+  },
+  {
+    "id": "vtol",
+    "category": "Air / UAV & UAS",
+    "title": "Flying-wing VTOL stability",
+    "context": "Client engineering support | Fiverr",
+    "status": "Successful flight trials supported",
+    "problem": "Resolve unstable flight behaviour, oscillation and vibration on a 4+1 flying-wing QuadPlane.",
+    "delivery": "Technical report, troubleshooting guidance and support for successful client flight trials after configuration and tuning.",
+    "scope": "Scope: remote configuration, diagnostic analysis and client test support.",
+    "contribution": "Rebuilt and reviewed Pixhawk 6C / ArduPlane setup, motor/servo assignments and QuadPlane settings. Supported calibration and PID tuning; analysed attitude tracking, IMU clipping, vibration and FFT data.",
+    "image": "assets/vtol.jpg",
+    "caption": "Client-supplied platform photograph.",
+    "domain": "air",
+    "tags": [
+      "ArduPlane",
+      "QuadPlane",
+      "Flight-trial support"
+    ],
+    "gallery": [
+      {
+        "src": "assets/vtol.jpg",
+        "caption": "Client-supplied platform photograph."
+      }
+    ],
+    "papers": [
+      "vtol-analysis"
+    ],
+    "photo_verified": true
+  },
+  {
+    "id": "helicopter",
+    "category": "Air / UAV & UAS",
+    "title": "Single-rotor helicopter diagnostics",
+    "context": "Client engineering support | Upwork",
+    "status": "Log analysis and static run-up review",
+    "problem": "Investigate position drift, altitude/yaw tracking and configuration concerns using supplied test logs.",
+    "delivery": "Diagnostic reports with findings, corrective recommendations and acceptance criteria for subsequent tests.",
+    "scope": "Latest supplied validation: static run-up review and recommendations for further hover tests.",
+    "contribution": "Reviewed swashplate/servo mapping, governor/RPM, motor interlock, failsafes, yaw and power-bus data. Analysed vibration/notch filtering, external INS / EKF3 and rangefinder configuration.",
+    "image": "assets/helicopter.jpg",
+    "caption": "Client-supplied platform photograph.",
+    "domain": "air",
+    "tags": [
+      "ArduCopter 4.6",
+      "External INS / EKF3",
+      "Log analysis"
+    ],
+    "gallery": [
+      {
+        "src": "assets/helicopter.jpg",
+        "caption": "Client-supplied platform photograph."
+      },
+      {
+        "src": "assets/helicopter-internal.jpg",
+        "caption": "Client-supplied powerplant and internal integration context."
+      }
+    ],
+    "papers": [
+      "helicopter-analysis"
+    ],
+    "photo_verified": true
+  },
+  {
+    "id": "usv",
+    "category": "Sea / USV",
+    "title": "Uncrewed surface-vessel electronics",
+    "context": "Cross-platform electrical integration",
+    "status": "Integration and troubleshooting",
+    "problem": "Integrate propulsion and power interfaces on a 4 m twin-waterjet USV.",
+    "delivery": "Electrical-interface integration and power-switching troubleshooting.",
+    "scope": "Scope: USV electrical integration and power-switching troubleshooting.",
+    "contribution": "Integrated ESC, battery/BMS and propulsion interfaces. Investigated inrush current and worked on pre-charge and main-contactor integration.",
+    "image": "",
+    "caption": "Project photo to be added.",
+    "domain": "sea",
+    "tags": [
+      "Twin waterjet",
+      "ESC / BMS",
+      "Power switching"
+    ],
+    "gallery": [],
+    "papers": [],
+    "photo_verified": false
+  },
+  {
+    "id": "rover",
+    "category": "Land / UGV",
+    "title": "Rover autopilot and motor control",
+    "context": "Robotics integration",
+    "status": "Integration plus coordination concepts",
+    "problem": "Connect an autopilot to dual motor controllers and explore UAV-to-rover communication.",
+    "delivery": "Motor-control interface integration, platform configuration and coordination concepts.",
+    "scope": "Scope: motor-control integration; docking and coordination remained concept work.",
+    "contribution": "Integrated CUAV X7, dual VESC and ArduRover motor-control interfaces and autonomous configuration. Worked on communication and coordination/docking concepts.",
+    "image": "",
+    "caption": "Project photo to be added.",
+    "domain": "land",
+    "tags": [
+      "ArduRover",
+      "CUAV X7",
+      "Dual VESC"
+    ],
+    "gallery": [],
+    "papers": [],
+    "photo_verified": false
+  },
+  {
+    "id": "vision",
+    "category": "Avionics & integration",
+    "title": "Embedded vision and payload video",
+    "context": "Companion-computer and payload integration",
+    "status": "Interface and workflow integration",
+    "problem": "Connect companion compute, camera tracking, video transport and payload interfaces.",
+    "delivery": "Connected perception, video and platform interfaces for embedded payload workflows.",
+    "scope": "Scope: embedded payload, tracking and video-interface integration.",
+    "contribution": "Integrated Jetson/Raspberry Pi, YOLOv8/ByteTrack and SIYI camera/gimbal interfaces. Worked with RTSP/GStreamer for tracking and operator-visibility workflows.",
+    "image": "assets/vision.jpg",
+    "caption": "Platform context from the supplied project collection; no performance metric is implied.",
+    "domain": "avionics",
+    "tags": [
+      "Jetson / Raspberry Pi",
+      "YOLOv8 / ByteTrack",
+      "SIYI / GStreamer"
+    ],
+    "gallery": [
+      {
+        "src": "assets/vision.jpg",
+        "caption": "Platform context from the supplied project collection; no performance metric is implied."
+      }
+    ],
+    "papers": [],
+    "photo_verified": true
+  },
+  {
+    "id": "ais",
+    "category": "Sea / USV",
+    "title": "AIS reception and maritime awareness",
+    "context": "Embedded RF and data workflows",
+    "status": "Reception and logging work",
+    "problem": "Receive and retain AIS data for maritime awareness and replay.",
+    "delivery": "AIS reception and data-handling workflows with an observed reception-range result.",
+    "scope": "Approximately 9 km was observed under favourable line-of-sight conditions; actual range depends on the environment.",
+    "contribution": "Worked on Raspberry Pi / RTL-SDR AIS reception, logging, replay and geofencing. Observed approximately 9 km reception under favourable line-of-sight conditions.",
+    "image": "",
+    "caption": "Project photo to be added.",
+    "domain": "sea",
+    "tags": [
+      "RTL-SDR",
+      "Raspberry Pi",
+      "AIS / logging"
+    ],
+    "gallery": [],
+    "papers": [],
+    "photo_verified": false
+  },
+  {
+    "id": "bom",
+    "category": "Avionics & integration",
+    "title": "Workshop and component planning",
+    "context": "Engineering delivery and procurement preparation",
+    "status": "Planning scope",
+    "problem": "Prepare component, tooling and spare-parts plans across drone sizes.",
+    "delivery": "Workshop and component-planning work to support engineering preparation.",
+    "scope": "Approximately 100 drones describes the component and workshop planning scope.",
+    "contribution": "Planned workshop tools, spares and BOMs for approximately 100 drones across 3-, 5- and 7-inch classes. Compared suppliers, procurement options and component compatibility.",
+    "image": "",
+    "caption": "Project photo to be added.",
+    "domain": "avionics",
+    "tags": [
+      "UAS components",
+      "BOM",
+      "Workshop planning"
+    ],
+    "gallery": [],
+    "papers": [],
+    "photo_verified": false
+  },
+  {
+    "id": "fixed-wing-design",
+    "domain": "air",
+    "category": "Air / UAV & UAS",
+    "title": "Twin-tractor fixed-wing design study",
+    "context": "Design development and workshop documentation",
+    "status": "CAD and manufacturing preparation",
+    "problem": "Develop a modular fixed-wing proof-of-concept architecture with accessible foam structures and tube reinforcement.",
+    "contribution": "Developed the aircraft package, parametric geometry, mechanical interfaces and workshop documentation. Prepared foam-cutting templates, CNC part information, tube-stock planning and assembly views.",
+    "delivery": "A structured CAD and fabrication-preparation package with a build manual, part lists and printable workshop guides.",
+    "scope": "The documented checks are CAD and preparation checks. Physical structural validation, final equipment fits and flight testing remain separate activities.",
+    "tags": [
+      "Fixed-wing CAD",
+      "Foam / tube structure",
+      "CNC documentation"
+    ],
+    "image": "",
+    "caption": "Project photo to be added.",
+    "gallery": [],
+    "papers": [],
+    "photo_verified": false
+  },
+  {
+    "id": "usv-system-study",
+    "domain": "sea",
+    "category": "Sea / USV",
+    "title": "Surface-vessel system planning",
+    "context": "Preliminary vessel engineering study",
+    "status": "Architecture and supplier study",
+    "problem": "Define propulsion, controls and supporting equipment for a larger uncrewed surface-vessel concept.",
+    "contribution": "Compared propulsion and control-system choices, organised equipment interfaces and prepared supplier-linked planning material. Kept vessel equipment and reusable workshop/test tools separate.",
+    "delivery": "A preliminary system study, equipment and supplier comparison, planning cost model and technical presentation.",
+    "scope": "This is concept and planning work. It is separate from the 4 m twin-waterjet integration project and does not establish a constructed or commissioned vessel.",
+    "tags": [
+      "USV architecture",
+      "Propulsion / controls",
+      "Equipment planning"
+    ],
+    "image": "",
+    "caption": "Project photo to be added.",
+    "gallery": [],
+    "papers": [],
+    "photo_verified": false
+  },
+  {
+    "id": "x500-airframe",
+    "domain": "air",
+    "category": "Air / UAV & UAS",
+    "title": "X500 airframe and CNC preparation",
+    "context": "Quadcopter mechanical-design preparation",
+    "status": "Design and fabrication documentation",
+    "problem": "Prepare a four-motor X500 layout with manufacturable plates and motor-mount interfaces.",
+    "contribution": "Worked on airframe proportions, carbon-plate and motor-mount geometry and the corresponding DXF/CNC preparation. Checked the four-motor arrangement and assembly presentation.",
+    "delivery": "Airframe and mount drawings, cutting preparation and assembly-preview material.",
+    "scope": "Design previews are not photographs of a manufactured aircraft. Physical fit, fabrication and flight validation are not confirmed in the reviewed record.",
+    "tags": [
+      "Quadcopter airframe",
+      "DXF / CNC",
+      "Motor mounts"
+    ],
+    "image": "",
+    "caption": "Project photo to be added.",
+    "gallery": [],
+    "papers": [],
+    "photo_verified": false
+  },
+  {
+    "id": "modular-quadcopter",
+    "domain": "air",
+    "category": "Air / UAV & UAS",
+    "title": "Modular quadcopter assembly",
+    "context": "Airframe assembly and integration planning",
+    "status": "Assembly-stage engineering",
+    "problem": "Bring frame and motor-arm assembly into a structured sequence for reinforcement, propulsion wiring and avionics installation.",
+    "contribution": "Advanced the frame and arm assembly and reviewed stiffness concerns. Structured the remaining work around local reinforcement, motor/ESC wiring, battery preparation and flight-controller installation.",
+    "delivery": "Assembly progress records, reinforcement review and a staged propulsion/avionics integration plan.",
+    "scope": "The reviewed conversation identifies wiring, battery and autopilot installation as subsequent work. Completed electrical integration or flight validation is not claimed.",
+    "tags": [
+      "Airframe assembly",
+      "Reinforcement",
+      "Integration planning"
+    ],
+    "image": "",
+    "caption": "Project photo to be added.",
+    "gallery": [],
+    "papers": [],
+    "photo_verified": false
+  },
+  {
+    "id": "baseboard-review",
+    "domain": "avionics",
+    "category": "Avionics & integration",
+    "title": "Companion-computer baseboard review",
+    "context": "Jetson Orin baseboard review coordination",
+    "status": "Design review and issue tracking",
+    "problem": "Prepare an actionable review of a companion-computer baseboard project before final production files and bring-up.",
+    "contribution": "Reviewed schematic/PCB connectivity, interface routing, power and connector questions with the engineer. Organised correction points and tracked missing libraries, footprints and connector 3D models.",
+    "delivery": "A design-review checklist and a portable-project handoff request covering corrections and required source assets.",
+    "scope": "The scope is engineering review and coordination. It does not claim sole PCB design ownership, completed manufacture or successful board bring-up.",
+    "tags": [
+      "Jetson Orin",
+      "KiCad review",
+      "Interfaces / power"
+    ],
+    "image": "",
+    "caption": "Project photo to be added.",
+    "gallery": [],
+    "papers": [],
+    "photo_verified": false
+  }
+]

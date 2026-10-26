@@ -1,0 +1,45 @@
+[
+  {
+    "id": "vtol-analysis",
+    "title": "VTOL flight-log analysis",
+    "subtitle": "Attitude tracking, vibration and filtering",
+    "case": "vtol",
+    "source": "Flying-wing VTOL engineering report",
+    "language": "English",
+    "pages": [
+      27,
+      19
+    ],
+    "images": [
+      "assets/vtol-method-excerpt.png",
+      "assets/vtol-pitch-excerpt.png"
+    ],
+    "captions": [
+      "Selected original report page: a staged mechanical-check, logging, FFT, filtering and verification workflow.",
+      "Cropped original attitude-tracking figure. The visible tracking noise motivated further tuning and vibration investigation; it is not a stand-alone proof of a single root cause."
+    ],
+    "description": "An edited public work sample from my client report. It shows how I structured the investigation, interpreted attitude response and proposed a verification workflow.",
+    "scope": "Original client identifiers, raw logs, maps and parameter-file downloads are not included. Figures describe that specific engagement; they are not universal tuning instructions.",
+    "file": "reports/vtol-analysis-public-excerpt.pdf"
+  },
+  {
+    "id": "helicopter-analysis",
+    "title": "Helicopter vibration review",
+    "subtitle": "VIBE channels, clipping and diagnostic interpretation",
+    "case": "helicopter",
+    "source": "Single-rotor helicopter diagnostic report, revision 2.1",
+    "language": "French / English summary",
+    "pages": [
+      10
+    ],
+    "images": [
+      "assets/helicopter-vibration-excerpt.png"
+    ],
+    "captions": [
+      "Cropped original vibration analysis from the earlier report. The filename/date header and the broad safety conclusion are excluded from this public excerpt."
+    ],
+    "description": "An edited public work sample from my helicopter log-analysis report. The excerpt shows channel-by-channel vibration interpretation and clipping review.",
+    "scope": "This excerpt is from the earlier diagnostic report. The later supplied evidence covers static run-up checks and preparation for further hover testing; completed post-fix flight validation is not claimed.",
+    "file": "reports/helicopter-analysis-public-excerpt.pdf"
+  }
+]
