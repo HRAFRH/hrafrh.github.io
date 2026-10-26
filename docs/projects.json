@@ -86,13 +86,13 @@
   {
     "id": "vtol",
     "category": "Air / UAV & UAS",
-    "title": "Flying-wing VTOL stability",
+    "title": "Flying-wing VTOL integration and flight tuning",
     "context": "Client engineering support | Fiverr",
     "status": "Successful flight trials supported",
-    "problem": "Resolve unstable flight behaviour, oscillation and vibration on a 4+1 flying-wing QuadPlane.",
-    "delivery": "Technical report, troubleshooting guidance and support for successful client flight trials after configuration and tuning.",
-    "scope": "Scope: remote configuration, diagnostic analysis and client test support.",
-    "contribution": "Rebuilt and reviewed Pixhawk 6C / ArduPlane setup, motor/servo assignments and QuadPlane settings. Supported calibration and PID tuning; analysed attitude tracking, IMU clipping, vibration and FFT data.",
+    "problem": "Configure and diagnose a 4+1 flying-wing QuadPlane, addressing hover behaviour, attitude tracking and vibration through iterative test review.",
+    "delivery": "An engineering report, vibration and notch-filter analyses, configuration guidance and iterative remote flight-test support. The media library follows the original test sequence rather than presenting every recording as a final acceptance test.",
+    "scope": "Scope: configuration, diagnostic analysis and remote client test support. The recordings span field trials and ground tests at different stages of the work; individual clips do not establish final aircraft certification or an unrestricted flight release.",
+    "contribution": "Reviewed Pixhawk 6C / ArduPlane configuration, motor and servo assignments, compass and airspeed interfaces, calibration and failsafes. Analysed supplied flight logs and recordings, attitude response, vibration, clipping and FFT spectra, then documented filter and PID-tuning recommendations.",
     "image": "assets/vtol.jpg",
     "caption": "Client-supplied platform photograph.",
     "domain": "air",
@@ -103,8 +103,20 @@
     ],
     "gallery": [
       {
-        "src": "assets/vtol.jpg",
-        "caption": "Client-supplied platform photograph."
+        "src": "media/vtol/airframe.jpg",
+        "caption": "Supplied aircraft photograph: aluminium flying wing with four lift motors and a separate cruise motor."
+      },
+      {
+        "src": "media/vtol/flight-still-03.jpg",
+        "caption": "Frame from supplied field-test recording 03. Historical test context, not a final acceptance claim."
+      },
+      {
+        "src": "media/vtol/flight-still-06.jpg",
+        "caption": "Frame from supplied field-test recording 06. Historical test context, not a final acceptance claim."
+      },
+      {
+        "src": "media/vtol/flight-still-13.jpg",
+        "caption": "Frame from supplied field-test recording 13. Historical test context, not a final acceptance claim."
       }
     ],
     "papers": [

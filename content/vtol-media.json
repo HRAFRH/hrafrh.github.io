@@ -1,0 +1,146 @@
+{
+  "case": "vtol",
+  "videos": [
+    {
+      "file": "media/vtol/flight-01.mp4",
+      "poster": "media/vtol/flight-01.jpg",
+      "title": "Field trial 01",
+      "duration": 40,
+      "date": "26 August 2025"
+    },
+    {
+      "file": "media/vtol/flight-02.mp4",
+      "poster": "media/vtol/flight-02.jpg",
+      "title": "Field trial 02",
+      "duration": 51,
+      "date": "26 August 2025"
+    },
+    {
+      "file": "media/vtol/flight-03.mp4",
+      "poster": "media/vtol/flight-03.jpg",
+      "title": "Field trial 03",
+      "duration": 88,
+      "date": "26 August 2025"
+    },
+    {
+      "file": "media/vtol/flight-04.mp4",
+      "poster": "media/vtol/flight-04.jpg",
+      "title": "Field trial 04",
+      "duration": 48,
+      "date": "26 August 2025"
+    },
+    {
+      "file": "media/vtol/flight-05.mp4",
+      "poster": "media/vtol/flight-05.jpg",
+      "title": "Field trial 05",
+      "duration": 15,
+      "date": "26 August 2025"
+    },
+    {
+      "file": "media/vtol/flight-06.mp4",
+      "poster": "media/vtol/flight-06.jpg",
+      "title": "Field trial 06",
+      "duration": 38,
+      "date": "26 August 2025"
+    },
+    {
+      "file": "media/vtol/flight-07.mp4",
+      "poster": "media/vtol/flight-07.jpg",
+      "title": "Field trial 07",
+      "duration": 35,
+      "date": "26 August 2025"
+    },
+    {
+      "file": "media/vtol/flight-08.mp4",
+      "poster": "media/vtol/flight-08.jpg",
+      "title": "Field trial 08",
+      "duration": 7,
+      "date": "26 August 2025"
+    },
+    {
+      "file": "media/vtol/flight-09.mp4",
+      "poster": "media/vtol/flight-09.jpg",
+      "title": "Field trial 09",
+      "duration": 24,
+      "date": "26 August 2025"
+    },
+    {
+      "file": "media/vtol/flight-10.mp4",
+      "poster": "media/vtol/flight-10.jpg",
+      "title": "Field trial 10",
+      "duration": 42,
+      "date": "26 August 2025"
+    },
+    {
+      "file": "media/vtol/flight-11.mp4",
+      "poster": "media/vtol/flight-11.jpg",
+      "title": "Field trial 11",
+      "duration": 19,
+      "date": "26 August 2025"
+    },
+    {
+      "file": "media/vtol/flight-12.mp4",
+      "poster": "media/vtol/flight-12.jpg",
+      "title": "Field trial 12",
+      "duration": 31,
+      "date": "26 August 2025"
+    },
+    {
+      "file": "media/vtol/flight-13.mp4",
+      "poster": "media/vtol/flight-13.jpg",
+      "title": "Field trial 13",
+      "duration": 25,
+      "date": "26 August 2025"
+    },
+    {
+      "file": "media/vtol/flight-14.mp4",
+      "poster": "media/vtol/flight-14.jpg",
+      "title": "Ground test 14",
+      "duration": 49,
+      "date": "4 September 2025"
+    },
+    {
+      "file": "media/vtol/flight-15.mp4",
+      "poster": "media/vtol/flight-15.jpg",
+      "title": "Ground test 15",
+      "duration": 49,
+      "date": "4 September 2025"
+    },
+    {
+      "file": "media/vtol/flight-16.mp4",
+      "poster": "media/vtol/flight-16.jpg",
+      "title": "Ground test 16",
+      "duration": 36,
+      "date": "4 September 2025"
+    },
+    {
+      "file": "media/vtol/flight-17.mp4",
+      "poster": "media/vtol/flight-17.jpg",
+      "title": "Ground test 17",
+      "duration": 25,
+      "date": "4 September 2025"
+    }
+  ],
+  "reports": [
+    {
+      "title": "VTOL engineering report",
+      "file": "media/vtol/vtol-engineering-report-public.pdf",
+      "note": "34-page public edition of my project report. Three map-bearing source pages are omitted."
+    },
+    {
+      "title": "Vibration and notch-filter analysis",
+      "file": "media/vtol/vibration-notch-analysis.pdf",
+      "note": "13-page engineering work sample covering vibration review, logging and filter setup."
+    },
+    {
+      "title": "Notch-filter and PID review",
+      "file": "media/vtol/notch-pid-review.pdf",
+      "note": "5-page follow-up work sample covering compass interference, FFT and filter review."
+    },
+    {
+      "title": "Aircraft reference manual",
+      "file": "media/vtol/reference-aircraft-manual.pdf",
+      "note": "Third-party reference: Super Stingray VTOL user manual, Flightory / Szymon W\u00f3jcik, \u00a9 2024. Not authored by me and not a claim that this is the same airframe."
+    }
+  ]
+}
