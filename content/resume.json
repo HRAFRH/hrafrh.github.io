@@ -1,0 +1,126 @@
+{
+  "headline": "UAV & AVIONICS SYSTEMS ENGINEER",
+  "skills": [
+    [
+      "CAD & Simulation",
+      "Onshape, AutoCAD Electrical; Gazebo/SITL; Gmsh mesh preparation."
+    ],
+    [
+      "Manufacturing",
+      "FDM 3D printing, airframe assembly, CNC preparation; BOMs and workshop planning."
+    ],
+    [
+      "Electronics & Embedded",
+      "STM32/ESP32/Arduino; Jetson/Raspberry Pi; CAN, UART, SPI, I2C, Ethernet; ESC/VESC, BMS; KiCad/Altium familiarity."
+    ],
+    [
+      "Programming & Robotics",
+      "C/C++, Python, VHDL, Linux, Git; ArduPilot, PX4, MAVLink; Mission Planner/QGC; PID, FFT and logs."
+    ],
+    [
+      "Vision & Automation",
+      "YOLOv8/ByteTrack, RTSP/GStreamer, gimbal interfaces; Siemens PLC, TIA Portal and WinCC."
+    ],
+    [
+      "Design & Communication",
+      "Photoshop, Illustrator; engineering reports, automotive service documentation and technical coordination."
+    ]
+  ],
+  "experience": [
+    {
+      "company": "FARASHA SYSTEMS | Rabat, Morocco",
+      "title": "Electronics Team Manager",
+      "dates": "Mar 2026 - Present",
+      "bullets": [
+        "Lead avionics architecture, component selection and integration across electronics, embedded, RF and mechanical teams. Plan validation, resolve field issues and maintain technical documentation."
+      ]
+    },
+    {
+      "company": "FARASHA SYSTEMS | Rabat, Morocco",
+      "title": "UAV & Avionics Systems Engineer",
+      "dates": "Aug 2025 - Mar 2026",
+      "bullets": [
+        "Integrated UAV and USV platforms, configuring autopilots, navigation, payloads and power interfaces. Supported simulation, bench checks, flight trials and water tests."
+      ]
+    },
+    {
+      "company": "Independent engineering | Upwork, Fiverr and direct clients",
+      "title": "UAV & Robotics Engineer",
+      "dates": "2025 - Present",
+      "bullets": [
+        "Deliver autopilot setup, tuning and log-based troubleshooting. Support on-site teams remotely and turn findings into corrective actions, reports and practical test plans."
+      ]
+    },
+    {
+      "company": "CAPGEMINI ENGINEERING | Casablanca",
+      "title": "Technical Documentation Technician / Consultant",
+      "dates": "Jul - Sep 2023",
+      "bullets": [
+        "Supported Stellantis after-sales engineering by translating vehicle-system data into structured diagnostic and service documentation."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "VTOL & fixed-wing aircraft",
+      "tools": "ArduPilot / PX4 · Cube / Pixhawk · CAD / 3D printing",
+      "bullets": [
+        "Integrated airframes, propulsion, avionics and telemetry; configured flight modes and missions. Supported hover, transition and stability testing, including successful client VTOL trials."
+      ]
+    },
+    {
+      "title": "Unmanned surface vehicle (USV)",
+      "tools": "ArduRover · Differential thrust · Waterjets · Jetson Nano",
+      "bullets": [
+        "Developed the full system from architecture and electrical integration through water tests. Integrated autopilot navigation, differential-thrust waterjets, FPV and AI detection with Jetson Nano and an A8C gimbal camera."
+      ]
+    },
+    {
+      "title": "Rotorcraft control & diagnostics",
+      "tools": "CUAV / Matek · PID tuning · FFT / notch filtering",
+      "bullets": [
+        "Configured 17- and 30-inch quadcopters and investigated unstable flight through logs. Reviewed helicopter control, vibration and estimator behaviour; documented corrective actions and subsequent tests."
+      ]
+    },
+    {
+      "title": "Ground robotics & UAV docking",
+      "tools": "CUAV X7 · Dual VESC · ArduRover · MAVLink",
+      "bullets": [
+        "Integrated rover motor-control interfaces and developed a four-actuator docking proof of concept with synchronized control, isolated power and autopilot handshakes."
+      ]
+    },
+    {
+      "title": "Embedded vision & avionics",
+      "tools": "Jetson / Raspberry Pi · YOLOv8 / ByteTrack · RTSP",
+      "bullets": [
+        "Integrated camera, tracking and video interfaces; reviewed companion-computer baseboard connectivity. Prepared AprilTag precision-landing architecture and staged verification criteria."
+      ]
+    }
+  ],
+  "contact": {
+    "name": "Achraf RAHIBE",
+    "city": "Rabat",
+    "country": "Morocco",
+    "email": "achrafrahibpro@gmail.com",
+    "phone": "+212620323768",
+    "linkedin": "https://www.linkedin.com/in/achraf-rahib1"
+  },
+  "education": [
+    "State Engineer Diploma in Electrical Engineering and Telecommunications, option Electrical Engineering and Industrial Control. Faculty of Sciences and Techniques of Mohammedia (FSTM), Hassan II University. 2021–2025, Bac+5.",
+    "DUT in Electrical Engineering, Electronics and Industrial Computing. École Supérieure de Technologie de Fès (EST Fès), Université Sidi Mohamed Ben Abdellah. 2019–2021.",
+    "Technical Baccalaureate in Electrical Sciences and Technology (STE). Lycée Technique Anoual, Casablanca. 2018–2019."
+  ],
+  "languages": {
+    "Arabic": "Native",
+    "English": "Fluent",
+    "French": "Fluent",
+    "German": "Basic"
+  },
+  "leadership": {
+    "organisation": "ROBOTHINGS",
+    "role": "Founder and President",
+    "dates": "2023–2025"
+  },
+  "version": 11,
+  "as_of": "2026-10-26"
+}

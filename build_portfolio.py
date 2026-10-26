@@ -25,7 +25,7 @@ filterProjects();const oldIds=__IDS__;if((location.pathname==='/'||location.path
 def nav(pre):return f'''<a class="skip" href="#main">Skip to content</a><header class="top"><div class="wrap"><a class="brand" href="{pre}index.html">Achraf RAHIBE</a><nav aria-label="Primary"><a href="{pre}index.html">Home</a><a href="{pre}projects/">Projects</a><a href="{pre}index.html#about">About</a><a href="{pre}Achraf_Rahibe_CV.pdf">Resume</a><a href="{pre}technical-notes/">Documents</a><button class="theme" id="theme" type="button" aria-label="Toggle dark theme" aria-pressed="false">☾</button></nav></div></header>'''
 def footer(pre):return f'''<footer class="footer"><div class="wrap"><span>© 2026 Achraf RAHIBE · Engineering portfolio</span><span><a href="mailto:achrafrahibpro@gmail.com">Email</a> · <a href="https://github.com/HRAFRH" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/achraf-rahib1" target="_blank" rel="noopener">LinkedIn</a></span></div></footer><dialog class="lightbox" id="lightbox" aria-label="Project image viewer"><button id="close-lightbox" type="button">Close ×</button><img id="large-image" alt=""></dialog>'''
 def page(title,body,pre=''):
- return f'<!doctype html><html lang="en" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Achraf RAHIBE, UAV and avionics systems engineer. Aircraft, ground robotics, surface vessels, integration and technical documentation."><title>{e(title)} | Achraf RAHIBE</title><link rel="stylesheet" href="{pre}assets/site.css?v=20261026-flights6"></head><body>{nav(pre)}{body}{footer(pre)}<script src="{pre}assets/site.js?v=20261026-flights6" defer></script></body></html>'
+ return f'<!doctype html><html lang="en" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Achraf RAHIBE, UAV and avionics systems engineer. Aircraft, ground robotics, surface vessels, integration and technical documentation."><title>{e(title)} | Achraf RAHIBE</title><link rel="stylesheet" href="{pre}assets/site.css?v=20261026-resume11"></head><body>{nav(pre)}{body}{footer(pre)}<script src="{pre}assets/site.js?v=20261026-resume11" defer></script></body></html>'
 
 def reference_media(d,pre='../../'):
  refs=d.get('reference_images',[])
@@ -241,3 +241,5 @@ with (A/'site.css').open('a',encoding='utf-8') as f:
 
 # Platform portfolios keep supporting work within the main engineering projects.
 exec((ROOT/"build_collections.py").read_text(encoding="utf-8"))
+
+exec((ROOT/"build_resume_journal.py").read_text(encoding="utf-8"))

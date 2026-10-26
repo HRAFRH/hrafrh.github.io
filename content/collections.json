@@ -105,9 +105,9 @@
   },
   {
     "id": "surface-vessels",
-    "title": "Uncrewed surface vessels",
+    "title": "Unmanned surface vehicles",
     "domain": "sea",
-    "lead": "Marine electrical architecture, steering and propulsion interfaces, navigation electronics and system planning.",
+    "lead": "USV / ASV development, from architecture and propulsion control to autopilot navigation, onboard vision and water testing.",
     "cover": "media/reference/usv-reference-1.svg",
     "caption": "Third-party reference photograph: OceanAlpha SL40. The actual project USV is confidential. This is not a vessel I claim to have developed.",
     "members": [
@@ -118,20 +118,20 @@
     ],
     "stages": [
       [
-        "Define the system",
-        "Equipment architecture, propulsion/control trade-offs and supplier-linked planning."
+        "System architecture",
+        "Requirements, component selection, electrical layout and subsystem interfaces."
       ],
       [
-        "Integrate controls & power",
-        "Rudder, throttle, ESC, battery/BMS, contactor and safety interfaces."
+        "Propulsion & control",
+        "Differential-thrust waterjets, rudder/throttle interfaces, ESCs and power distribution."
       ],
       [
-        "Connect navigation",
-        "RTK, AIS, NMEA2000, companion compute and communications planning."
+        "Navigation & perception",
+        "Autopilot navigation, Jetson Nano, FPV and AI detection with an A8C gimbal camera, alongside marine communications work."
       ],
       [
-        "Deliver the handoff",
-        "Electrical documentation, integration support and a clear record of the validation reached."
+        "Water tests & delivery",
+        "Integrated-system checks, water trials, troubleshooting and technical documentation."
       ]
     ],
     "cover_credit": "OceanAlpha via Unmanned Systems Technology",

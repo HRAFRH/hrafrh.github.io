@@ -76,3 +76,5 @@ h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(5
 .matched-flight{margin-top:32px}.matched-flight .video-grid{grid-template-columns:repeat(auto-fit,minmax(280px,650px))}.matched-flight video{width:100%;max-height:460px;object-fit:contain;background:#111}.matched-flight figcaption span{display:block}
 
 .reference-note{color:#c5122f;font-size:14px;max-width:850px}.reference-credit{font-size:12px;color:var(--muted)}.reference-credit a{color:var(--accent)}
+
+.resume-role{color:var(--muted);font-size:17px;margin:16px 0 0}.resume-block .resume-tools{color:var(--accent);font-size:13px;margin:8px 0}.journal-deck{font-size:16px;color:var(--accent);margin:0 0 25px}.journal-copy{max-width:900px}.journal-copy p{font-size:15px;line-height:1.9;color:var(--muted);margin:18px 0}.journal-entry .blog-heading h2{font-size:26px;line-height:1.35}.journal-entry .links{margin-bottom:0}.journal-entry .blog-image{height:440px}.skill-logo.brand-tile img{padding:0}.resume-line strong{max-width:75%}@media(max-width:700px){.journal-entry .blog-image{height:280px}.journal-entry .blog-heading h2{font-size:23px}.resume-line strong{max-width:100%}}
