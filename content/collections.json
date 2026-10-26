@@ -108,8 +108,8 @@
     "title": "Uncrewed surface vessels",
     "domain": "sea",
     "lead": "Marine electrical architecture, steering and propulsion interfaces, navigation electronics and system planning.",
-    "cover": "media/upwork/usv-navigation-box.jpg",
-    "caption": "Original marine navigation and electronics enclosure photograph.",
+    "cover": "media/reference/usv-reference-1.svg",
+    "caption": "Third-party reference photograph: OceanAlpha SL40. The actual project USV is confidential. This is not a vessel I claim to have developed.",
     "members": [
       "rescue-usv",
       "usv",
@@ -133,7 +133,9 @@
         "Deliver the handoff",
         "Electrical documentation, integration support and a clear record of the validation reached."
       ]
-    ]
+    ],
+    "cover_credit": "OceanAlpha via Unmanned Systems Technology",
+    "cover_source": "https://www.unmannedsystemstechnology.com/company/oceanalpha/sl40-small-unmanned-surface-vehicle/"
   },
   {
     "id": "avionics-integration",

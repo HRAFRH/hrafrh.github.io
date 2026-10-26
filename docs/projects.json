@@ -173,7 +173,7 @@
     "scope": "Scope: USV electrical integration and power-switching troubleshooting.",
     "contribution": "Integrated ESC, battery/BMS and propulsion interfaces. Investigated inrush current and worked on pre-charge and main-contactor integration.",
     "image": "media/upwork/usv-power-box.jpg",
-    "caption": "Original power-integration enclosure photograph.",
+    "caption": "Reference image only. The actual project USV is confidential; the pictured SL40 is not the project vessel.",
     "domain": "sea",
     "tags": [
       "Twin waterjet",
@@ -191,7 +191,23 @@
       }
     ],
     "papers": [],
-    "photo_verified": true
+    "photo_verified": true,
+    "reference_images": [
+      {
+        "src": "media/reference/usv-reference-1.svg",
+        "caption": "Third-party reference photograph: OceanAlpha SL40. The actual project USV is confidential. This is not a vessel I claim to have developed.",
+        "credit": "OceanAlpha via Unmanned Systems Technology",
+        "source_url": "https://www.unmannedsystemstechnology.com/company/oceanalpha/sl40-small-unmanned-surface-vehicle/",
+        "reference_only": true
+      },
+      {
+        "src": "media/reference/usv-reference-2.svg",
+        "caption": "Third-party reference photograph: OceanAlpha SL40. The actual project USV is confidential. This is not a vessel I claim to have developed.",
+        "credit": "OceanAlpha via Unmanned Systems Technology",
+        "source_url": "https://www.unmannedsystemstechnology.com/company/oceanalpha/sl40-small-unmanned-surface-vehicle/",
+        "reference_only": true
+      }
+    ]
   },
   {
     "id": "rover",

@@ -1,0 +1,29 @@
+[
+  {
+    "id": "cobra-hover",
+    "target": "cobra-airframe",
+    "title": "Cobra VTOL hover",
+    "caption": "Airborne hover excerpt from the Cobra airframe build and test recording.",
+    "file": "media/flights/cobra-hover.mp4",
+    "poster": "media/flights/cobra-hover.jpg",
+    "duration": 14.0
+  },
+  {
+    "id": "seven-pixhawk-hover",
+    "target": "seven-pixhawk",
+    "title": "7-inch Pixhawk hover",
+    "caption": "Close hover and handling excerpt from the 7-inch Pixhawk build.",
+    "file": "media/flights/seven-pixhawk-hover.mp4",
+    "poster": "media/flights/seven-pixhawk-hover.jpg",
+    "duration": 13.5
+  },
+  {
+    "id": "ten-pixhawk-return",
+    "target": "fpv-10",
+    "title": "10-inch quadcopter return flight",
+    "caption": "Airborne return-flight excerpt from the 10-inch Pixhawk 6X project recording.",
+    "file": "media/flights/ten-pixhawk-return.mp4",
+    "poster": "media/flights/ten-pixhawk-return.jpg",
+    "duration": 14.5
+  }
+]
