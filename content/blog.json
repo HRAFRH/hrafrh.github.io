@@ -1,0 +1,62 @@
+[
+  {
+    "id": "quadplane-stability",
+    "case": "vtol",
+    "title": "Investigating stability on a flying-wing QuadPlane",
+    "intro": "Configuration review, vibration analysis and flight-trial support for a 4+1 VTOL aircraft.",
+    "sections": [
+      [
+        "Start with the configuration",
+        "This engagement began with an unstable flying-wing QuadPlane. I rebuilt and reviewed the Pixhawk 6C and ArduPlane setup, including motor and servo assignments, calibration and QuadPlane settings."
+      ],
+      [
+        "Read the response, not just the settings",
+        "I reviewed attitude tracking, IMU clipping, vibration and FFT data to connect the reported behaviour with the recorded response. That analysis informed configuration corrections and PID-tuning support."
+      ],
+      [
+        "Close the loop with the client",
+        "The delivery combined a technical report, troubleshooting guidance and remote support for successful client flight trials. The work covered configuration and diagnostics; the client carried out the physical tests."
+      ]
+    ]
+  },
+  {
+    "id": "helicopter-log-review",
+    "case": "helicopter",
+    "title": "From helicopter logs to the next test plan",
+    "intro": "Reviewing configuration, vibration and estimator behaviour without overstating the validation reached.",
+    "sections": [
+      [
+        "Separate the symptoms",
+        "The supplied logs raised questions around position drift, altitude and yaw tracking. I reviewed swashplate and servo mapping, governor and RPM behaviour, motor interlock, failsafes, yaw response and power-bus data."
+      ],
+      [
+        "Connect the subsystems",
+        "The diagnostic work also covered vibration and notch filtering, external INS and EKF3 configuration, and rangefinder settings. Each finding needed to connect a recorded symptom with a check or corrective recommendation."
+      ],
+      [
+        "State the test boundary",
+        "The latest supplied evidence supported a static run-up review and recommendations for further hover testing. I documented findings and acceptance criteria for subsequent tests. This is not a claim of a completed post-fix flight campaign."
+      ]
+    ]
+  },
+  {
+    "id": "fixed-wing-workshop-package",
+    "case": "fixed-wing-design",
+    "title": "Turning a fixed-wing concept into a workshop package",
+    "intro": "Organizing airframe geometry, interfaces and fabrication information so that a concept can progress toward a build.",
+    "sections": [
+      [
+        "Design around the build approach",
+        "The study developed a modular twin-tractor fixed-wing concept using accessible foam structures and tube reinforcement. I prepared parametric geometry, mechanical interfaces and assembly information around that approach."
+      ],
+      [
+        "Make the handoff usable",
+        "The package included foam-cutting templates, CNC part information, tube-stock planning, assembly views, part lists and printable workshop guides. The aim was to connect the CAD model to an understandable build sequence."
+      ],
+      [
+        "Keep preparation distinct from validation",
+        "The delivered checks were CAD and preparation checks. Physical structural validation, final equipment fits and flight testing remain separate activities. No manufactured aircraft or flight result is implied by the documentation package."
+      ]
+    ]
+  }
+]

@@ -1,6 +1,6 @@
 
 from pathlib import Path
-import json,html
+import json,html,re
 ROOT=Path(__file__).resolve().parent;D=ROOT/'docs';A=D/'assets'
 data=json.loads((ROOT/'content/projects.json').read_text(encoding='utf-8'))
 papers=json.loads((ROOT/'content/papers.json').read_text(encoding='utf-8'))
@@ -99,6 +99,102 @@ for p in papers:
  figs=''.join(f'<figure class="document-figure"><button data-full="{pre}{im}" data-alt="{e(cap)}" aria-label="Inspect report excerpt"><img src="{pre}{im}" alt="{e(cap)}" loading="lazy"></button><figcaption>{e(cap)}</figcaption></figure>' for im,cap in zip(p['images'],p['captions']))
  body=f'''<main id="main" class="wrap"><section class="page-head"><p class="breadcrumb"><a href="../">Documents</a> / Work sample</p><p class="kicker">Achraf Rahibe · {e(p['language'])}</p><h1>{e(p['title'])}</h1><p>{e(p['description'])}</p><div class="links"><a href="{pre}projects/{p['case']}/">View related project</a><a href="{pre}{p['file']}" download>Download edited work sample</a></div></section>{figs}<section class="scope"><p>{e(p['scope'])}</p></section><div class="download"><p>Source: {e(p['source'])}<br>Selected source pages: {', '.join(map(str,p['pages']))}. Edited public excerpt.</p><a class="btn" href="{pre}{p['file']}" download>Download work sample</a></div></main>'''
  (out/'index.html').write_text(page(p['title'],body,pre),encoding='utf-8')
+
+# Reference-led skills, resume, About and engineering journal.
+extra_css=r"""
+.skills-band{background:var(--card);padding:48px 24px 64px}
+.skills-band>.section-title{justify-content:center;margin-bottom:50px}
+.skills-band>.section-title h2,.resume-title{font:400 clamp(38px,4vw,52px)/1.15 Georgia,serif;letter-spacing:-.04em;text-transform:none}
+.skills{display:block;max-width:900px;margin:auto}
+.skills>div{margin-bottom:46px}.skills>div:last-child{margin-bottom:0}
+.skills h3{text-align:center;text-transform:uppercase;letter-spacing:.12em;font-size:13px;margin-bottom:24px}
+.skill-items{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 20px}
+.skill-item{flex:0 1 calc((100% - 40px)/3);min-height:78px;padding:14px 12px;gap:16px}
+.skill-logo{width:46px;height:46px;background:var(--soft);border-radius:0}.skill-logo svg{width:29px;height:29px}
+.skill-item strong{font-size:15px}.skill-item small{font-size:13px}.skill-logo.adobe-ps,.skill-logo.adobe-ai{font-size:25px}
+.resume-title{text-align:center;margin:0 0 48px}
+.resume-sheet{max-width:960px;margin:auto;border:1px solid var(--line);border-top:2px solid var(--accent);background:var(--card);padding:44px 48px}
+.resume-header{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}.resume-header h3{font:400 36px/1.2 Georgia,serif;letter-spacing:-.035em;margin:0}.resume-header .btn{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.resume-contact{display:flex;flex-wrap:wrap;gap:8px 20px;margin:24px 0 36px;font-size:14px}.resume-contact a{text-decoration:none;overflow-wrap:anywhere}
+.resume-sheet h4{font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:.12em;border-bottom:1px solid var(--line);padding-bottom:12px;margin:34px 0 22px}
+.resume-line{display:flex;justify-content:space-between;gap:20px;align-items:baseline}.resume-line strong{font-size:17px;font-weight:600}.resume-line span{color:var(--muted);font-size:13px;white-space:nowrap}.resume-block{margin-bottom:25px}.resume-block p,.resume-block li{font-size:14px;color:var(--muted);line-height:1.8;margin:7px 0}.resume-block ul{padding-left:20px}.resume-block .org{color:var(--ink);margin:4px 0}
+.resume-skills p{font-size:14px;color:var(--muted);line-height:1.85}.resume-skills strong{color:var(--ink)}
+.about-page{padding-top:75px;padding-bottom:85px}.about-page h1{font-size:60px;margin-bottom:35px}
+.about-copy{display:grid;grid-template-columns:1fr 290px;gap:60px;align-items:start}.about-copy p{font-size:18px;color:var(--muted);line-height:1.85;margin:0 0 24px}.about-photo{margin:0}.about-photo img{width:100%;max-height:380px;object-fit:cover;border:1px solid var(--line)}.about-photo figcaption{font-size:12px;color:var(--muted);margin-top:10px;text-align:center}
+.blog-head{text-align:center;padding:80px 0 50px}.blog-head h1{font-size:68px}.blog-head p{font-size:16px;color:var(--muted);margin:22px 0 0}
+.blog-card{background:var(--card);border:1px solid var(--line);padding:28px 30px;margin:0 0 35px}
+.blog-heading{display:flex;justify-content:space-between;align-items:baseline;gap:24px;margin-bottom:26px}.blog-heading h2{font-size:23px;letter-spacing:-.03em;line-height:1.35;margin:0}.blog-heading a{color:var(--ink);text-decoration:none}.blog-heading a:hover{color:var(--accent)}.blog-heading time{font-size:13px;color:var(--muted);white-space:nowrap}
+.blog-image{background:var(--bg);margin:0 0 25px;height:430px;display:flex;justify-content:center}.blog-image img{width:100%;height:100%;object-fit:contain}.blog-image .photo-pending{width:100%}.blog-excerpt{max-width:850px;font-size:15px;line-height:1.8;color:var(--muted)}.blog-meta{font-size:12px;color:var(--accent);margin-bottom:20px}.article-head{padding-top:65px}.article-head h1{max-width:900px;font-size:52px}.article-head .lead{max-width:800px;color:var(--muted);font-size:18px}.reading-copy{max-width:760px;margin:40px auto 60px}.reading-copy h2{font-size:25px;font-weight:500;letter-spacing:-.025em;margin:34px 0 14px}.reading-copy p{font-size:16px;color:var(--muted);line-height:1.9}.reading-copy .scope{margin:35px 0}.reading-copy .links a{font-size:13px}
+@media(max-width:700px){.skill-item{flex-basis:calc((100% - 20px)/2);padding-inline:3px;gap:12px}.skill-logo{width:36px;height:40px}.skill-item strong{font-size:13px}.skill-item small{font-size:11px}.resume-sheet{padding:25px 20px}.resume-header h3{font-size:30px}.resume-line{display:block}.resume-line span{display:block;margin-top:5px}.resume-contact{font-size:12px;gap:10px}.about-page{padding-top:45px}.about-page h1{font-size:48px}.about-copy{grid-template-columns:1fr;gap:30px}.about-photo{max-width:260px}.about-copy p{font-size:16px}.blog-head{padding:48px 0 35px}.blog-head h1{font-size:52px}.blog-card{padding:20px}.blog-heading{display:block;margin-bottom:20px}.blog-heading h2{font-size:21px}.blog-heading time{display:block;margin-top:10px}.blog-image{height:260px}.article-head h1{font-size:40px}.article-head{padding-top:40px}}
+@media(max-width:380px){.skill-item{flex-basis:100%}}
+"""
+with (A/'site.css').open('a',encoding='utf-8') as f:f.write(extra_css)
+# Group items into centered rows, with the final row centered.
+def centered_skill_group(match):
+ inside=match.group(1)
+ return '<div><h3>'+inside+'</h3><div class="skill-items">'
+skills_markup=re.sub(r'<div><h3>(.*?)</h3>',centered_skill_group,skills_markup)
+skills_markup=skills_markup.replace('</small></div></div></div>','</small></div></div></div></div>')
+resume=f"""<section class="section" id="resume"><h2 class="resume-title">Resume</h2><div class="resume-sheet"><div class="resume-header"><h3>Achraf Rahibe</h3><a class="btn" href="Achraf_Rahibe_CV.pdf" download>Download Resume ↓</a></div><div class="resume-contact"><a href="tel:+212620323768">+212 620 323 768</a><a href="mailto:achrafrahibpro@gmail.com">achrafrahibpro@gmail.com</a><a href="https://www.linkedin.com/in/achraf-rahib1">LinkedIn</a></div>
+<h4>Education</h4>
+<div class="resume-block"><div class="resume-line"><strong>State Engineer Diploma, FSTM</strong><span>2021 to 2025</span></div><p>Hassan II University of Casablanca · Bac+5</p><ul><li>Electrical Engineering and Telecommunications, Industrial Control option.</li></ul></div>
+<div class="resume-block"><div class="resume-line"><strong>DUT, EST Fès</strong><span>2019 to 2021</span></div><p>Université Sidi Mohamed Ben Abdellah</p><ul><li>Electrical Engineering, Electronics and Industrial Computing.</li></ul></div>
+<div class="resume-block"><div class="resume-line"><strong>Technical Baccalaureate, Lycée Technique Anoual</strong><span>2018 to 2019</span></div><ul><li>Electrical Sciences and Technology, Casablanca.</li></ul></div>
+<h4>Experience</h4>
+<div class="resume-block"><div class="resume-line"><strong>Electronics Team Manager</strong><span>Mar 2026 to present</span></div><p class="org">FARASHA SYSTEMS</p><ul><li>Lead avionics integration and component selection, coordinate electronics, embedded, RF and mechanical work, and plan validation.</li></ul></div>
+<div class="resume-block"><div class="resume-line"><strong>UAV &amp; Avionics Systems Engineer</strong><span>Aug 2025 to Mar 2026</span></div><p class="org">FARASHA SYSTEMS</p><ul><li>Integrated aircraft and USV interfaces, configured autopilots, and investigated system behaviour through simulation, bench checks and logs.</li></ul></div>
+<div class="resume-block"><div class="resume-line"><strong>Independent UAV &amp; Robotics Engineer</strong><span>2025 to present</span></div><p class="org">Upwork, Fiverr and direct clients</p><ul><li>Delivered autopilot configuration, stability investigations, diagnostic reports and practical test recommendations.</li></ul></div>
+<h4>Projects</h4>
+""" + ''.join('<div class="resume-block"><div class="resume-line"><strong>'+e(x['title'])+'</strong></div><p>'+e(x['contribution'])+'</p></div>' for x in data if x['id'] in ['vtol','helicopter','usv']) + """
+<h4>Technical skills</h4><div class="resume-skills"><p><strong>Flight controls:</strong> ArduPilot, PX4, Pixhawk, Cube, CUAV, Mission Planner, MAVLink, GNSS/RTK and flight-log analysis.</p><p><strong>Embedded &amp; interfaces:</strong> C/C++, Python, Linux, Jetson, Raspberry Pi, DroneCAN, UART and Ethernet.</p><p><strong>Engineering:</strong> Electrical integration, CAD and CNC preparation, interface review, BOM planning and technical documentation.</p><p><strong>Design:</strong> Photoshop for photo editing and Illustrator for vector graphics.</p><p><strong>Languages:</strong> Arabic native, English and French fluent, German basic.</p></div></div></section>"""
+home=(D/'index.html').read_text(encoding='utf-8')
+home=re.sub(r'<section class="section skills-band".*?(?=<section class="section" id="about">)',skills_markup+'\n',home,flags=re.S)
+home=re.sub(r'<section class="section" id="about">.*?</section></main>',resume+'</main>',home,flags=re.S)
+(D/'index.html').write_text(home,encoding='utf-8')
+# Standalone biography uses only supplied professional facts.
+about=f"""<main id="main" class="wrap about-page"><h1>About Me</h1><div class="about-copy"><div><p>Hello, I'm Achraf Rahibe, a UAV and avionics systems engineer based in Rabat, Morocco. My work focuses on the electronics, flight controls and interfaces that bring uncrewed aircraft, ground robots and surface vessels together.</p><p>At FARASHA SYSTEMS, I coordinate electronics integration across embedded, RF and mechanical work. Alongside that role, I support independent clients with autopilot configuration, stability investigations and technical reporting.</p><p>I work from the problem through configuration, bench checks and log review, documenting what changed and what still needs to be validated. My project library also includes airframe design studies, fabrication preparation and surface-vessel system planning.</p><p>I also work with Photoshop for photo editing and Illustrator for vector graphics, bringing clear visual communication into engineering documentation.</p><a class="btn primary" href="../projects/">View My Projects</a></div><figure class="about-photo"><img src="../assets/portrait.jpg" alt="Achraf Rahibe"><figcaption>Achraf Rahibe · Rabat, Morocco</figcaption></figure></div></main>"""
+(D/'about').mkdir(exist_ok=True)
+(D/'about/index.html').write_text(page('About Me',about,'../'),encoding='utf-8')
+posts=[
+ {'id':'quadplane-stability','case':'vtol','title':'Investigating stability on a flying-wing QuadPlane','intro':'Configuration review, vibration analysis and flight-trial support for a 4+1 VTOL aircraft.','sections':[
+ ('Start with the configuration','This engagement began with an unstable flying-wing QuadPlane. I rebuilt and reviewed the Pixhawk 6C and ArduPlane setup, including motor and servo assignments, calibration and QuadPlane settings.'),
+ ('Read the response, not just the settings','I reviewed attitude tracking, IMU clipping, vibration and FFT data to connect the reported behaviour with the recorded response. That analysis informed configuration corrections and PID-tuning support.'),
+ ('Close the loop with the client','The delivery combined a technical report, troubleshooting guidance and remote support for successful client flight trials. The work covered configuration and diagnostics; the client carried out the physical tests.')
+ ]},
+ {'id':'helicopter-log-review','case':'helicopter','title':'From helicopter logs to the next test plan','intro':'Reviewing configuration, vibration and estimator behaviour without overstating the validation reached.','sections':[
+ ('Separate the symptoms','The supplied logs raised questions around position drift, altitude and yaw tracking. I reviewed swashplate and servo mapping, governor and RPM behaviour, motor interlock, failsafes, yaw response and power-bus data.'),
+ ('Connect the subsystems','The diagnostic work also covered vibration and notch filtering, external INS and EKF3 configuration, and rangefinder settings. Each finding needed to connect a recorded symptom with a check or corrective recommendation.'),
+ ('State the test boundary','The latest supplied evidence supported a static run-up review and recommendations for further hover testing. I documented findings and acceptance criteria for subsequent tests. This is not a claim of a completed post-fix flight campaign.')
+ ]},
+ {'id':'fixed-wing-workshop-package','case':'fixed-wing-design','title':'Turning a fixed-wing concept into a workshop package','intro':'Organizing airframe geometry, interfaces and fabrication information so that a concept can progress toward a build.','sections':[
+ ('Design around the build approach','The study developed a modular twin-tractor fixed-wing concept using accessible foam structures and tube reinforcement. I prepared parametric geometry, mechanical interfaces and assembly information around that approach.'),
+ ('Make the handoff usable','The package included foam-cutting templates, CNC part information, tube-stock planning, assembly views, part lists and printable workshop guides. The aim was to connect the CAD model to an understandable build sequence.'),
+ ('Keep preparation distinct from validation','The delivered checks were CAD and preparation checks. Physical structural validation, final equipment fits and flight testing remain separate activities. No manufactured aircraft or flight result is implied by the documentation package.')
+ ]}
+]
+(ROOT/'content/blog.json').write_text(json.dumps(posts,ensure_ascii=False,indent=2),encoding='utf-8')
+blog=D/'blog';blog.mkdir(exist_ok=True)
+cards=[]
+for post in posts:
+ d=next(x for x in data if x['id']==post['case'])
+ cover=('<img src="../'+e(d['image'])+'" alt="'+e(d['title'])+' project photograph" loading="lazy">') if d.get('photo_verified') else '<div class="photo-pending">Project photo to be added</div>'
+ cards.append('<article class="blog-card"><div class="blog-heading"><h2><a href="'+post['id']+'/">'+e(post['title'])+'</a></h2><time datetime="2026-10-26">26 October 2026</time></div><figure class="blog-image">'+cover+'</figure><p class="blog-excerpt">'+e(post['intro'])+'</p><a href="'+post['id']+'/">Read engineering note →</a></article>')
+ out=blog/post['id'];out.mkdir(exist_ok=True)
+ dcover=photo(d,'../../','case-cover')
+ sections=''.join('<section><h2>'+e(t)+'</h2><p>'+e(copy)+'</p></section>' for t,copy in post['sections'])
+ body='<main id="main" class="wrap"><header class="article-head"><p class="breadcrumb"><a href="../">Blog</a> / Engineering note</p><h1>'+e(post['title'])+'</h1><p class="lead">'+e(post['intro'])+'</p><p class="blog-meta">Achraf Rahibe · Published 26 October 2026 · Project retrospective</p></header>'+dcover+'<div class="reading-copy">'+sections+'<div class="links"><a href="../../projects/'+d['id']+'/">Full project details</a><a href="../../technical-notes/">Technical documents</a></div></div></main>'
+ (out/'index.html').write_text(page(post['title'],body,'../../'),encoding='utf-8')
+body='<main id="main" class="wrap"><header class="blog-head"><h1>Blog</h1><p>Engineering notes on uncrewed systems, integration and the work behind each test.</p></header>'+''.join(cards)+'</main>'
+(blog/'index.html').write_text(page('Blog',body,'../'),encoding='utf-8')
+# Navigation on every generated page, preserving technical work-sample access.
+for f in D.rglob('*.html'):
+ t=f.read_text(encoding='utf-8')
+ t=re.sub(r'href="([^"]*)index.html#about">About',r'href="\1about/">About',t)
+ t=re.sub(r'href="([^"]*)Achraf_Rahibe_CV.pdf">Resume</a>',r'href="\1index.html#resume">Resume</a>',t)
+ t=re.sub(r'(<a href="([^"]*)technical-notes/">Documents</a>)',r'<a href="\2blog/">Blog</a>\1',t,count=1)
+ f.write_text(t,encoding='utf-8')
+print('Built centered skills, full web resume, About and Blog with 3 original project retrospectives.')
+
 # Exact typography preference applies to all generated page copy.
 for f in D.rglob('*.html'):
  text=f.read_text(encoding='utf-8');assert '\u2014' not in text and '\u2013' not in text,f
