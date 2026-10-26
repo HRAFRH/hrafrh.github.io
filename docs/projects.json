@@ -2,24 +2,33 @@
   {
     "id": "heavy-lift",
     "category": "Air / UAV & UAS",
-    "title": "Heavy-lift UAV integration",
+    "title": "Heavy-lift flight-control support",
     "context": "FARASHA SYSTEMS",
-    "status": "Integration and architecture concepts",
-    "problem": "Connect propulsion, avionics and payload interfaces within aircraft constraints.",
-    "delivery": "Electrical integration decisions and test preparation, including 14S and Li-ion/BMS concepts.",
-    "scope": "Scope: avionics integration and electrical architecture concepts.",
-    "contribution": "Worked on modular multirotor architecture, propulsion sizing, high-current wiring and flight-computer/sensor interfaces. Connected GNSS/RTK, telemetry, ESC and companion-computer interfaces; coordinated technical decisions and test preparation.",
-    "image": "",
-    "caption": "Project photo to be added.",
+    "status": "Remote analysis and field-test support",
+    "problem": "Diagnose instability and support tuning across large multirotor development platforms.",
+    "delivery": "Diagnostic findings, filter and PID-tuning recommendations, configuration support and test-review documentation.",
+    "scope": "The published portfolio identifies DARPA Lift Challenge team support. This describes engineering support to a participating team, not employment by DARPA, official endorsement or a competition outcome.",
+    "contribution": "Supported a U.S. heavy-lift team through remote flight-log review and live test discussions, examining PID/rate tracking, motor imbalance, vibration and clipping, estimator and compass faults, GPS behaviour and battery response. Completed additional setup and tuning engagements on 17-inch Matek H743 and 30-inch CUAV X7+ platforms.",
+    "image": "media/upwork/heavy-lift-workshop.jpg",
+    "caption": "Original project workshop photograph.",
     "domain": "air",
     "tags": [
       "Multirotor",
       "Electrical architecture",
       "GNSS/RTK"
     ],
-    "gallery": [],
+    "gallery": [
+      {
+        "src": "media/upwork/heavy-lift-workshop.jpg",
+        "caption": "Original heavy-lift project integration photograph."
+      },
+      {
+        "src": "media/upwork/heavy-lift-avionics.jpg",
+        "caption": "Original heavy-lift project integration photograph."
+      }
+    ],
     "papers": [],
-    "photo_verified": false
+    "photo_verified": true
   },
   {
     "id": "multirotor",
@@ -163,17 +172,26 @@
     "delivery": "Electrical-interface integration and power-switching troubleshooting.",
     "scope": "Scope: USV electrical integration and power-switching troubleshooting.",
     "contribution": "Integrated ESC, battery/BMS and propulsion interfaces. Investigated inrush current and worked on pre-charge and main-contactor integration.",
-    "image": "",
-    "caption": "Project photo to be added.",
+    "image": "media/upwork/usv-power-box.jpg",
+    "caption": "Original power-integration enclosure photograph.",
     "domain": "sea",
     "tags": [
       "Twin waterjet",
       "ESC / BMS",
       "Power switching"
     ],
-    "gallery": [],
+    "gallery": [
+      {
+        "src": "media/upwork/usv-power-box.jpg",
+        "caption": "Original project electronics-enclosure photograph; not a complete-vessel photograph."
+      },
+      {
+        "src": "media/upwork/usv-navigation-box.jpg",
+        "caption": "Original project electronics-enclosure photograph; not a complete-vessel photograph."
+      }
+    ],
     "papers": [],
-    "photo_verified": false
+    "photo_verified": true
   },
   {
     "id": "rover",
@@ -249,13 +267,13 @@
   {
     "id": "bom",
     "category": "Avionics & integration",
-    "title": "Workshop and component planning",
+    "title": "FPV workshop and component planning",
     "context": "Engineering delivery and procurement preparation",
     "status": "Planning scope",
     "problem": "Prepare component, tooling and spare-parts plans across drone sizes.",
-    "delivery": "Workshop and component-planning work to support engineering preparation.",
-    "scope": "Approximately 100 drones describes the component and workshop planning scope.",
-    "contribution": "Planned workshop tools, spares and BOMs for approximately 100 drones across 3-, 5- and 7-inch classes. Compared suppliers, procurement options and component compatibility.",
+    "delivery": "Four structured workbooks covering workshop equipment and three drone configurations, with component options and quantities.",
+    "scope": "The verified engagement covers planning and documentation. Procuring or assembling every listed system is not implied.",
+    "contribution": "Prepared workshop equipment and component plans for 3-inch, 5-inch and 7-inch FPV configurations, including compatibility review, supplier research and production quantities.",
     "image": "",
     "caption": "Project photo to be added.",
     "domain": "avionics",
@@ -447,5 +465,271 @@
     "gallery": [],
     "papers": [],
     "photo_verified": false
+  },
+  {
+    "id": "cube-vtol",
+    "title": "Cube Orange 4+1 VTOL development",
+    "domain": "air",
+    "category": "Air / UAV & UAS",
+    "context": "Engineering development and integration",
+    "status": "Engineering development and test work",
+    "problem": "Develop a 2.2 m VTOL aircraft combining four lift motors with separate forward propulsion.",
+    "contribution": "Integrated airframe components, propulsion, power distribution, autopilot electronics, GNSS, RC and telemetry. Configured ArduPilot and PX4 workflows, calibrated sensors and supported control tuning, transitions and mission testing.",
+    "delivery": "An assembled aircraft and a documented sequence of bench checks, configuration and iterative field tests.",
+    "scope": "My published portfolio describes field-test and mission-validation work. Photographs show the aircraft and integration stages; they do not independently quantify transition performance or payload capacity.",
+    "tags": [
+      "Cube Orange",
+      "ArduPilot / PX4",
+      "4+1 VTOL",
+      "3D-printed airframe"
+    ],
+    "image": "media/upwork/cube-vtol-field.jpg",
+    "caption": "Project photograph matched to my published Upwork portfolio.",
+    "gallery": [
+      {
+        "src": "media/upwork/cube-vtol-field.jpg",
+        "caption": "Original project photograph, resized for the web."
+      },
+      {
+        "src": "media/upwork/cube-vtol-complete.jpg",
+        "caption": "Original project photograph, resized for the web."
+      },
+      {
+        "src": "media/upwork/cube-vtol-avionics.jpg",
+        "caption": "Original project photograph, resized for the web."
+      }
+    ],
+    "papers": [],
+    "photo_verified": true,
+    "source_url": "https://www.upwork.com/freelancers/~0120fb0eccd7bfca35"
+  },
+  {
+    "id": "drone-rover-docking",
+    "title": "Drone-to-rover docking subsystem",
+    "domain": "land",
+    "category": "Land / UGV",
+    "context": "Engineering development and integration",
+    "status": "Engineering development and test work",
+    "problem": "Develop a docking, locking and release subsystem connecting a UAV with a ground vehicle.",
+    "contribution": "Developed a four-actuator docking architecture, motor-driver and isolated power interfaces, and CUAV X7+ AUX/RC-PWM integration. Worked on trigger logic using MAVLink handshakes and sensors.",
+    "delivery": "A proof-of-concept docking subsystem with synchronized actuators and an integration path toward wider autonomy.",
+    "scope": "The documented result is a docking proof of concept. A fully autonomous moving-rover landing service or operational delivery system is not claimed.",
+    "tags": [
+      "CUAV X7+",
+      "Linear actuators",
+      "MAVLink",
+      "Dock / lock / release"
+    ],
+    "image": "",
+    "caption": "Project photo to be added.",
+    "gallery": [],
+    "papers": [],
+    "photo_verified": false,
+    "source_url": "https://www.upwork.com/freelancers/~0120fb0eccd7bfca35"
+  },
+  {
+    "id": "rescue-usv",
+    "title": "Diesel rescue-vessel autonomy system",
+    "domain": "sea",
+    "category": "Sea / USV",
+    "context": "Engineering development and integration",
+    "status": "Engineering development and test work",
+    "problem": "Develop the electrical and autonomy architecture for converting a diesel-powered rescue boat into an uncrewed surface vessel.",
+    "contribution": "Prepared the system architecture and BOM, rudder and throttle interfaces, CUAV V6X / ArduRover configuration planning, and power, safety, navigation and compute integration. Specified RTK, AIS, NMEA2000, companion compute and communications interfaces.",
+    "delivery": "System and procurement documentation with integration support for engine controls, power and safety equipment, and navigation electronics.",
+    "scope": "A completed client engagement and project photographs support the design and integration scope. No independently measured sea-trial performance, certified autonomy level or rescue deployment is asserted.",
+    "tags": [
+      "ArduRover",
+      "CUAV V6X",
+      "Diesel controls",
+      "Marine power / safety"
+    ],
+    "image": "media/upwork/rescue-engine.jpg",
+    "caption": "Project photograph matched to my published Upwork portfolio.",
+    "gallery": [
+      {
+        "src": "media/upwork/rescue-engine.jpg",
+        "caption": "Original project photograph, resized for the web."
+      },
+      {
+        "src": "media/upwork/rescue-rudder.jpg",
+        "caption": "Original project photograph, resized for the web."
+      },
+      {
+        "src": "media/upwork/rescue-controller.jpg",
+        "caption": "Original project photograph, resized for the web."
+      }
+    ],
+    "papers": [],
+    "photo_verified": true,
+    "source_url": "https://www.upwork.com/freelancers/~0120fb0eccd7bfca35"
+  },
+  {
+    "id": "fpv-10",
+    "title": "10-inch autonomous FPV quadcopter",
+    "domain": "air",
+    "category": "Air / UAV & UAS",
+    "context": "Engineering development and integration",
+    "status": "Engineering development and test work",
+    "problem": "Build and configure a 6S FPV quadcopter for stabilized and GPS-assisted flight.",
+    "contribution": "Selected propulsion and power components, integrated Pixhawk 6X and sensors, completed wiring and calibration, and configured flight modes, waypoint missions, failsafes and PID tuning.",
+    "delivery": "An integrated quadcopter with manual, assisted-flight and mission-testing work.",
+    "scope": "The documented project work includes approximately 2 kg payload testing. Mission and payload checks apply to this development configuration.",
+    "tags": [
+      "Pixhawk 6X",
+      "6S power",
+      "Autonomous missions",
+      "Failsafes"
+    ],
+    "image": "",
+    "caption": "Project photo to be added.",
+    "gallery": [],
+    "papers": [],
+    "photo_verified": false,
+    "source_url": "https://www.upwork.com/freelancers/~0120fb0eccd7bfca35"
+  },
+  {
+    "id": "talon-vtol",
+    "title": "Micro Talon 4+1 VTOL conversion",
+    "domain": "air",
+    "category": "Air / UAV & UAS",
+    "context": "Engineering development and integration",
+    "status": "Engineering development and test work",
+    "problem": "Convert a Talon fixed-wing airframe to a quadplane while retaining cruise flight capability.",
+    "contribution": "Produced mounting parts, integrated four lift motors, electronics and a SpeedyBee F405 WING Mini, and configured ArduPlane calibration, hover modes, transition parameters and missions.",
+    "delivery": "A physical VTOL conversion, integration work and flight-test sequence documented in my portfolio.",
+    "scope": "The published evidence includes an initial QStabilize takeoff and landing and mission-review material. Full operational transition reliability is not quantified.",
+    "tags": [
+      "ArduPlane",
+      "SpeedyBee F405 WING Mini",
+      "Motor mounts",
+      "QuadPlane"
+    ],
+    "image": "media/upwork/talon-vtol.jpg",
+    "caption": "Project photograph matched to my published Upwork portfolio.",
+    "gallery": [
+      {
+        "src": "media/upwork/talon-vtol.jpg",
+        "caption": "Original project photograph, resized for the web."
+      },
+      {
+        "src": "media/upwork/talon-before.jpg",
+        "caption": "Original project photograph, resized for the web."
+      }
+    ],
+    "papers": [],
+    "photo_verified": true,
+    "source_url": "https://www.upwork.com/freelancers/~0120fb0eccd7bfca35"
+  },
+  {
+    "id": "s500",
+    "title": "S500 autopilot and sensor integration",
+    "domain": "air",
+    "category": "Air / UAV & UAS",
+    "context": "Engineering development and integration",
+    "status": "Engineering development and test work",
+    "problem": "Build and configure a sensor-equipped S500 quadcopter with assisted-flight functions.",
+    "contribution": "Integrated Pixhawk 6X, GNSS, telemetry and propulsion interfaces, completed calibration and parameter setup, and worked on flight-stability checks.",
+    "delivery": "A configured S500 development platform and integration work sample.",
+    "scope": "This case focuses on the verified S500 hardware integration, sensor calibration and development testing. It does not specify a production firmware release.",
+    "tags": [
+      "S500",
+      "Pixhawk 6X",
+      "GNSS / telemetry",
+      "Calibration"
+    ],
+    "image": "media/upwork/s500-avionics-preview.jpg",
+    "caption": "Project photograph matched to my published Upwork portfolio.",
+    "gallery": [
+      {
+        "src": "media/upwork/s500-avionics-preview.jpg",
+        "caption": "Faithful browser preview of my published project photograph; original local file not yet matched."
+      }
+    ],
+    "papers": [],
+    "photo_verified": true,
+    "source_url": "https://www.upwork.com/freelancers/~0120fb0eccd7bfca35"
+  },
+  {
+    "id": "inav-fpv",
+    "title": "3-inch INAV FPV integration",
+    "domain": "air",
+    "category": "Air / UAV & UAS",
+    "context": "Engineering development and integration",
+    "status": "Engineering development and test work",
+    "problem": "Build a compact 4S FPV quadcopter with stabilized flight modes and a reliable control link.",
+    "contribution": "Completed frame and power integration, flight-controller wiring, INAV setup, OSD and ExpressLRS configuration, followed by Angle and Horizon mode tuning.",
+    "delivery": "A compact FPV platform with documented wiring, firmware setup and flight-validation work.",
+    "scope": "Published project scope covers stabilized FPV flying. Autonomous mission performance or heavy-payload capability is not claimed.",
+    "tags": [
+      "INAV",
+      "ExpressLRS",
+      "4S power",
+      "Angle / Horizon"
+    ],
+    "image": "media/upwork/inav-fpv-preview.jpg",
+    "caption": "Project photograph matched to my published Upwork portfolio.",
+    "gallery": [
+      {
+        "src": "media/upwork/inav-fpv-preview.jpg",
+        "caption": "Faithful browser preview of my published project photograph; original local file not yet matched."
+      }
+    ],
+    "papers": [],
+    "photo_verified": true,
+    "source_url": "https://www.upwork.com/freelancers/~0120fb0eccd7bfca35"
+  },
+  {
+    "id": "mini-talon-simulation",
+    "title": "Mini Talon mission simulation",
+    "domain": "air",
+    "category": "Air / UAV & UAS",
+    "context": "Engineering development and integration",
+    "status": "Simulation and mission testing",
+    "problem": "Evaluate fixed-wing mission behaviour in a reproducible virtual environment before field testing.",
+    "contribution": "Configured the Mini Talon model and virtual runway in Gazebo, connected ArduPlane and QGroundControl, and prepared AUTO-mode waypoint missions and parameter checks.",
+    "delivery": "A fixed-wing simulation and mission-testing workflow.",
+    "scope": "Results belong to simulation. They are not presented as physical flight-test evidence.",
+    "tags": [
+      "Gazebo",
+      "ArduPlane",
+      "QGroundControl",
+      "SITL"
+    ],
+    "image": "",
+    "caption": "Project photo to be added.",
+    "gallery": [],
+    "papers": [],
+    "photo_verified": false,
+    "source_url": "https://www.upwork.com/freelancers/~0120fb0eccd7bfca35"
+  },
+  {
+    "id": "tiltrotor",
+    "title": "3D-printed tiltrotor VTOL integration",
+    "domain": "air",
+    "category": "Air / UAV & UAS",
+    "context": "Engineering development and integration",
+    "status": "Engineering development and test work",
+    "problem": "Develop a tricopter tiltrotor with a V-tail and integrated flight controls.",
+    "contribution": "Printed and assembled structural components, integrated propulsion, servos and sensors, and configured Pixhawk 6X / SpeedyBee F405 ArduPilot workflows. Used a matching tricopter configuration to investigate settings before wider VTOL testing.",
+    "delivery": "An integrated tiltrotor development platform with hover-test, mission-planning and configuration work.",
+    "scope": "The portfolio documents assembly, hovering and maiden-test material. A certified aircraft or a completed production validation programme is not claimed.",
+    "tags": [
+      "Tiltrotor",
+      "ArduPilot",
+      "V-tail",
+      "3D printing"
+    ],
+    "image": "media/upwork/tiltrotor-avionics.jpg",
+    "caption": "Project photograph matched to my published Upwork portfolio.",
+    "gallery": [
+      {
+        "src": "media/upwork/tiltrotor-avionics.jpg",
+        "caption": "Original project photograph, resized for the web."
+      }
+    ],
+    "papers": [],
+    "photo_verified": true,
+    "source_url": "https://www.upwork.com/freelancers/~0120fb0eccd7bfca35"
   }
 ]
