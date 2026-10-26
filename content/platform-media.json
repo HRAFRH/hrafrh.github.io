@@ -1,0 +1,40 @@
+{
+  "cobra": [
+    {
+      "src": "media/platforms/cobra-1.jpg",
+      "caption": "Cobra airframe build and integration · original workshop photograph."
+    },
+    {
+      "src": "media/platforms/cobra-2.jpg",
+      "caption": "Cobra airframe build and integration · original workshop photograph."
+    },
+    {
+      "src": "media/platforms/cobra-3.jpg",
+      "caption": "Cobra airframe build and integration · original workshop photograph."
+    },
+    {
+      "src": "media/platforms/cobra-4.jpg",
+      "caption": "Cobra airframe build and integration · original workshop photograph."
+    },
+    {
+      "src": "media/platforms/cobra-5.jpg",
+      "caption": "Cobra airframe build and integration · original workshop photograph."
+    },
+    {
+      "src": "media/platforms/cobra-6.jpg",
+      "caption": "Cobra airframe build and integration · original workshop photograph."
+    }
+  ],
+  "pixhawk-seven": [
+    {
+      "src": "media/platforms/pixhawk-seven-1.jpg",
+      "caption": "7-inch Pixhawk quadcopter build · original workshop photograph."
+    },
+    {
+      "src": "media/platforms/pixhawk-seven-2.jpg",
+      "caption": "7-inch Pixhawk quadcopter build · original workshop photograph."
+    }
+  ],
+  "fleet": "media/platforms/aircraft-fleet.jpg",
+  "workshop": "media/work-samples/vtol-airframe-parts.jpg"
+}

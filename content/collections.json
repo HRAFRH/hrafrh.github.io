@@ -1,0 +1,169 @@
+[
+  {
+    "id": "aircraft",
+    "title": "VTOL & fixed-wing aircraft",
+    "domain": "air",
+    "lead": "Airframe development, avionics integration and flight-control work across QuadPlane, tiltrotor and fixed-wing platforms.",
+    "cover": "media/platforms/aircraft-fleet.jpg",
+    "caption": "Aircraft from my project collection. Individual builds and development stages are documented below.",
+    "members": [
+      "cube-vtol",
+      "tiltrotor",
+      "talon-vtol",
+      "vtol",
+      "fixed-wing-design",
+      "fixed-wing",
+      "mini-talon-simulation"
+    ],
+    "stages": [
+      [
+        "Design & modeling",
+        "Airframe geometry, mechanical interfaces, meshing studies and fabrication documentation."
+      ],
+      [
+        "Build & integration",
+        "Printed airframe parts, propulsion, servos, power distribution and autopilot electronics."
+      ],
+      [
+        "Configuration & simulation",
+        "ArduPilot and PX4 setup, sensor calibration, mission preparation and simulation workflows."
+      ],
+      [
+        "Testing & analysis",
+        "Bench checks, hover and transition work, flight-log review and live support during client trials."
+      ]
+    ]
+  },
+  {
+    "id": "rotorcraft",
+    "title": "Multirotor & helicopter systems",
+    "domain": "air",
+    "lead": "Aircraft assembly, component selection, autopilot configuration and stability investigations, from FPV quadcopters to heavy-lift platforms.",
+    "cover": "media/platforms/fpv-ten-2.jpg",
+    "caption": "Original 10-inch FPV quadcopter project photograph.",
+    "members": [
+      "fpv-10",
+      "heavy-lift",
+      "multirotor",
+      "helicopter",
+      "s500",
+      "inav-fpv",
+      "x500-airframe",
+      "modular-quadcopter",
+      "bom",
+      "copter-safety-documentation",
+      "gps-denied-altitude"
+    ],
+    "stages": [
+      [
+        "Plan the platform",
+        "Component compatibility, workshop equipment, BOMs and airframe fabrication preparation."
+      ],
+      [
+        "Integrate the aircraft",
+        "Propulsion, power, flight controllers, GNSS, RC and telemetry interfaces."
+      ],
+      [
+        "Configure & diagnose",
+        "Calibration, flight modes, failsafes, estimator review and filter/PID investigations."
+      ],
+      [
+        "Test & document",
+        "Bench and flight-test support, comparative log review and documented next-test actions."
+      ]
+    ]
+  },
+  {
+    "id": "ground-systems",
+    "title": "Ground robotics & UAV docking",
+    "domain": "land",
+    "lead": "Rover motor-control integration and a docking subsystem linking an aircraft with a ground platform.",
+    "cover": "media/platforms/docking-rover-wiring.jpg",
+    "caption": "Rover wiring architecture published with the docking project. This is a system diagram.",
+    "members": [
+      "drone-rover-docking",
+      "rover"
+    ],
+    "stages": [
+      [
+        "System architecture",
+        "UAV and rover wiring, actuator interfaces and isolated power paths."
+      ],
+      [
+        "Motor control",
+        "CUAV X7, ArduRover and dual VESC interface integration."
+      ],
+      [
+        "Docking mechanism",
+        "Four-actuator control, motor drivers and synchronized locking/release concepts."
+      ],
+      [
+        "System handoff",
+        "A docking proof of concept and integration path using AUX/RC-PWM, sensor inputs and MAVLink handshakes."
+      ]
+    ]
+  },
+  {
+    "id": "surface-vessels",
+    "title": "Uncrewed surface vessels",
+    "domain": "sea",
+    "lead": "Marine electrical architecture, steering and propulsion interfaces, navigation electronics and system planning.",
+    "cover": "media/upwork/usv-navigation-box.jpg",
+    "caption": "Original marine navigation and electronics enclosure photograph.",
+    "members": [
+      "rescue-usv",
+      "usv",
+      "ais",
+      "usv-system-study"
+    ],
+    "stages": [
+      [
+        "Define the system",
+        "Equipment architecture, propulsion/control trade-offs and supplier-linked planning."
+      ],
+      [
+        "Integrate controls & power",
+        "Rudder, throttle, ESC, battery/BMS, contactor and safety interfaces."
+      ],
+      [
+        "Connect navigation",
+        "RTK, AIS, NMEA2000, companion compute and communications planning."
+      ],
+      [
+        "Deliver the handoff",
+        "Electrical documentation, integration support and a clear record of the validation reached."
+      ]
+    ]
+  },
+  {
+    "id": "avionics-integration",
+    "title": "Avionics & machine vision",
+    "domain": "avionics",
+    "lead": "Companion-computer interfaces, payload video, engineering design review and vision-based landing architecture.",
+    "cover": "assets/vision.jpg",
+    "caption": "Embedded vision and payload integration context from my project archive.",
+    "members": [
+      "vision",
+      "precision-landing",
+      "baseboard-review"
+    ],
+    "stages": [
+      [
+        "Define the architecture",
+        "Camera, companion computer and flight-controller data paths."
+      ],
+      [
+        "Review the interfaces",
+        "Power, connectors, schematic/PCB routing and source-project handoff."
+      ],
+      [
+        "Specify perception",
+        "AprilTag detection, pose estimation, coordinate transforms and MAVLink integration planning."
+      ],
+      [
+        "Plan verification",
+        "Bench checks, staged acceptance criteria and technical documentation tied to the delivered scope."
+      ]
+    ]
+  }
+]

@@ -3,7 +3,7 @@
     "id": "heavy-lift",
     "category": "Air / UAV & UAS",
     "title": "Heavy-lift flight-control support",
-    "context": "FARASHA SYSTEMS",
+    "context": "Engineering development and integration",
     "status": "Remote analysis and field-test support",
     "problem": "Diagnose instability and support tuning across large multirotor development platforms.",
     "delivery": "Diagnostic findings, filter and PID-tuning recommendations, configuration support and test-review documentation.",
@@ -306,7 +306,13 @@
     "caption": "Project photo to be added.",
     "gallery": [],
     "papers": [],
-    "photo_verified": false
+    "photo_verified": false,
+    "work_samples": [
+      {
+        "src": "media/platforms/airframe-mesh.jpg",
+        "caption": "Airframe meshing study in Gmsh. Model preparation, not a validated aerodynamic result."
+      }
+    ]
   },
   {
     "id": "usv-system-study",
@@ -506,15 +512,15 @@
     "gallery": [
       {
         "src": "media/upwork/cube-vtol-field.jpg",
-        "caption": "Original project photograph, resized for the web."
+        "caption": "QuadPlane field setup with its ground-control equipment."
       },
       {
         "src": "media/upwork/cube-vtol-complete.jpg",
-        "caption": "Original project photograph, resized for the web."
+        "caption": "Assembled QuadPlane with four lift motors and separate forward propulsion."
       },
       {
         "src": "media/upwork/cube-vtol-avionics.jpg",
-        "caption": "Original project photograph, resized for the web."
+        "caption": "Avionics and power integration inside the aircraft fuselage."
       }
     ],
     "papers": [],
@@ -543,7 +549,17 @@
     "gallery": [],
     "papers": [],
     "photo_verified": false,
-    "source_url": "https://www.upwork.com/freelancers/~0120fb0eccd7bfca35"
+    "source_url": "https://www.upwork.com/freelancers/~0120fb0eccd7bfca35",
+    "work_samples": [
+      {
+        "src": "media/platforms/docking-drone-wiring.jpg",
+        "caption": "UAV wiring architecture · diagram published with the docking project."
+      },
+      {
+        "src": "media/platforms/docking-rover-wiring.jpg",
+        "caption": "Rover wiring architecture · diagram published with the docking project."
+      }
+    ]
   },
   {
     "id": "rescue-usv",
@@ -599,11 +615,28 @@
       "Autonomous missions",
       "Failsafes"
     ],
-    "image": "",
-    "caption": "Project photo to be added.",
-    "gallery": [],
+    "image": "media/platforms/fpv-ten-1.jpg",
+    "caption": "Original 10-inch FPV project photograph.",
+    "gallery": [
+      {
+        "src": "media/platforms/fpv-ten-1.jpg",
+        "caption": "10-inch FPV quadcopter in the field."
+      },
+      {
+        "src": "media/platforms/fpv-ten-2.jpg",
+        "caption": "Original FPV propulsion and avionics integration."
+      },
+      {
+        "src": "media/platforms/fpv-ten-3.jpg",
+        "caption": "FPV frame and autopilot assembly on the bench."
+      },
+      {
+        "src": "media/platforms/fpv-ten-4.jpg",
+        "caption": "Assembled quadcopter before field testing."
+      }
+    ],
     "papers": [],
-    "photo_verified": false,
+    "photo_verified": true,
     "source_url": "https://www.upwork.com/freelancers/~0120fb0eccd7bfca35"
   },
   {
@@ -738,16 +771,34 @@
       "V-tail",
       "3D printing"
     ],
-    "image": "media/upwork/tiltrotor-avionics.jpg",
-    "caption": "Project photograph matched to my published Upwork portfolio.",
+    "image": "media/platforms/tiltrotor-maiden.jpg",
+    "caption": "Original tiltrotor project image published in my Upwork portfolio.",
     "gallery": [
       {
-        "src": "media/upwork/tiltrotor-avionics.jpg",
-        "caption": "Original project photograph, resized for the web."
+        "src": "media/platforms/tiltrotor-hover.jpg",
+        "caption": "Tiltrotor hovering test, as published in my Upwork portfolio."
+      },
+      {
+        "src": "media/platforms/tiltrotor-tricopter-test.jpg",
+        "caption": "Tricopter test configuration used to investigate settings."
+      },
+      {
+        "src": "media/platforms/tiltrotor-maiden.jpg",
+        "caption": "Assembled 3D-printed tiltrotor airframe."
+      },
+      {
+        "src": "media/platforms/tiltrotor-electronics.jpg",
+        "caption": "Propulsion, servo, sensor and flight-controller integration."
       }
     ],
     "papers": [],
     "photo_verified": true,
-    "source_url": "https://www.upwork.com/freelancers/~0120fb0eccd7bfca35"
+    "source_url": "https://www.upwork.com/freelancers/~0120fb0eccd7bfca35",
+    "work_samples": [
+      {
+        "src": "media/platforms/tiltrotor-overview.jpg",
+        "caption": "Tiltrotor system overview and component layout, a project diagram."
+      }
+    ]
   }
 ]
