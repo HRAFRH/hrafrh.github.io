@@ -94,12 +94,12 @@
         "CUAV X7, ArduRover and dual VESC interface integration."
       ],
       [
-        "Docking mechanism",
-        "Four-actuator control, motor drivers and synchronized locking/release concepts."
+        "Docking & coordination",
+        "Synchronized actuators, locking/release and communication between aircraft and rover."
       ],
       [
-        "System handoff",
-        "A docking proof of concept and integration path using AUX/RC-PWM, sensor inputs and MAVLink handshakes."
+        "System testing",
+        "Integrated aircraft, rover, docking, autopilot handshakes and failsafe checks."
       ]
     ]
   },

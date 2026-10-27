@@ -5,3 +5,5 @@ Adobe logo presentation restored from https://nikoweaver.github.io/logos/illustr
 Additional brand marks: Simple Icons project (https://simpleicons.org), via npm CDN. Trademarks belong to their owners. Engineering activity pictograms are original SVG artwork. A generic colored engineering pictogram is used where a brand mark was unavailable.
 
 Onshape: official PTC brand-guide RGB artwork, https://www.ptc.com/en/brand-guide/logos/onshape . ArduPilot: official ardupilot_wiki/images/ardupilot_logo.png. Mission Planner: official MissionPlanner/Resources/missionplannerlogo.png. QGroundControl: official qgroundcontrol/resources/QGCLogoArrow.svg. Gazebo: official gazebo-classic/doc/gazebo_logo.png.
+
+PX4, INAV and Betaflight: original marks from the official PX4-user_guide, inav-configurator and betaflight-configurator repositories.
