@@ -13,7 +13,8 @@
       "vtol",
       "fixed-wing-design",
       "fixed-wing",
-      "mini-talon-simulation"
+      "mini-talon-simulation",
+      "inav-fixed-wing"
     ],
     "stages": [
       [
@@ -52,7 +53,10 @@
       "modular-quadcopter",
       "bom",
       "copter-safety-documentation",
-      "gps-denied-altitude"
+      "gps-denied-altitude",
+      "px4-yaw-diagnostics",
+      "skybrush-stability",
+      "agricultural-uav-design"
     ],
     "stages": [
       [
@@ -82,7 +86,8 @@
     "caption": "Original project photograph of a quadcopter approaching the autonomous rover docking platform.",
     "members": [
       "drone-rover-docking",
-      "rover"
+      "rover",
+      "hybrid-wheeled-uav"
     ],
     "stages": [
       [
@@ -147,7 +152,10 @@
     "members": [
       "vision",
       "precision-landing",
-      "baseboard-review"
+      "baseboard-review",
+      "lidar-avoidance",
+      "safe-corridor-return",
+      "sitl-mission-dashboard"
     ],
     "stages": [
       [

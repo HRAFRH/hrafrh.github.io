@@ -35,7 +35,9 @@
         "caption": "Quadcopter with Pixhawk Cube and custom electronics"
       }
     ],
-    "papers": [],
+    "papers": [
+      "heavy-lift-log"
+    ],
     "photo_verified": true
   },
   {
@@ -48,8 +50,8 @@
     "delivery": "Configured and tuned aircraft, flight-test support, mission setup and diagnostic recommendations across different platform classes.",
     "scope": "Completed delivery and client acceptance are recorded. A later delivery note states that further work would continue; order completion is not treated as independent proof that every planned validation step was finished.",
     "contribution": "Worked across 2, 3, 5, 7, 10, 15, 22 and 42-inch classes: propulsion sizing and motor/ESC/propeller compatibility, wiring and avionics integration, firmware configuration, sensor calibration, troubleshooting, PID/filter tuning and real mission preparation. The portfolio includes support for a DARPA Lift Challenge team.",
-    "image": "media/claude/09_simulation_sitl_gazebo/01-gazebo-quad-sitl.webp",
-    "caption": "Quadcopter simulated in Gazebo with ArduPilot SITL",
+    "image": "media/claude/03_pixhawk_quadcopters/01-7in-pixhawk-quad-bench.webp",
+    "caption": "Original 7-inch Pixhawk quadcopter bench photograph.",
     "domain": "air",
     "tags": [
       "ArduPilot",
@@ -490,7 +492,9 @@
     "image": "",
     "caption": "Project photo to be added.",
     "gallery": [],
-    "papers": [],
+    "papers": [
+      "jetson-landing"
+    ],
     "photo_verified": false,
     "work_samples": [
       {
@@ -739,7 +743,9 @@
         "caption": "Actisense engine interface for NMEA 2000 data"
       }
     ],
-    "papers": [],
+    "papers": [
+      "vessel-wiring"
+    ],
     "photo_verified": true,
     "source_url": "https://www.upwork.com/freelancers/~0120fb0eccd7bfca35"
   },
@@ -981,6 +987,297 @@
       {
         "src": "media/platforms/tiltrotor-overview.jpg",
         "caption": "Tiltrotor system overview and component layout, a project diagram."
+      }
+    ]
+  },
+  {
+    "id": "px4-yaw-diagnostics",
+    "category": "Air / UAV & UAS",
+    "title": "PX4 quadrotor yaw diagnostics",
+    "context": "Client engineering documentation",
+    "status": "Flight-log analysis and corrective recommendations",
+    "problem": "Investigate yaw tracking and estimator behaviour on a PX4 multirotor.",
+    "contribution": "Reviewed yaw setpoint/response, estimator and sensor configuration, available actuator authority and FFT/filter evidence. Turned the findings into configuration checks and next-test recommendations.",
+    "delivery": "A structured log-review report separating observed behaviour from tuning hypotheses.",
+    "scope": "The report covers the supplied flight evidence; completed post-change flight validation is not claimed.",
+    "image": "",
+    "caption": "",
+    "domain": "air",
+    "tags": [
+      "PX4",
+      "Yaw control",
+      "EKF2",
+      "FFT",
+      "Flight logs"
+    ],
+    "gallery": [],
+    "papers": [
+      "px4-yaw"
+    ],
+    "photo_verified": false,
+    "work_samples": [
+      {
+        "src": "media/documents/px4-yaw-1.webp",
+        "caption": "Original report excerpt: PX4 yaw and estimator review. Diagnostic report; recommendations are specific to the supplied log, and are not proof of completed corrective flight validation."
+      },
+      {
+        "src": "media/documents/px4-yaw-2.webp",
+        "caption": "Original report excerpt: PX4 yaw and estimator review. Diagnostic report; recommendations are specific to the supplied log, and are not proof of completed corrective flight validation."
+      }
+    ]
+  },
+  {
+    "id": "skybrush-stability",
+    "category": "Air / UAV & UAS",
+    "title": "Custom-flight-controller filter tuning",
+    "context": "Client engineering documentation",
+    "status": "FFT and ESC-telemetry review",
+    "problem": "Stabilize the filtering baseline before changing roll and pitch PID gains.",
+    "contribution": "Reviewed motor-frequency peaks, ESC telemetry, harmonic-notch tracking, vibration and control plots, then proposed a bounded filter change and a clean follow-up test.",
+    "delivery": "A focused engineering report and test recommendations for the custom-controller setup.",
+    "scope": "The recorded delivery is analysis and tuning guidance; the report is not independent proof that every later flight target was achieved.",
+    "image": "",
+    "caption": "",
+    "domain": "air",
+    "tags": [
+      "ArduCopter",
+      "ESC telemetry",
+      "Harmonic notch",
+      "FFT",
+      "PID"
+    ],
+    "gallery": [],
+    "papers": [
+      "skybrush-tuning"
+    ],
+    "photo_verified": false,
+    "work_samples": [
+      {
+        "src": "media/documents/skybrush-tuning-1.webp",
+        "caption": "Original report excerpt: ESC-telemetry notch-filter review. Report-specific tuning recommendations. The excerpt does not claim that a subsequent flight completed every validation step."
+      },
+      {
+        "src": "media/documents/skybrush-tuning-2.webp",
+        "caption": "Original report excerpt: ESC-telemetry notch-filter review. Report-specific tuning recommendations. The excerpt does not claim that a subsequent flight completed every validation step."
+      }
+    ]
+  },
+  {
+    "id": "hybrid-wheeled-uav",
+    "category": "Ground / UGV",
+    "title": "Hybrid wheeled UAV: ground-drive control",
+    "context": "Client engineering documentation",
+    "status": "Ground-unit commissioning and integration report",
+    "problem": "Develop the ground-driving milestone of an aircraft that can also operate as a wheeled robot.",
+    "contribution": "Integrated the CUAV X7+ ArduRover baseline, dual VESC motor paths, skid-steer mixing and RC/safety gating. Documented ground control behaviour before the later flight-and-drive merge.",
+    "delivery": "A ground-unit setup report, control-path explanation and next integration steps.",
+    "scope": "This is a distinct hybrid wheeled-aircraft project. The report documents the ground milestone; it is separate from the UAV landing on a rover docking project.",
+    "image": "",
+    "caption": "",
+    "domain": "land",
+    "tags": [
+      "Hybrid UAV / UGV",
+      "CUAV X7+",
+      "ArduRover",
+      "VESC",
+      "Skid steer"
+    ],
+    "gallery": [],
+    "papers": [
+      "rover-setup"
+    ],
+    "photo_verified": false,
+    "work_samples": [
+      {
+        "src": "media/documents/rover-setup-1.webp",
+        "caption": "Original report excerpt: Hybrid wheeled-UAV ground-control report. The documented milestone covers the ground unit. Merging flight and wheel operation is identified as a later integration stage."
+      },
+      {
+        "src": "media/documents/rover-setup-2.webp",
+        "caption": "Original report excerpt: Hybrid wheeled-UAV ground-control report. The documented milestone covers the ground unit. Merging flight and wheel operation is identified as a later integration stage."
+      }
+    ]
+  },
+  {
+    "id": "inav-fixed-wing",
+    "category": "Air / UAV & UAS",
+    "title": "INAV fixed-wing configuration review",
+    "context": "Client engineering documentation",
+    "status": "Yaw-drift diagnosis and Blackbox planning",
+    "problem": "Investigate yaw drift on a pusher fixed-wing aircraft with a SpeedyBee F405 Wing controller.",
+    "contribution": "Reviewed the INAV configuration, board alignment, compass assumptions, yaw feed-forward and damper settings. Defined corrective checks and the Blackbox evidence needed for the next flight.",
+    "delivery": "An aircraft-specific configuration investigation and an ordered test plan.",
+    "scope": "The report documents analysis and recommendations. A planned Blackbox capture and final flight validation are not presented as completed results.",
+    "image": "",
+    "caption": "",
+    "domain": "air",
+    "tags": [
+      "INAV",
+      "Volantex Ranger",
+      "SpeedyBee F405 Wing",
+      "Pusher",
+      "Blackbox"
+    ],
+    "gallery": [],
+    "papers": [
+      "inav-fixed-wing"
+    ],
+    "photo_verified": false,
+    "work_samples": [
+      {
+        "src": "media/documents/inav-fixed-wing-1.webp",
+        "caption": "Original report excerpt: INAV fixed-wing yaw-drift investigation. Configuration analysis and test planning. Recommended changes and a planned Blackbox capture are not presented as completed flight validation."
+      },
+      {
+        "src": "media/documents/inav-fixed-wing-2.webp",
+        "caption": "Original report excerpt: INAV fixed-wing yaw-drift investigation. Configuration analysis and test planning. Recommended changes and a planned Blackbox capture are not presented as completed flight validation."
+      }
+    ]
+  },
+  {
+    "id": "lidar-avoidance",
+    "category": "Avionics / autonomy",
+    "title": "LiDAR proximity and obstacle-avoidance integration",
+    "context": "Client engineering documentation",
+    "status": "Integration review and latency investigation",
+    "problem": "Connect a companion-computer LiDAR pipeline to ArduPilot and investigate delayed proximity information.",
+    "contribution": "Reviewed Unitree L2 data through ROS 2 and MAVROS into MAVLink OBSTACLE_DISTANCE, serial mapping and proximity settings. Distinguished sensor-to-autopilot latency from GCS rendering and proposed ground verification checks.",
+    "delivery": "An integration findings report covering interfaces, timing and validation.",
+    "scope": "This work is an integration investigation; universal avoidance reliability or autonomous-flight completion is not claimed.",
+    "image": "",
+    "caption": "",
+    "domain": "avionics",
+    "tags": [
+      "Unitree L2",
+      "ROS 2",
+      "MAVROS",
+      "ArduPilot",
+      "Raspberry Pi",
+      "OBSTACLE_DISTANCE"
+    ],
+    "gallery": [],
+    "papers": [
+      "lidar-avoidance"
+    ],
+    "photo_verified": false,
+    "work_samples": [
+      {
+        "src": "media/documents/lidar-avoidance-1.webp",
+        "caption": "Original report excerpt: LiDAR proximity and latency review. Integration findings and proposed checks for the documented setup. No universal avoidance-performance claim is made."
+      },
+      {
+        "src": "media/documents/lidar-avoidance-2.webp",
+        "caption": "Original report excerpt: LiDAR proximity and latency review. Integration findings and proposed checks for the documented setup. No universal avoidance-performance claim is made."
+      }
+    ]
+  },
+  {
+    "id": "safe-corridor-return",
+    "category": "Avionics / autonomy",
+    "title": "Agricultural mission safe-return design",
+    "context": "Client engineering documentation",
+    "status": "Firmware specification and SITL acceptance planning",
+    "problem": "Design a return path from a working agricultural mission to a predefined safe corridor.",
+    "contribution": "Specified mission representation, local-frame geometry, corridor-intersection logic and an ArduCopter C++ integration path. Defined an RC/failsafe trigger concept and SITL checks for the proposed behaviour.",
+    "delivery": "A technical specification for the navigation feature and its implementation handoff.",
+    "scope": "Design-stage work. The document describes the proposed mechanism and test criteria; validated firmware or real-flight performance is not claimed.",
+    "image": "",
+    "caption": "",
+    "domain": "avionics",
+    "tags": [
+      "ArduCopter",
+      "C++",
+      "Mission planning",
+      "Safe return",
+      "SITL"
+    ],
+    "gallery": [],
+    "papers": [
+      "smart-rtl"
+    ],
+    "photo_verified": false,
+    "work_samples": [
+      {
+        "src": "media/documents/smart-rtl-1.webp",
+        "caption": "Original report excerpt: Safe-corridor return specification. Design specification, not a validated flight feature. The excerpt is a portfolio record of the proposed engineering approach."
+      },
+      {
+        "src": "media/documents/smart-rtl-2.webp",
+        "caption": "Original report excerpt: Safe-corridor return specification. Design specification, not a validated flight feature. The excerpt is a portfolio record of the proposed engineering approach."
+      }
+    ]
+  },
+  {
+    "id": "sitl-mission-dashboard",
+    "category": "Avionics / autonomy",
+    "title": "Gazebo mission-dashboard simulation",
+    "context": "Client engineering documentation",
+    "status": "Simulation architecture and milestone planning",
+    "problem": "Represent a real flight-controller and companion-computer system inside a mission-scheduling dashboard.",
+    "contribution": "Designed the Gazebo/SITL vehicle architecture, MAVLink TCP/UDP routing, per-vehicle identities and separate GStreamer video transport, with a path from one simulated aircraft to multiple vehicles.",
+    "delivery": "A simulation milestone plan, interface architecture and integration checklist.",
+    "scope": "The source is a design and milestone document. It does not establish completion of every proposed cloud or multi-vehicle feature.",
+    "image": "",
+    "caption": "",
+    "domain": "avionics",
+    "tags": [
+      "Gazebo",
+      "SITL",
+      "MAVLink",
+      "MAVProxy",
+      "GStreamer",
+      "Multi-vehicle"
+    ],
+    "gallery": [],
+    "papers": [
+      "sitl-scheduling"
+    ],
+    "photo_verified": false,
+    "work_samples": [
+      {
+        "src": "media/documents/sitl-scheduling-1.webp",
+        "caption": "Original report excerpt: Gazebo mission-dashboard integration plan. Milestone definition and integration architecture; the report separates the requested simulation deliverables from later multi-vehicle expansion."
+      },
+      {
+        "src": "media/documents/sitl-scheduling-2.webp",
+        "caption": "Original report excerpt: Gazebo mission-dashboard integration plan. Milestone definition and integration architecture; the report separates the requested simulation deliverables from later multi-vehicle expansion."
+      }
+    ]
+  },
+  {
+    "id": "agricultural-uav-design",
+    "category": "Air / UAV & UAS",
+    "title": "Agricultural payload-UAV design study",
+    "context": "Client engineering documentation",
+    "status": "Airframe concept and propulsion feasibility",
+    "problem": "Develop an airframe and propulsion concept around a cutting payload, hose forces and an offboard collection system.",
+    "contribution": "Prepared CAD and assembly studies, mass and propulsion budgets, six-motor versus coaxial trade-offs and bench/simulation/flight verification gates. Connected payload interfaces and manufacturability with the next CAD/Gazebo milestone.",
+    "delivery": "A documented engineering feasibility study with a staged test plan.",
+    "scope": "Concept and feasibility work. Renders show the design, not a completed aircraft; thrust, mass and power estimates are not measured flight performance.",
+    "image": "",
+    "caption": "",
+    "domain": "air",
+    "tags": [
+      "Agricultural UAV",
+      "CAD",
+      "Payload integration",
+      "Propulsion sizing",
+      "Hexacopter / coaxial",
+      "Gazebo"
+    ],
+    "gallery": [],
+    "papers": [
+      "agricultural-design"
+    ],
+    "photo_verified": false,
+    "work_samples": [
+      {
+        "src": "media/documents/agricultural-design-1.webp",
+        "caption": "Original report excerpt: Agricultural UAV propulsion feasibility. Feasibility study and CAD concept. Weight, thrust and endurance figures are planning estimates or source-component values, not measured flight results."
+      },
+      {
+        "src": "media/documents/agricultural-design-2.webp",
+        "caption": "Original report excerpt: Agricultural UAV propulsion feasibility. Feasibility study and CAD concept. Weight, thrust and endurance figures are planning estimates or source-component values, not measured flight results."
       }
     ]
   }

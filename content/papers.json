@@ -20,7 +20,9 @@
     ],
     "description": "An edited public work sample from my client report. It shows how I structured the investigation, interpreted attitude response and proposed a verification workflow.",
     "scope": "Original client identifiers, raw logs, maps and parameter-file downloads are not included. Figures describe that specific engagement; they are not universal tuning instructions.",
-    "file": "reports/vtol-analysis-public-excerpt.pdf"
+    "file": "reports/vtol-analysis-public-excerpt.pdf",
+    "group": "Flight diagnostics",
+    "stage": "Diagnostic report"
   },
   {
     "id": "helicopter-analysis",
@@ -40,6 +42,335 @@
     ],
     "description": "An edited public work sample from my helicopter log-analysis report. The excerpt shows channel-by-channel vibration interpretation and clipping review.",
     "scope": "This excerpt is from the earlier diagnostic report. The later supplied evidence covers static run-up checks and preparation for further hover testing; completed post-fix flight validation is not claimed.",
-    "file": "reports/helicopter-analysis-public-excerpt.pdf"
+    "file": "reports/helicopter-analysis-public-excerpt.pdf",
+    "group": "Flight diagnostics",
+    "stage": "Diagnostic report"
+  },
+  {
+    "id": "px4-yaw",
+    "title": "PX4 yaw and estimator review",
+    "subtitle": "Yaw tracking, estimator setup and filter diagnosis",
+    "case": "px4-yaw-diagnostics",
+    "source": "Original engineering report by Achraf RAHIBE",
+    "language": "English",
+    "pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "images": [
+      "media/documents/px4-yaw-1.webp",
+      "media/documents/px4-yaw-2.webp"
+    ],
+    "captions": [
+      "Original report page 3: PX4 yaw and estimator review. Diagnostic report; recommendations are specific to the supplied log, and are not proof of completed corrective flight validation.",
+      "Original report page 4: PX4 yaw and estimator review. Diagnostic report; recommendations are specific to the supplied log, and are not proof of completed corrective flight validation."
+    ],
+    "description": "A diagnostic investigation of yaw behaviour on a PX4 quadrotor, connecting attitude response, yaw-estimator configuration and vibration/filter evidence.",
+    "scope": "Diagnostic report; recommendations are specific to the supplied log, and are not proof of completed corrective flight validation.",
+    "file": "reports/px4-yaw-public-sample.pdf",
+    "group": "Flight diagnostics",
+    "stage": "Diagnostic report",
+    "page_count": 9
+  },
+  {
+    "id": "skybrush-tuning",
+    "title": "ESC-telemetry notch-filter review",
+    "subtitle": "FFT interpretation before roll/pitch PID tuning",
+    "case": "skybrush-stability",
+    "source": "Original engineering report by Achraf RAHIBE",
+    "language": "English",
+    "pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "images": [
+      "media/documents/skybrush-tuning-1.webp",
+      "media/documents/skybrush-tuning-2.webp"
+    ],
+    "captions": [
+      "Original report page 1: ESC-telemetry notch-filter review. Report-specific tuning recommendations. The excerpt does not claim that a subsequent flight completed every validation step.",
+      "Original report page 2: ESC-telemetry notch-filter review. Report-specific tuning recommendations. The excerpt does not claim that a subsequent flight completed every validation step."
+    ],
+    "description": "A focused review of the motor-frequency band, ESC telemetry, harmonic notch settings and the next controlled test.",
+    "scope": "Report-specific tuning recommendations. The excerpt does not claim that a subsequent flight completed every validation step.",
+    "file": "reports/skybrush-tuning-public-sample.pdf",
+    "group": "Flight diagnostics",
+    "stage": "Diagnostic report",
+    "page_count": 4
+  },
+  {
+    "id": "jetson-landing",
+    "title": "Vision-based precision-landing design",
+    "subtitle": "Architecture, pose estimation, MAVLink and staged tests",
+    "case": "precision-landing",
+    "source": "Original engineering report by Achraf RAHIBE",
+    "language": "English",
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "images": [
+      "media/documents/jetson-landing-1.webp",
+      "media/documents/jetson-landing-2.webp"
+    ],
+    "captions": [
+      "Original report page 3: Vision-based precision-landing design. Design delivery and proposed proof of concept; these pages distinguish planned implementation from demonstrated performance.",
+      "Original report page 8: Vision-based precision-landing design. Design delivery and proposed proof of concept; these pages distinguish planned implementation from demonstrated performance."
+    ],
+    "description": "An engineering design for a Jetson Nano and AprilTag landing-target pipeline, with explicit coordinate and interface contracts.",
+    "scope": "Design delivery and proposed proof of concept; these pages distinguish planned implementation from demonstrated performance.",
+    "file": "reports/jetson-landing-public-sample.pdf",
+    "group": "Autonomy & perception",
+    "stage": "Design specification",
+    "page_count": 14
+  },
+  {
+    "id": "rover-setup",
+    "title": "Hybrid wheeled-UAV ground-control report",
+    "subtitle": "Skid-steer control, VESC interfaces and safety gating",
+    "case": "hybrid-wheeled-uav",
+    "source": "Original engineering report by Achraf RAHIBE",
+    "language": "English",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "images": [
+      "media/documents/rover-setup-1.webp",
+      "media/documents/rover-setup-2.webp"
+    ],
+    "captions": [
+      "Original report page 2: Hybrid wheeled-UAV ground-control report. The documented milestone covers the ground unit. Merging flight and wheel operation is identified as a later integration stage.",
+      "Original report page 3: Hybrid wheeled-UAV ground-control report. The documented milestone covers the ground unit. Merging flight and wheel operation is identified as a later integration stage."
+    ],
+    "description": "A ground-drive commissioning report for a hybrid aircraft-and-rover platform using CUAV X7+ and dual VESC control.",
+    "scope": "The documented milestone covers the ground unit. Merging flight and wheel operation is identified as a later integration stage.",
+    "file": "reports/rover-setup-public-sample.pdf",
+    "group": "Integration & commissioning",
+    "stage": "Integration report",
+    "page_count": 5
+  },
+  {
+    "id": "vessel-wiring",
+    "title": "Autonomous-vessel cable layout",
+    "subtitle": "Power, navigation and actuator routing",
+    "case": "rescue-usv",
+    "source": "Original engineering report by Achraf RAHIBE",
+    "language": "English / bilingual drawing",
+    "pages": [
+      1
+    ],
+    "images": [
+      "media/documents/vessel-wiring-1.webp"
+    ],
+    "captions": [
+      "Original report page 1: Autonomous-vessel cable layout. Engineering layout work sample. It is separate from the confidential twin-waterjet USV and is not a photograph of that vessel."
+    ],
+    "description": "An original bilingual cable-layout drawing showing how navigation, propulsion and control equipment connect within an autonomous rescue-vessel design.",
+    "scope": "Engineering layout work sample. It is separate from the confidential twin-waterjet USV and is not a photograph of that vessel.",
+    "file": "reports/vessel-wiring-public-sample.pdf",
+    "group": "Integration & commissioning",
+    "stage": "Integration report",
+    "page_count": 1
+  },
+  {
+    "id": "inav-fixed-wing",
+    "title": "INAV fixed-wing yaw-drift investigation",
+    "subtitle": "Pusher-airframe configuration and Blackbox test planning",
+    "case": "inav-fixed-wing",
+    "source": "Original engineering report by Achraf RAHIBE",
+    "language": "English",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "images": [
+      "media/documents/inav-fixed-wing-1.webp",
+      "media/documents/inav-fixed-wing-2.webp"
+    ],
+    "captions": [
+      "Original report page 4: INAV fixed-wing yaw-drift investigation. Configuration analysis and test planning. Recommended changes and a planned Blackbox capture are not presented as completed flight validation.",
+      "Original report page 5: INAV fixed-wing yaw-drift investigation. Configuration analysis and test planning. Recommended changes and a planned Blackbox capture are not presented as completed flight validation."
+    ],
+    "description": "A configuration review for a Volantex Ranger / SpeedyBee F405 Wing aircraft, with hypotheses for yaw drift and a request for improved flight evidence.",
+    "scope": "Configuration analysis and test planning. Recommended changes and a planned Blackbox capture are not presented as completed flight validation.",
+    "file": "reports/inav-fixed-wing-public-sample.pdf",
+    "group": "Flight diagnostics",
+    "stage": "Diagnostic report",
+    "page_count": 8
+  },
+  {
+    "id": "lidar-avoidance",
+    "title": "LiDAR proximity and latency review",
+    "subtitle": "Unitree L2, ROS 2, MAVROS and ArduPilot",
+    "case": "lidar-avoidance",
+    "source": "Original engineering report by Achraf RAHIBE",
+    "language": "English",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "images": [
+      "media/documents/lidar-avoidance-1.webp",
+      "media/documents/lidar-avoidance-2.webp"
+    ],
+    "captions": [
+      "Original report page 1: LiDAR proximity and latency review. Integration findings and proposed checks for the documented setup. No universal avoidance-performance claim is made.",
+      "Original report page 2: LiDAR proximity and latency review. Integration findings and proposed checks for the documented setup. No universal avoidance-performance claim is made."
+    ],
+    "description": "A review of the point-cloud-to-proximity pipeline, telemetry transport and methods for separating real sensor latency from GCS display delay.",
+    "scope": "Integration findings and proposed checks for the documented setup. No universal avoidance-performance claim is made.",
+    "file": "reports/lidar-avoidance-public-sample.pdf",
+    "group": "Autonomy & perception",
+    "stage": "Diagnostic report",
+    "page_count": 7
+  },
+  {
+    "id": "smart-rtl",
+    "title": "Safe-corridor return specification",
+    "subtitle": "Mission representation, geometric routing and SITL checks",
+    "case": "safe-corridor-return",
+    "source": "Original engineering report by Achraf RAHIBE",
+    "language": "English",
+    "pages": [
+      1,
+      2,
+      3
+    ],
+    "images": [
+      "media/documents/smart-rtl-1.webp",
+      "media/documents/smart-rtl-2.webp"
+    ],
+    "captions": [
+      "Original report page 1: Safe-corridor return specification. Design specification, not a validated flight feature. The excerpt is a portfolio record of the proposed engineering approach.",
+      "Original report page 2: Safe-corridor return specification. Design specification, not a validated flight feature. The excerpt is a portfolio record of the proposed engineering approach."
+    ],
+    "description": "A design specification for returning from an agricultural mission to a designated safe corridor, including mission representation and firmware integration planning.",
+    "scope": "Design specification, not a validated flight feature. The excerpt is a portfolio record of the proposed engineering approach.",
+    "file": "reports/smart-rtl-public-sample.pdf",
+    "group": "Autonomy & perception",
+    "stage": "Design specification",
+    "page_count": 3
+  },
+  {
+    "id": "sitl-scheduling",
+    "title": "Gazebo mission-dashboard integration plan",
+    "subtitle": "SITL, MAVLink routing, video and multi-vehicle scaling",
+    "case": "sitl-mission-dashboard",
+    "source": "Original engineering report by Achraf RAHIBE",
+    "language": "English",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "images": [
+      "media/documents/sitl-scheduling-1.webp",
+      "media/documents/sitl-scheduling-2.webp"
+    ],
+    "captions": [
+      "Original report page 2: Gazebo mission-dashboard integration plan. Milestone definition and integration architecture; the report separates the requested simulation deliverables from later multi-vehicle expansion.",
+      "Original report page 5: Gazebo mission-dashboard integration plan. Milestone definition and integration architecture; the report separates the requested simulation deliverables from later multi-vehicle expansion."
+    ],
+    "description": "A simulation architecture that connects Gazebo and a SITL autopilot to a mission dashboard through MAVLink routing and a separate video pipeline.",
+    "scope": "Milestone definition and integration architecture; the report separates the requested simulation deliverables from later multi-vehicle expansion.",
+    "file": "reports/sitl-scheduling-public-sample.pdf",
+    "group": "Simulation & systems",
+    "stage": "Design specification",
+    "page_count": 5
+  },
+  {
+    "id": "agricultural-design",
+    "title": "Agricultural UAV propulsion feasibility",
+    "subtitle": "Airframe concept, six-motor versus coaxial trade-off and test gates",
+    "case": "agricultural-uav-design",
+    "source": "Original engineering report by Achraf RAHIBE",
+    "language": "English",
+    "pages": [
+      3,
+      4,
+      11,
+      13,
+      14
+    ],
+    "images": [
+      "media/documents/agricultural-design-1.webp",
+      "media/documents/agricultural-design-2.webp"
+    ],
+    "captions": [
+      "Original report page 3: Agricultural UAV propulsion feasibility. Feasibility study and CAD concept. Weight, thrust and endurance figures are planning estimates or source-component values, not measured flight results.",
+      "Original report page 4: Agricultural UAV propulsion feasibility. Feasibility study and CAD concept. Weight, thrust and endurance figures are planning estimates or source-component values, not measured flight results."
+    ],
+    "description": "A client engineering study linking a tea-harvesting airframe concept, payload assumptions, propulsion estimates and a staged verification plan.",
+    "scope": "Feasibility study and CAD concept. Weight, thrust and endurance figures are planning estimates or source-component values, not measured flight results.",
+    "file": "reports/agricultural-design-public-sample.pdf",
+    "group": "Design & feasibility",
+    "stage": "Feasibility study",
+    "page_count": 5
+  },
+  {
+    "id": "heavy-lift-log",
+    "title": "Heavy-lift log-review methodology",
+    "subtitle": "Attitude tracking, vibration, filters and next-test priorities",
+    "case": "heavy-lift",
+    "source": "Original engineering report by Achraf RAHIBE",
+    "language": "English",
+    "pages": [
+      2,
+      4,
+      6,
+      8
+    ],
+    "images": [
+      "media/documents/heavy-lift-log-1.webp",
+      "media/documents/heavy-lift-log-2.webp"
+    ],
+    "captions": [
+      "Original report page 2: Heavy-lift log-review methodology. Initial diagnostic interpretation. Test conditions and missing evidence limit conclusions; no competition result or official DARPA endorsement is implied.",
+      "Original report page 4: Heavy-lift log-review methodology. Initial diagnostic interpretation. Test conditions and missing evidence limit conclusions; no competition result or official DARPA endorsement is implied."
+    ],
+    "description": "A first-look flight-control review showing how log evidence was separated from hypotheses and translated into the next sensor, mechanical and tuning checks.",
+    "scope": "Initial diagnostic interpretation. Test conditions and missing evidence limit conclusions; no competition result or official DARPA endorsement is implied.",
+    "file": "reports/heavy-lift-log-public-sample.pdf",
+    "group": "Flight diagnostics",
+    "stage": "Diagnostic report",
+    "page_count": 4
   }
 ]
