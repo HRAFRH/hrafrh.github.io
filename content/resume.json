@@ -2,28 +2,28 @@
   "headline": "UAV & AVIONICS SYSTEMS ENGINEER",
   "skills": [
     [
+      "Flight Control & Avionics",
+      "ArduPilot, PX4, INAV, Betaflight; Mission Planner, QGroundControl; Gazebo/SITL, MAVLink, PID/FFT and log analysis."
+    ],
+    [
+      "Embedded & Interfaces",
+      "C/C++, Python, VHDL, Linux, Git; STM32/ESP32, Jetson/Raspberry Pi; CAN/DroneCAN, UART, SPI, I2C, Ethernet."
+    ],
+    [
+      "Vision & Navigation",
+      "YOLOv8, ByteTrack, RTSP/GStreamer; A8C gimbal, GNSS/RTK, telemetry, AIS and ADS-B workflows."
+    ],
+    [
+      "Electronics & Prototyping",
+      "ESC/VESC, BMS, power distribution; KiCad/Altium familiarity; FDM 3D printing and component compatibility."
+    ],
+    [
       "CAD & Simulation",
-      "Onshape, AutoCAD Electrical; Gazebo/SITL; Gmsh mesh preparation."
-    ],
-    [
-      "Manufacturing",
-      "FDM 3D printing, airframe assembly, CNC preparation; BOMs and workshop planning."
-    ],
-    [
-      "Electronics & Embedded",
-      "STM32/ESP32/Arduino; Jetson/Raspberry Pi; CAN, UART, SPI, I2C, Ethernet; ESC/VESC, BMS; KiCad/Altium familiarity."
-    ],
-    [
-      "Programming & Robotics",
-      "C/C++, Python, VHDL, Linux, Git; ArduPilot, PX4, MAVLink; Mission Planner/QGC; PID, FFT and logs."
-    ],
-    [
-      "Vision & Automation",
-      "YOLOv8/ByteTrack, RTSP/GStreamer, gimbal interfaces; Siemens PLC, TIA Portal and WinCC."
+      "Onshape, AutoCAD Electrical; Gmsh mesh preparation, CNC files, BOMs and assembly planning."
     ],
     [
       "Design & Communication",
-      "Photoshop, Illustrator; engineering reports, automotive service documentation and technical coordination."
+      "Photoshop, Illustrator; graphic design, engineering consultations and technical coordination."
     ]
   ],
   "experience": [
@@ -32,7 +32,7 @@
       "title": "Electronics Team Manager",
       "dates": "Mar 2026 - Present",
       "bullets": [
-        "Lead avionics architecture, component selection and integration across electronics, embedded, RF and mechanical teams. Plan validation, resolve field issues and maintain technical documentation."
+        "Lead avionics architecture, component selection and cross-functional integration. Coordinate validation, field troubleshooting and technical delivery across electronics, embedded, RF and mechanical teams."
       ]
     },
     {
@@ -40,15 +40,15 @@
       "title": "UAV & Avionics Systems Engineer",
       "dates": "Aug 2025 - Mar 2026",
       "bullets": [
-        "Integrated UAV and USV platforms, configuring autopilots, navigation, payloads and power interfaces. Supported simulation, bench checks, flight trials and water tests."
+        "Integrated aerial and maritime platforms, covering autopilots, sensors, payloads and power systems from simulation and bench checks through flight and water trials."
       ]
     },
     {
-      "company": "Independent engineering | Upwork, Fiverr and direct clients",
-      "title": "UAV & Robotics Engineer",
+      "title": "UAV & Avionics Engineering Consultant",
+      "company": "Upwork, Fiverr and direct clients",
       "dates": "2025 - Present",
       "bullets": [
-        "Deliver autopilot setup, tuning and log-based troubleshooting. Support on-site teams remotely and turn findings into corrective actions, reports and practical test plans."
+        "Provide engineering consultations, system integration, autopilot configuration and tuning. Guide field teams through live calls, log-based troubleshooting, corrective actions and mission preparation."
       ]
     },
     {
@@ -56,44 +56,51 @@
       "title": "Technical Documentation Technician / Consultant",
       "dates": "Jul - Sep 2023",
       "bullets": [
-        "Supported Stellantis after-sales engineering by translating vehicle-system data into structured diagnostic and service documentation."
+        "Produced Stellantis after-sales diagnostic and service documentation following an automotive engineering internship studying automatic emergency braking."
       ]
     }
   ],
   "projects": [
     {
-      "title": "VTOL & fixed-wing aircraft",
-      "tools": "ArduPilot / PX4 · Cube / Pixhawk · CAD / 3D printing",
+      "title": "Fixed-Wing UAVs",
+      "tools": "Onshape · ArduPlane / PX4 · Gazebo / SITL · DJI O4 Pro",
       "bullets": [
-        "Integrated airframes, propulsion, avionics and telemetry; configured flight modes and missions. Supported hover, transition and stability testing, including successful client VTOL trials."
+        "Designed and integrated V-tail, pusher and twin-motor conventional-tail aircraft, including differential thrust. Progressed from CAD and SITL mission tests to real flights, mission planning and FPV camera/goggle integration."
       ]
     },
     {
-      "title": "Unmanned surface vehicle (USV)",
-      "tools": "ArduRover · Differential thrust · Waterjets · Jetson Nano",
+      "title": "VTOL & QuadPlane Systems",
+      "tools": "Cube / Pixhawk · ArduPilot / PX4 · 3D printing",
       "bullets": [
-        "Developed the full system from architecture and electrical integration through water tests. Integrated autopilot navigation, differential-thrust waterjets, FPV and AI detection with Jetson Nano and an A8C gimbal camera."
+        "Developed flying-wing QuadPlanes and tiltrotor configurations, integrating lift/cruise propulsion, avionics and telemetry. Calibrated sensors, tuned hover and transitions, and supported successful client flight trials."
       ]
     },
     {
-      "title": "Rotorcraft control & diagnostics",
-      "tools": "CUAV / Matek · PID tuning · FFT / notch filtering",
+      "title": "Multirotor & Rotorcraft Development",
+      "tools": "2-42 inch platforms · ArduCopter / INAV / Betaflight · PID / FFT",
       "bullets": [
-        "Configured 17- and 30-inch quadcopters and investigated unstable flight through logs. Reviewed helicopter control, vibration and estimator behaviour; documented corrective actions and subsequent tests."
+        "Built and supported FPV, cinewhoop and heavy-lift platforms across 2, 3, 5, 7, 10, 15, 22 and 42-inch classes, including DARPA Lift Challenge support. Matched propulsion and electronics; configured, calibrated, troubleshot and tuned aircraft for flight and real missions."
       ]
     },
     {
-      "title": "Ground robotics & UAV docking",
-      "tools": "CUAV X7 · Dual VESC · ArduRover · MAVLink",
+      "title": "Unmanned Surface Vehicles",
+      "tools": "ArduRover · Waterjets · Jetson Nano · A8C · GNSS / RTK",
       "bullets": [
-        "Integrated rover motor-control interfaces and developed a four-actuator docking proof of concept with synchronized control, isolated power and autopilot handshakes."
+        "Developed a twin-waterjet USV from architecture to water trials, combining differential thrust, autopilot navigation, FPV and AI detection. Integrated propulsion, ESC/BMS and safety interfaces; supported AIS and maritime communications on related vessel work."
       ]
     },
     {
-      "title": "Embedded vision & avionics",
+      "title": "Integrated UAV-Rover System",
+      "tools": "ArduPilot / ArduRover · CUAV X7 · VESC · MAVLink",
+      "bullets": [
+        "Developed and tested the drone-rover system from scratch, integrating the aircraft, autonomous rover, communications and docking. Implemented motor control, synchronized actuators, autopilot coordination and failsafe checks."
+      ]
+    },
+    {
+      "title": "Embedded Vision & Avionics",
       "tools": "Jetson / Raspberry Pi · YOLOv8 / ByteTrack · RTSP",
       "bullets": [
-        "Integrated camera, tracking and video interfaces; reviewed companion-computer baseboard connectivity. Prepared AprilTag precision-landing architecture and staged verification criteria."
+        "Integrated camera, tracking and video interfaces; reviewed companion-computer baseboards. Prepared AprilTag precision-landing architecture, MAVLink interfaces and staged verification criteria."
       ]
     }
   ],
@@ -121,6 +128,23 @@
     "role": "Founder and President",
     "dates": "2023–2025"
   },
-  "version": 11,
-  "as_of": "2026-10-26"
+  "version": 14,
+  "as_of": "2026-10-27",
+  "hobbies": [
+    "Surfing",
+    "Reading",
+    "Graphic design"
+  ],
+  "leadership_entries": [
+    [
+      "ROBOTHINGS",
+      "Founder / President",
+      "2023-2025"
+    ],
+    [
+      "ENACTUS FSTM",
+      "Marketing & Graphic Design Lead",
+      "2022-2023"
+    ]
+  ]
 }

@@ -25,6 +25,14 @@
       {
         "src": "media/upwork/heavy-lift-avionics.jpg",
         "caption": "Original heavy-lift project integration photograph."
+      },
+      {
+        "src": "media/claude/05_heavy_lift_multirotors/03-17kg-quad-frame.webp",
+        "caption": "17 kg ArduPilot quadcopter frame"
+      },
+      {
+        "src": "media/claude/05_heavy_lift_multirotors/04-pixhawk-cube-quad.webp",
+        "caption": "Quadcopter with Pixhawk Cube and custom electronics"
       }
     ],
     "papers": [],
@@ -36,12 +44,12 @@
     "title": "Multirotor log analysis and filter tuning",
     "context": "Professional and independent engineering",
     "status": "Diagnostic and tuning milestones completed",
-    "problem": "Investigate unstable response and establish repeatable configuration checks.",
-    "delivery": "A staged diagnostic and tuning engagement with log-analysis reports, sensor and filter checks, and recommended next test actions.",
+    "problem": "Multirotor development across FPV, cinewhoop and heavy-lift aircraft, from compact 2-inch builds to 42-inch-class platforms.",
+    "delivery": "Configured and tuned aircraft, flight-test support, mission setup and diagnostic recommendations across different platform classes.",
     "scope": "Completed delivery and client acceptance are recorded. A later delivery note states that further work would continue; order completion is not treated as independent proof that every planned validation step was finished.",
-    "contribution": "Reviewed flight logs and sensors, prepared filter-setup recommendations, and supported FFT analysis, filter tuning, EKF corrections and PID-tuning work. Produced scenario reviews and follow-up parameter and test guidance.",
-    "image": "assets/multirotor.jpg",
-    "caption": "Platform context from the supplied project collection; no performance metric is implied.",
+    "contribution": "Worked across 2, 3, 5, 7, 10, 15, 22 and 42-inch classes: propulsion sizing and motor/ESC/propeller compatibility, wiring and avionics integration, firmware configuration, sensor calibration, troubleshooting, PID/filter tuning and real mission preparation. The portfolio includes support for a DARPA Lift Challenge team.",
+    "image": "media/claude/09_simulation_sitl_gazebo/01-gazebo-quad-sitl.webp",
+    "caption": "Quadcopter simulated in Gazebo with ArduPilot SITL",
     "domain": "air",
     "tags": [
       "ArduPilot",
@@ -56,6 +64,18 @@
       {
         "src": "assets/multirotor-wiring.jpg",
         "caption": "Wiring and avionics integration context."
+      },
+      {
+        "src": "media/claude/03_pixhawk_quadcopters/01-7in-pixhawk-quad-bench.webp",
+        "caption": "7-inch Pixhawk quadcopter wired up on the bench"
+      },
+      {
+        "src": "media/claude/09_simulation_sitl_gazebo/01-gazebo-quad-sitl.webp",
+        "caption": "Quadcopter simulated in Gazebo with ArduPilot SITL"
+      },
+      {
+        "src": "media/claude/09_simulation_sitl_gazebo/03-mission-planner-sitl.webp",
+        "caption": "Mission Planner connected to a simulated multirotor"
       }
     ],
     "papers": [],
@@ -64,15 +84,15 @@
   {
     "id": "fixed-wing",
     "category": "Air / UAV & UAS",
-    "title": "Fixed-wing mission and payload integration",
+    "title": "Fixed-wing UAV configurations and mission development",
     "context": "Professional UAV engineering",
     "status": "Mission and interface integration",
-    "problem": "Connect navigation, telemetry and payload interfaces for fixed-wing missions.",
-    "delivery": "Mission configuration and interface integration with preparation for further testing.",
+    "problem": "Fixed-wing aircraft development across V-tail, pusher and twin-motor conventional-tail configurations, connecting airframe design with autonomous missions.",
+    "delivery": "Integrated aircraft configurations, simulation workflows, autonomous mission setup and field-test support.",
     "scope": "The 4 kg payload figure describes the project use case.",
-    "contribution": "Configured Pixhawk 6C missions and worked on a Pixhawk 6X aircraft for an approximately 4 kg payload use case. Integrated sensors, telemetry and GNSS/RTK using Mission Planner and QGroundControl workflows.",
-    "image": "assets/fixed-wing.jpg",
-    "caption": "Platform context from the supplied project collection; no performance metric is implied.",
+    "contribution": "Designed and integrated airframe, propulsion and avionics interfaces, including differential-thrust configurations. Used Gazebo/SITL for mission and autopilot checks before real-world flight tests, mission planning and DJI O4 Pro camera/goggle integration.",
+    "image": "media/claude/02_fixed_wing_and_3d_printed_vtol/01-talon-fixed-wing.webp",
+    "caption": "White Talon-style fixed-wing UAV on grass",
     "domain": "air",
     "tags": [
       "Pixhawk 6C / 6X",
@@ -87,6 +107,14 @@
       {
         "src": "assets/air-field.jpg",
         "caption": "Fixed-wing platform in a field-test context."
+      },
+      {
+        "src": "media/claude/02_fixed_wing_and_3d_printed_vtol/01-talon-fixed-wing.webp",
+        "caption": "White Talon-style fixed-wing UAV on grass"
+      },
+      {
+        "src": "media/claude/02_fixed_wing_and_3d_printed_vtol/04-fixed-wing-fleet.webp",
+        "caption": "Several fixed-wing UAVs lined up on grass"
       }
     ],
     "papers": [],
@@ -396,11 +424,16 @@
       "Reinforcement",
       "Integration planning"
     ],
-    "image": "",
-    "caption": "Project photo to be added.",
-    "gallery": [],
+    "image": "media/claude/03_pixhawk_quadcopters/05-3d-printed-quad.webp",
+    "caption": "3D-printed quadcopter with radio transmitter",
+    "gallery": [
+      {
+        "src": "media/claude/03_pixhawk_quadcopters/05-3d-printed-quad.webp",
+        "caption": "3D-printed quadcopter with radio transmitter"
+      }
+    ],
     "papers": [],
-    "photo_verified": false
+    "photo_verified": true
   },
   {
     "id": "baseboard-review",
@@ -418,11 +451,24 @@
       "KiCad review",
       "Interfaces / power"
     ],
-    "image": "",
-    "caption": "Project photo to be added.",
-    "gallery": [],
+    "image": "media/claude/08_electronics_and_bench/01-custom-fc-board.webp",
+    "caption": "Custom flight-controller carrier board installed on a frame",
+    "gallery": [
+      {
+        "src": "media/claude/08_electronics_and_bench/01-custom-fc-board.webp",
+        "caption": "Custom flight-controller carrier board installed on a frame"
+      },
+      {
+        "src": "media/claude/08_electronics_and_bench/02-quad-with-radio.webp",
+        "caption": "Quadcopter with radio after bench setup"
+      },
+      {
+        "src": "media/claude/08_electronics_and_bench/03-quad-top-view.webp",
+        "caption": "Top view of a wired quadcopter"
+      }
+    ],
     "papers": [],
-    "photo_verified": false
+    "photo_verified": true
   },
   {
     "id": "precision-landing",
@@ -462,6 +508,26 @@
       {
         "src": "media/work-samples/precision-test-plan.jpg",
         "caption": "Staged test plan, from offline checks to supervised trials."
+      },
+      {
+        "src": "media/claude/10_precision_landing_jetson/01-precision-landing-cover.webp",
+        "caption": "Vision-based precision landing design: Jetson Nano, ArduPilot, AprilTag"
+      },
+      {
+        "src": "media/claude/10_precision_landing_jetson/02-precision-landing-architecture.webp",
+        "caption": "System architecture page"
+      },
+      {
+        "src": "media/claude/10_precision_landing_jetson/03-precision-landing-pose-estimation.webp",
+        "caption": "Pose estimation page"
+      },
+      {
+        "src": "media/claude/10_precision_landing_jetson/04-precision-landing-mavlink.webp",
+        "caption": "MAVLink LANDING_TARGET interface page"
+      },
+      {
+        "src": "media/claude/10_precision_landing_jetson/05-precision-landing-test-plan.webp",
+        "caption": "Staged test plan page"
       }
     ]
   },
@@ -529,8 +595,8 @@
       "4+1 VTOL",
       "3D-printed airframe"
     ],
-    "image": "media/upwork/cube-vtol-field.jpg",
-    "caption": "Project photograph matched to my published Upwork portfolio.",
+    "image": "media/claude/01_vtol_quadplane/01-vtol-ground-control.webp",
+    "caption": "White VTOL quadplane on grass with radio and ground-control tablet",
     "gallery": [
       {
         "src": "media/upwork/cube-vtol-field.jpg",
@@ -543,6 +609,30 @@
       {
         "src": "media/upwork/cube-vtol-avionics.jpg",
         "caption": "Avionics and power integration inside the aircraft fuselage."
+      },
+      {
+        "src": "media/claude/01_vtol_quadplane/01-vtol-ground-control.webp",
+        "caption": "White VTOL quadplane on grass with radio and ground-control tablet"
+      },
+      {
+        "src": "media/claude/01_vtol_quadplane/02-vtol-on-stand.webp",
+        "caption": "Completed VTOL quadplane on its stand"
+      },
+      {
+        "src": "media/claude/01_vtol_quadplane/03-vtol-avionics.webp",
+        "caption": "VTOL fuselage open, showing avionics and battery"
+      },
+      {
+        "src": "media/claude/01_vtol_quadplane/04-vtol-mission-planner-bench.webp",
+        "caption": "VTOL on the bench with radio and Mission Planner on a laptop"
+      },
+      {
+        "src": "media/claude/01_vtol_quadplane/05-vtol-field-ready.webp",
+        "caption": "VTOL quadplane on grass, ready for a field test"
+      },
+      {
+        "src": "media/claude/01_vtol_quadplane/06-uav-fleet.webp",
+        "caption": "Fleet of VTOLs, flying wings and quadcopters on grass"
       }
     ],
     "papers": [],
@@ -551,26 +641,31 @@
   },
   {
     "id": "drone-rover-docking",
-    "title": "Drone-to-rover docking subsystem",
+    "title": "Integrated drone-rover autonomy and docking system",
     "domain": "land",
     "category": "Land / UGV",
     "context": "Engineering development and integration",
-    "status": "Engineering development and test work",
-    "problem": "Develop a docking, locking and release subsystem connecting a UAV with a ground vehicle.",
-    "contribution": "Developed a four-actuator docking architecture, motor-driver and isolated power interfaces, and CUAV X7+ AUX/RC-PWM integration. Worked on trigger logic using MAVLink handshakes and sensors.",
-    "delivery": "A proof-of-concept docking subsystem with synchronized actuators and an integration path toward wider autonomy.",
-    "scope": "The documented result is a docking proof of concept. A fully autonomous moving-rover landing service or operational delivery system is not claimed.",
+    "status": "Integrated system development and testing",
+    "problem": "A complete aerial and ground robotic system, developed from scratch so a drone and autonomous rover can operate together and dock.",
+    "contribution": "Developed and tested the combined UAV-rover system, integrating aircraft and rover autopilots, CUAV X7, dual VESC motor control, MAVLink communication and coordinated docking. Worked on actuator synchronization, isolated power, autopilot handshakes and failsafe checks.",
+    "delivery": "An integrated, tested drone-rover platform, with the control, communications and docking subsystems developed together.",
+    "scope": "Owner-confirmed end-to-end development and system testing. The four-actuator docking mechanism and its staged integration are documented separately within the system work.",
     "tags": [
       "CUAV X7+",
       "Linear actuators",
       "MAVLink",
       "Dock / lock / release"
     ],
-    "image": "",
-    "caption": "Project photo to be added.",
-    "gallery": [],
+    "image": "media/claude/07_drone_rover_docking/01-drone-rover-docking.webp",
+    "caption": "Quadcopter landing on an autonomous ground rover",
+    "gallery": [
+      {
+        "src": "media/claude/07_drone_rover_docking/01-drone-rover-docking.webp",
+        "caption": "Quadcopter landing on an autonomous ground rover"
+      }
+    ],
     "papers": [],
-    "photo_verified": false,
+    "photo_verified": true,
     "source_url": "https://www.upwork.com/freelancers/~0120fb0eccd7bfca35",
     "work_samples": [
       {
@@ -614,6 +709,34 @@
       {
         "src": "media/upwork/rescue-controller.jpg",
         "caption": "Original project photograph, resized for the web."
+      },
+      {
+        "src": "media/claude/06_autonomous_rescue_boat_usv/01-usv-power-safety-box.webp",
+        "caption": "USV power and safety box: fuses, battery switch, shunt"
+      },
+      {
+        "src": "media/claude/06_autonomous_rescue_boat_usv/02-usv-navigation-box.webp",
+        "caption": "USV navigation and compute box"
+      },
+      {
+        "src": "media/claude/06_autonomous_rescue_boat_usv/03-usv-box-layout.webp",
+        "caption": "USV electrical box layout drawing with dimensions"
+      },
+      {
+        "src": "media/claude/06_autonomous_rescue_boat_usv/04-usv-diesel-engine.webp",
+        "caption": "Diesel engine of the rescue boat"
+      },
+      {
+        "src": "media/claude/06_autonomous_rescue_boat_usv/05-usv-actuator-diagram.webp",
+        "caption": "Throttle and rudder actuator installation diagram"
+      },
+      {
+        "src": "media/claude/06_autonomous_rescue_boat_usv/06-usv-ais-receiver.webp",
+        "caption": "em-trak AIS receiver used on the USV"
+      },
+      {
+        "src": "media/claude/06_autonomous_rescue_boat_usv/07-usv-nmea2000-engine-interface.webp",
+        "caption": "Actisense engine interface for NMEA 2000 data"
       }
     ],
     "papers": [],
@@ -655,6 +778,18 @@
       {
         "src": "media/platforms/fpv-ten-4.jpg",
         "caption": "Assembled quadcopter before field testing."
+      },
+      {
+        "src": "media/claude/03_pixhawk_quadcopters/02-10in-pixhawk6x-quad.webp",
+        "caption": "10-inch ArduCopter quad with Pixhawk 6X"
+      },
+      {
+        "src": "media/claude/03_pixhawk_quadcopters/03-10in-quads-field.webp",
+        "caption": "10-inch ArduCopter quads in the field"
+      },
+      {
+        "src": "media/claude/03_pixhawk_quadcopters/04-10in-quad-grass.webp",
+        "caption": "10-inch quad on grass before a test flight"
       }
     ],
     "papers": [],
@@ -740,12 +875,24 @@
       "4S power",
       "Angle / Horizon"
     ],
-    "image": "media/upwork/inav-fpv-preview.jpg",
-    "caption": "Project photograph matched to my published Upwork portfolio.",
+    "image": "media/claude/04_fpv_builds/01-3in-fpv-cinewhoops.webp",
+    "caption": "Two 3-inch FPV cinewhoops with radio",
     "gallery": [
       {
         "src": "media/upwork/inav-fpv-preview.jpg",
         "caption": "Faithful browser preview of my published project photograph; original local file not yet matched."
+      },
+      {
+        "src": "media/claude/04_fpv_builds/01-3in-fpv-cinewhoops.webp",
+        "caption": "Two 3-inch FPV cinewhoops with radio"
+      },
+      {
+        "src": "media/claude/04_fpv_builds/02-fpv-flight-controller.webp",
+        "caption": "FPV flight controller close-up"
+      },
+      {
+        "src": "media/claude/04_fpv_builds/03-fpv-cinewhoop.webp",
+        "caption": "FPV cinewhoop build"
       }
     ],
     "papers": [],
@@ -774,7 +921,13 @@
     "gallery": [],
     "papers": [],
     "photo_verified": false,
-    "source_url": "https://www.upwork.com/freelancers/~0120fb0eccd7bfca35"
+    "source_url": "https://www.upwork.com/freelancers/~0120fb0eccd7bfca35",
+    "work_samples": [
+      {
+        "src": "media/claude/09_simulation_sitl_gazebo/02-gazebo-plane-sitl.webp",
+        "caption": "Fixed-wing simulated in Gazebo with SITL"
+      }
+    ]
   },
   {
     "id": "tiltrotor",
@@ -811,6 +964,14 @@
       {
         "src": "media/platforms/tiltrotor-electronics.jpg",
         "caption": "Propulsion, servo, sensor and flight-controller integration."
+      },
+      {
+        "src": "media/claude/02_fixed_wing_and_3d_printed_vtol/02-3d-printed-vtol.webp",
+        "caption": "3D-printed VTOL airframe with four lift motors"
+      },
+      {
+        "src": "media/claude/02_fixed_wing_and_3d_printed_vtol/03-3d-printed-vtol-assembly.webp",
+        "caption": "3D-printed VTOL assembled on the ground"
       }
     ],
     "papers": [],

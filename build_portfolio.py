@@ -25,7 +25,7 @@ filterProjects();const oldIds=__IDS__;if((location.pathname==='/'||location.path
 def nav(pre):return f'''<a class="skip" href="#main">Skip to content</a><header class="top"><div class="wrap"><a class="brand" href="{pre}index.html">Achraf RAHIBE</a><nav aria-label="Primary"><a href="{pre}index.html">Home</a><a href="{pre}projects/">Projects</a><a href="{pre}index.html#about">About</a><a href="{pre}Achraf_Rahibe_CV.pdf">Resume</a><a href="{pre}technical-notes/">Documents</a><button class="theme" id="theme" type="button" aria-label="Toggle dark theme" aria-pressed="false">☾</button></nav></div></header>'''
 def footer(pre):return f'''<footer class="footer"><div class="wrap"><span>© 2026 Achraf RAHIBE · Engineering portfolio</span><span><a href="mailto:achrafrahibpro@gmail.com">Email</a> · <a href="https://github.com/HRAFRH" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/achraf-rahib1" target="_blank" rel="noopener">LinkedIn</a></span></div></footer><dialog class="lightbox" id="lightbox" aria-label="Project image viewer"><button id="close-lightbox" type="button">Close ×</button><img id="large-image" alt=""></dialog>'''
 def page(title,body,pre=''):
- return f'<!doctype html><html lang="en" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Achraf RAHIBE, UAV and avionics systems engineer. Aircraft, ground robotics, surface vessels, integration and technical documentation."><title>{e(title)} | Achraf RAHIBE</title><link rel="stylesheet" href="{pre}assets/site.css?v=20261026-resume11"></head><body>{nav(pre)}{body}{footer(pre)}<script src="{pre}assets/site.js?v=20261026-resume11" defer></script></body></html>'
+ return f'<!doctype html><html lang="en" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Achraf RAHIBE, UAV and avionics systems engineer. Aircraft, ground robotics, surface vessels, integration and technical documentation."><title>{e(title)} | Achraf RAHIBE</title><link rel="stylesheet" href="{pre}assets/site.css?v=20261027-platform14"></head><body>{nav(pre)}{body}{footer(pre)}<script src="{pre}assets/site.js?v=20261027-platform14" defer></script></body></html>'
 
 def reference_media(d,pre='../../'):
  refs=d.get('reference_images',[])
@@ -79,11 +79,9 @@ def icon(name):
  return '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+paths[name]+'</svg>'
 
 def skill(name,description,mark):
- logos={'Python':'python','C / C++':'cpp','Linux':'linux','Raspberry Pi':'raspberrypi','Git':'git','Photoshop':'photoshop','Illustrator':'illustrator'}
- if name in logos:
-  logo='<span class="skill-logo brand-tile"><img src="assets/logos/'+logos[name]+'.svg" alt="'+e(name)+' logo" loading="lazy"></span>'
- else:
-  logo=''
+ logos={'Python':'python','C / C++':'cpp','Linux':'linux','Raspberry Pi':'raspberrypi','Git':'git','Photoshop':'photoshop','Illustrator':'illustrator','Onshape':'onshape','AutoCAD Electrical':'autocad','Gazebo / SITL':'gazebo','Gmsh':'engineering-layers','STM32':'stmicroelectronics','ESP32 / Arduino':'arduino','Jetson Nano / Orin Nano':'nvidia','KiCad / Altium':'kicad','ArduPilot':'ardupilot','PX4':'engineering-plane','Mission Planner':'missionplanner','QGroundControl':'qgroundcontrol','INAV / Betaflight':'engineering-plane','MAVLink / DroneCAN':'engineering-radio','YOLOv8 / ByteTrack':'yolo','RTSP / GStreamer':'gstreamer','A8C / GNSS / RTK':'engineering-camera'}
+ filename=logos.get(name,'engineering-'+mark)+'.svg'
+ logo='<span class="skill-logo brand-tile"><img src="assets/logos/'+filename+'" alt="'+e(name)+' icon" loading="lazy"></span>'
  return '<div class="skill-item">'+logo+'<div><strong>'+e(name)+'</strong><small>'+e(description)+'</small></div></div>'
 
 def skill_group(title,items):

@@ -3,7 +3,7 @@
     "id": "aircraft",
     "title": "VTOL & fixed-wing aircraft",
     "domain": "air",
-    "lead": "Airframe development, avionics integration and flight-control work across QuadPlane, tiltrotor and fixed-wing platforms.",
+    "lead": "Fixed-wing, QuadPlane and tiltrotor development, from V-tail, pusher and twin-motor airframes through propulsion integration, SITL, real flight tests and missions.",
     "cover": "media/platforms/aircraft-fleet.jpg",
     "caption": "Aircraft from my project collection. Individual builds and development stages are documented below.",
     "members": [
@@ -38,7 +38,7 @@
     "id": "rotorcraft",
     "title": "Multirotor & helicopter systems",
     "domain": "air",
-    "lead": "Aircraft assembly, component selection, autopilot configuration and stability investigations, from FPV quadcopters to heavy-lift platforms.",
+    "lead": "FPV, cinewhoop, quadcopter and heavy-lift work across 2 to 42-inch platforms, covering propulsion, integration, calibration, tuning and missions, alongside helicopter diagnostics.",
     "cover": "media/platforms/fpv-ten-2.jpg",
     "caption": "Original 10-inch FPV quadcopter project photograph.",
     "members": [
@@ -77,9 +77,9 @@
     "id": "ground-systems",
     "title": "Ground robotics & UAV docking",
     "domain": "land",
-    "lead": "Rover motor-control integration and a docking subsystem linking an aircraft with a ground platform.",
-    "cover": "media/platforms/docking-rover-wiring.jpg",
-    "caption": "Rover wiring architecture published with the docking project. This is a system diagram.",
+    "lead": "Complete drone-rover system development and testing, combining aerial and ground autopilots, motor control, communications, docking and failsafe behaviour.",
+    "cover": "media/claude/07_drone_rover_docking/01-drone-rover-docking.webp",
+    "caption": "Original project photograph of a quadcopter approaching the autonomous rover docking platform.",
     "members": [
       "drone-rover-docking",
       "rover"
