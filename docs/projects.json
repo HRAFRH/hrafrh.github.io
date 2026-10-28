@@ -91,36 +91,76 @@
     "status": "Mission and interface integration",
     "problem": "Fixed-wing aircraft development across V-tail, pusher and twin-motor conventional-tail configurations, connecting airframe design with autonomous missions.",
     "delivery": "Integrated aircraft configurations, simulation workflows, autonomous mission setup and field-test support.",
-    "scope": "The 4 kg payload figure describes the project use case.",
-    "contribution": "Designed and integrated airframe, propulsion and avionics interfaces, including differential-thrust configurations. Used Gazebo/SITL for mission and autopilot checks before real-world flight tests, mission planning and DJI O4 Pro camera/goggle integration.",
-    "image": "media/claude/02_fixed_wing_and_3d_printed_vtol/01-talon-fixed-wing.webp",
-    "caption": "White Talon-style fixed-wing UAV on grass",
+    "scope": "The photographs document my printing, assembly and avionics integration of Titan Dynamics Tornado V2 airframes. The 3% infill and single-wall ABS settings describe my build configuration; structural strength is not quantified here. The flight-review illustration is location-redacted and is not a source of geographic or quantitative flight data.",
+    "contribution": "Built and integrated multiple fixed-wing configurations, connecting airframe fabrication, propulsion and avionics with simulation, flight tests and autonomous mission setup. The Tornado V2 examples use the Titan Dynamics airframe design: I printed and assembled the structures, integrated Pixhawk 6C avionics and twin-pusher propulsion, and worked on configuration, control-surface checks and log review. Other work includes V-tail, pusher and twin-motor conventional-tail layouts, differential thrust, Gazebo/SITL checks and FPV interfaces.",
+    "image": "media/fixed-wing-build/tornado-twin-pusher.webp",
+    "caption": "Tornado V2 twin-pusher fixed-wing aircraft, with two propulsion motors and a conventional tail.",
     "domain": "air",
     "tags": [
       "Pixhawk 6C / 6X",
+      "ArduPlane 4.6.3",
+      "Twin-pusher propulsion",
+      "Differential thrust",
+      "ABS FDM printing",
       "Mission Planner",
-      "Payload interfaces"
+      "Gazebo / SITL"
     ],
     "gallery": [
       {
-        "src": "assets/fixed-wing.jpg",
-        "caption": "Platform context from the supplied project collection; no performance metric is implied."
+        "src": "media/fixed-wing-build/tornado-twin-pusher.webp",
+        "caption": "Tornado V2 twin-pusher fixed-wing aircraft, with two propulsion motors and a conventional tail."
       },
       {
-        "src": "assets/air-field.jpg",
-        "caption": "Fixed-wing platform in a field-test context."
+        "src": "media/fixed-wing-build/tornado-front.webp",
+        "caption": "Completed twin-pusher airframe during field preparation."
       },
       {
-        "src": "media/claude/02_fixed_wing_and_3d_printed_vtol/01-talon-fixed-wing.webp",
-        "caption": "White Talon-style fixed-wing UAV on grass"
+        "src": "media/fixed-wing-build/tornado-rear.webp",
+        "caption": "Rear-quarter view showing the twin propulsion arrangement and conventional tail."
       },
       {
-        "src": "media/claude/02_fixed_wing_and_3d_printed_vtol/04-fixed-wing-fleet.webp",
-        "caption": "Several fixed-wing UAVs lined up on grass"
+        "src": "media/fixed-wing-build/tornado-avionics.webp",
+        "caption": "Open fuselage during Pixhawk 6C, power and navigation integration."
+      },
+      {
+        "src": "media/fixed-wing-build/tornado-wiring.webp",
+        "caption": "Flight-controller wiring and internal avionics installation."
+      },
+      {
+        "src": "media/fixed-wing-build/printed-airframe-parts.webp",
+        "caption": "Printed wing, fuselage and tail sections laid out before assembly."
+      },
+      {
+        "src": "media/fixed-wing-build/wing-sections-printing.webp",
+        "caption": "Lightweight wing sections during FDM printing."
+      },
+      {
+        "src": "media/fixed-wing-build/fuselage-printing.webp",
+        "caption": "Fuselage section during FDM printing."
+      },
+      {
+        "src": "media/fixed-wing-build/airframe-assembly.webp",
+        "caption": "Assembly-stage view of printed fixed-wing airframes and workshop equipment."
+      },
+      {
+        "src": "media/fixed-wing-build/tornado-complete.webp",
+        "caption": "Assembled Tornado V2 airframe showing propulsion and onboard interfaces."
+      },
+      {
+        "src": "media/fixed-wing-build/flight-review-location-redacted.png",
+        "caption": "Location-redacted flight-review illustration. AI-assisted editing removes the satellite map and identifiers; this visual is not a source of precise trajectory or performance measurements."
       }
     ],
     "papers": [],
-    "photo_verified": true
+    "photo_verified": true,
+    "build_profile": {
+      "airframe": "Titan Dynamics Tornado V2",
+      "material": "ABS",
+      "infill": "3%",
+      "walls": "1 perimeter",
+      "configuration": "Twin-pusher fixed-wing",
+      "autopilot": "Pixhawk 6C / ArduPlane 4.6.3"
+    }
   },
   {
     "id": "vtol",
@@ -637,11 +677,42 @@
       {
         "src": "media/claude/01_vtol_quadplane/06-uav-fleet.webp",
         "caption": "Fleet of VTOLs, flying wings and quadcopters on grass"
+      },
+      {
+        "src": "media/fixed-wing-build/quadplane-workshop.webp",
+        "caption": "4+1 QuadPlane airframes and components in the workshop."
+      },
+      {
+        "src": "media/fixed-wing-build/quadplane-field.webp",
+        "caption": "Four-lift-motor QuadPlane during field preparation."
+      },
+      {
+        "src": "media/fixed-wing-build/quadplane-bench.webp",
+        "caption": "QuadPlane assembly and propulsion integration on the bench."
+      },
+      {
+        "src": "assets/fixed-wing.jpg",
+        "caption": "4+1 QuadPlane aircraft from the supplied project collection."
+      },
+      {
+        "src": "assets/air-field.jpg",
+        "caption": "4+1 QuadPlane aircraft from the supplied project collection."
+      },
+      {
+        "src": "media/claude/02_fixed_wing_and_3d_printed_vtol/01-talon-fixed-wing.webp",
+        "caption": "4+1 QuadPlane aircraft from the supplied project collection."
       }
     ],
     "papers": [],
     "photo_verified": true,
-    "source_url": "https://www.upwork.com/freelancers/~0120fb0eccd7bfca35"
+    "source_url": "https://www.upwork.com/freelancers/~0120fb0eccd7bfca35",
+    "build_profile": {
+      "configuration": "Four lift motors plus forward propulsion",
+      "material": "ABS",
+      "infill": "3%",
+      "walls": "1 perimeter",
+      "note": "Owner-reported printing configuration for the shown airframe builds; not a universal strength rating."
+    }
   },
   {
     "id": "drone-rover-docking",

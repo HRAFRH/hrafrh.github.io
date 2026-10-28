@@ -2,20 +2,24 @@
   {
     "id": "fixed-wing-from-airframe-to-mission",
     "case": "fixed-wing",
-    "title": "Taking a fixed-wing aircraft from airframe to mission",
-    "intro": "Different airframes require different integration decisions, even when they share an autopilot.",
+    "title": "Printing and integrating a twin-pusher fixed-wing aircraft",
+    "intro": "Tornado V2 airframe fabrication, Pixhawk 6C integration and the checks behind field testing.",
     "sections": [
       [
-        "The challenge: configuration is a system decision",
-        "My fixed-wing work spans V-tail, pusher and twin-motor layouts. The work begins with the aircraft as a whole: its structure, propulsion arrangement, control surfaces and the interfaces needed for the intended mission. Reusing a parameter file is only a starting point when the mechanical layout and propulsion change."
+        "Start with the airframe and its interfaces",
+        "For these builds I used the Titan Dynamics Tornado V2 airframe design. My work covered printing and assembly, propulsion and avionics integration, configuration and testing. The two pusher motors and conventional tail distinguish this aircraft from the four-lift-motor QuadPlanes elsewhere in the portfolio."
       ],
       [
-        "Connecting design and flight controls",
-        "I worked on airframe, propulsion and avionics integration, including differential-thrust configurations. Gazebo and software-in-the-loop gave me a way to examine mission and autopilot behaviour before moving into physical flight testing. I also connected mission planning with camera and operator-view requirements, including DJI O4 Pro integration."
+        "Balance printing weight with build practicality",
+        "I printed the shown airframe builds in ABS using 3% infill and one perimeter. Those were my lightweight fabrication settings for this build, rather than a universal strength recommendation. The photographs follow the work from wing and fuselage sections on the printer to laid-out parts and assembled aircraft."
       ],
       [
-        "What the work delivered",
-        "The outcome was integrated aircraft configurations, simulation workflows, autonomous mission setup and field-test support. These were different development configurations rather than one aircraft with every feature. The project page brings their engineering scope and existing photographs together; more build-specific images can be added as the collection grows."
+        "Connect propulsion, surfaces and avionics",
+        "I integrated the Pixhawk 6C, twin propulsion paths, navigation and onboard wiring. The supplied technical material identifies ArduPlane 4.6.3 and a twin-pusher control-surface checklist. The integration work included surface directions, stabilization response and differential-thrust behaviour, with configuration and log review linked to the next checks."
+      ],
+      [
+        "Keep the public evidence useful",
+        "The open-fuselage views show the hardware integration, while the assembled aircraft images show the finished build stages. The log-review visual has its satellite map and identifying information removed. It provides illustrative review context, not exact flight-path or performance data."
       ]
     ]
   },
