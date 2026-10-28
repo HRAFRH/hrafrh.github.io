@@ -2,7 +2,7 @@
 
 [Visit the portfolio](https://hrafrh.github.io/)
 
-Five platform portfolios present UAV and avionics engineering across VTOL and fixed-wing aircraft, rotorcraft, ground robotics, surface vessels and machine vision. The 35 detailed records sit inside these main portfolios, with modeling, fabrication, wiring, configuration, analysis and testing presented in context.
+Sixteen individual aircraft and system projects are visible directly on the homepage and Projects page. The 35 detailed records and five platform collections remain accessible. The blog contains 24 project stories with documented challenges, contributions and validation.
 
 ## Maintain the site
 
@@ -17,3 +17,5 @@ Blog entries are maintained in the generator and content/additional-blog.json. R
 Photographs, technical illustrations and edited report samples are labeled according to their role. Private conversations, raw flight logs, restricted reports, credentials, client costs and private source files are excluded. Client identities are omitted from the project narratives.
 
 The visual direction is inspired by https://nikoweaver.github.io/. Project descriptions and supplied photographs relate to Achraf's own work. Software logos retain their owners' trademarks; sources are recorded in docs/assets/logos/ATTRIBUTION.txt.
+
+The final build step, build_project_showcase.py, maintains the individual project presentation. New stories are in content/project-stories.json. Add matching project images to the existing records without replacing confidential-vessel reference labels.

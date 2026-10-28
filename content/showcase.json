@@ -1,0 +1,39 @@
+{
+  "main_projects": [
+    "fixed-wing",
+    "vtol",
+    "cube-vtol",
+    "tiltrotor",
+    "talon-vtol",
+    "helicopter",
+    "heavy-lift",
+    "multirotor",
+    "fpv-10",
+    "inav-fpv",
+    "s500",
+    "drone-rover-docking",
+    "usv",
+    "rescue-usv",
+    "hybrid-wheeled-uav",
+    "vision"
+  ],
+  "titles": {
+    "fixed-wing": "Fixed-wing UAV development",
+    "vtol": "Flying-wing VTOL",
+    "cube-vtol": "2.2 m Cube Orange QuadPlane",
+    "tiltrotor": "3D-printed tiltrotor VTOL",
+    "talon-vtol": "Micro Talon VTOL conversion",
+    "helicopter": "Single-rotor helicopter",
+    "heavy-lift": "Heavy-lift multirotors",
+    "multirotor": "Pixhawk multirotor development",
+    "fpv-10": "10-inch autonomous FPV quadcopter",
+    "inav-fpv": "3-inch INAV FPV aircraft",
+    "s500": "S500 sensor-equipped quadcopter",
+    "drone-rover-docking": "Drone-to-rover docking system",
+    "usv": "Twin-waterjet unmanned surface vehicle",
+    "rescue-usv": "Autonomous rescue-boat integration",
+    "hybrid-wheeled-uav": "Hybrid aircraft and ground-drive system",
+    "vision": "Embedded vision and camera payloads"
+  },
+  "story_count": 24
+}

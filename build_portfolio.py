@@ -243,3 +243,6 @@ exec((ROOT/"build_collections.py").read_text(encoding="utf-8"))
 exec((ROOT/"build_resume_journal.py").read_text(encoding="utf-8"))
 
 exec((ROOT/"build_document_library.py").read_text(encoding="utf-8"))
+
+# Individual project cards and expanded project stories.
+exec((ROOT/"build_project_showcase.py").read_text(encoding="utf-8"))

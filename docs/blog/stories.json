@@ -1,0 +1,482 @@
+[
+  {
+    "id": "fixed-wing-from-airframe-to-mission",
+    "case": "fixed-wing",
+    "title": "Taking a fixed-wing aircraft from airframe to mission",
+    "intro": "Different airframes require different integration decisions, even when they share an autopilot.",
+    "sections": [
+      [
+        "The challenge: configuration is a system decision",
+        "My fixed-wing work spans V-tail, pusher and twin-motor layouts. The work begins with the aircraft as a whole: its structure, propulsion arrangement, control surfaces and the interfaces needed for the intended mission. Reusing a parameter file is only a starting point when the mechanical layout and propulsion change."
+      ],
+      [
+        "Connecting design and flight controls",
+        "I worked on airframe, propulsion and avionics integration, including differential-thrust configurations. Gazebo and software-in-the-loop gave me a way to examine mission and autopilot behaviour before moving into physical flight testing. I also connected mission planning with camera and operator-view requirements, including DJI O4 Pro integration."
+      ],
+      [
+        "What the work delivered",
+        "The outcome was integrated aircraft configurations, simulation workflows, autonomous mission setup and field-test support. These were different development configurations rather than one aircraft with every feature. The project page brings their engineering scope and existing photographs together; more build-specific images can be added as the collection grows."
+      ]
+    ]
+  },
+  {
+    "id": "quadplane-bench-to-field",
+    "case": "cube-vtol",
+    "title": "Building a 2.2 m QuadPlane as one connected system",
+    "intro": "Lift propulsion, cruise propulsion and avionics had to work together before field testing.",
+    "sections": [
+      [
+        "The challenge: two flight regimes, one aircraft",
+        "The Cube Orange QuadPlane combined four lift motors with separate forward propulsion. That made the integration broader than mounting a flight controller. Airframe assembly, power distribution, control electronics and radio links all had to fit into one testable aircraft."
+      ],
+      [
+        "Working through the integration sequence",
+        "I integrated the structural components, propulsion, autopilot electronics, GNSS, RC and telemetry, then worked through sensor calibration and configuration. ArduPilot and PX4 workflows formed part of the development work. Bench checks established a baseline before control tuning, transition work and mission testing in the field."
+      ],
+      [
+        "The result and the next evidence",
+        "The delivered work included an assembled aircraft and an iterative sequence of configuration and field tests. Existing photographs show the fuselage integration, bench setup and aircraft in the field. I keep those stages visible because they explain the engineering behind the aircraft without turning a photograph into a performance claim."
+      ]
+    ]
+  },
+  {
+    "id": "printed-tiltrotor-build",
+    "case": "tiltrotor",
+    "title": "From printed structures to a tiltrotor test platform",
+    "intro": "A V-tail tricopter VTOL brought mechanical assembly and flight-control configuration into the same development loop.",
+    "sections": [
+      [
+        "The challenge: connect the moving mechanisms",
+        "A tiltrotor adds a mechanical interface to the control problem. The structure, propulsion units, servos and sensors have to work as a coordinated system. My work covered printed components and assembly as well as the electronics and autopilot setup."
+      ],
+      [
+        "Use a matching test configuration",
+        "I integrated the propulsion, servos and sensors and worked with Pixhawk-family and SpeedyBee ArduPilot configurations. A matching tricopter setup helped investigate settings before wider VTOL testing. This kept configuration work tied to the actual propulsion arrangement rather than treating the aircraft as a generic multirotor."
+      ],
+      [
+        "What reached testing",
+        "The project record includes assembly, hovering and maiden-test material, alongside mission-planning and configuration work. The photographs and system overview show the development stages. They describe a working development effort, with test scope kept separate from any claim of production qualification."
+      ]
+    ]
+  },
+  {
+    "id": "micro-talon-vtol-conversion",
+    "case": "talon-vtol",
+    "title": "Giving a Micro Talon vertical takeoff capability",
+    "intro": "The conversion linked new lift hardware to the fixed-wing aircraft's existing cruise role.",
+    "sections": [
+      [
+        "The challenge: add lift without losing the aircraft",
+        "Converting a fixed-wing airframe into a QuadPlane changes its mechanical and electrical interfaces. Four lift motors need mounting, power and control, while forward propulsion and the original flight surfaces remain part of the aircraft."
+      ],
+      [
+        "Build, configure and check the handoff",
+        "I produced mounting parts, integrated the lift propulsion and electronics, and configured the SpeedyBee F405 WING Mini with ArduPlane. Calibration, hover modes, transition parameters and mission setup were part of the same integration sequence."
+      ],
+      [
+        "The recorded result",
+        "The project includes a physical VTOL conversion and a documented flight-test sequence, including an initial QStabilize takeoff and landing. That is the validation I show. Wider transition reliability is a separate question and is not inferred from a single successful takeoff."
+      ]
+    ]
+  },
+  {
+    "id": "ten-inch-fpv-mission-build",
+    "case": "fpv-10",
+    "title": "Building a 10-inch FPV aircraft for assisted flight and missions",
+    "intro": "Propulsion, power, flight controls and failsafes were developed as a complete aircraft.",
+    "sections": [
+      [
+        "The challenge: go beyond a frame and motors",
+        "The 6S quadcopter needed to support manual handling, assisted flight and waypoint missions. The component choices and electrical integration therefore had to serve both the aircraft's propulsion demands and its autopilot functions."
+      ],
+      [
+        "Connect hardware to behaviour",
+        "I selected propulsion and power components, integrated Pixhawk 6X and sensors, and completed wiring and calibration. I then worked on flight modes, mission setup, failsafes and PID tuning. This joined the bench integration to the behaviour that would be checked in the field."
+      ],
+      [
+        "What was tested",
+        "The documented work includes assisted-flight and mission testing, plus approximately 2 kg payload testing for this development configuration. Bench and field images show the aircraft at different stages. Those checks belong to this build and are not a payload guarantee for every 10-inch aircraft."
+      ]
+    ]
+  },
+  {
+    "id": "compact-inav-fpv-build",
+    "case": "inav-fpv",
+    "title": "Making a compact INAV FPV build ready for flight",
+    "intro": "A 3-inch platform connected power, radio control and firmware setup in a small airframe.",
+    "sections": [
+      [
+        "The challenge: small aircraft still need full integration",
+        "Compact FPV aircraft leave little room for poor component placement or unclear wiring. This project brought together a 4S power system, flight-control electronics and ExpressLRS radio control within a small frame."
+      ],
+      [
+        "Bring the interfaces into one setup",
+        "I worked through the wiring, firmware configuration and control setup, including Angle and Horizon mode tuning. The objective was a coherent stabilized FPV configuration, with radio and flight-control behaviour checked together."
+      ],
+      [
+        "The delivered scope",
+        "The project record includes the build, documented wiring and flight-validation work for stabilized FPV flying. Its role is different from the autonomous mission platforms elsewhere in the portfolio. Keeping it separate makes the compact-aircraft integration work easier to see."
+      ]
+    ]
+  },
+  {
+    "id": "s500-integration-baseline",
+    "case": "s500",
+    "title": "Establishing an S500 autopilot and sensor baseline",
+    "intro": "A sensor-equipped quadcopter connected propulsion, navigation and telemetry before stability checks.",
+    "sections": [
+      [
+        "The challenge: make the integration observable",
+        "A development aircraft needs more than a powered flight controller. GNSS, telemetry and calibrated sensors are part of understanding what the vehicle is doing and preparing useful tests."
+      ],
+      [
+        "Build the baseline",
+        "I integrated Pixhawk 6X, GNSS, telemetry and propulsion interfaces on the S500, completed calibration and parameter setup, and worked on flight-stability checks. The focus was to bring these elements into one configured development platform."
+      ],
+      [
+        "What the project shows",
+        "The delivered work is the S500 hardware integration, sensor calibration and development testing. The current image documents the avionics setup. Additional photographs can extend the build record without changing the scope of the work already described."
+      ]
+    ]
+  },
+  {
+    "id": "lidar-delay-investigation",
+    "case": "lidar-avoidance",
+    "title": "Finding where a LiDAR proximity pipeline was delayed",
+    "intro": "Sensor output, autopilot input and the ground-station display needed to be examined separately.",
+    "sections": [
+      [
+        "The challenge: a delayed display is not a diagnosis",
+        "The integration connected a Unitree L2 LiDAR pipeline to ArduPilot through companion computing. Proximity information appeared delayed, but the visible symptom alone could not establish whether the delay came from sensing, transport, autopilot input or display rendering."
+      ],
+      [
+        "Trace the data path",
+        "I reviewed the ROS 2 and MAVROS path into MAVLink OBSTACLE_DISTANCE, together with serial mapping and proximity settings. I separated sensor-to-autopilot latency from ground-station rendering and proposed ground checks to examine the interfaces and timing."
+      ],
+      [
+        "An actionable investigation",
+        "The output was an integration findings report with validation steps. It narrowed the questions for the next checks instead of treating an unverified tuning change as a complete solution. The public report excerpts show the approach; universal obstacle-avoidance performance is not claimed."
+      ]
+    ]
+  },
+  {
+    "id": "hybrid-uav-ground-drive",
+    "case": "hybrid-wheeled-uav",
+    "title": "Commissioning the ground-drive stage of a hybrid aircraft",
+    "intro": "The wheeled-aircraft project required its own motor-control and safety baseline.",
+    "sections": [
+      [
+        "The challenge: separate the two operating modes",
+        "An aircraft that can drive on wheels brings different control paths into one platform. This engagement focused on the ground unit before the later flight-and-drive merge. It is a separate project from the drone landing on a rover."
+      ],
+      [
+        "Make ground commands explicit",
+        "I integrated the CUAV X7+ ArduRover baseline, dual VESC motor paths, skid-steer mixing and RC safety gating. The work connected the operator commands and autopilot configuration to the wheel-drive interfaces."
+      ],
+      [
+        "The delivered milestone",
+        "I documented the ground-control behaviour, setup and next integration steps in a commissioning report. The ground milestone is the completed delivery shown here. Combining wheel operation with flight was a later stage, so I do not present it as a finished hybrid-flight result."
+      ]
+    ]
+  },
+  {
+    "id": "vision-payload-integration",
+    "case": "vision",
+    "title": "Connecting perception to a usable vehicle payload",
+    "intro": "Detection, camera control and video transport belong to the same integration problem.",
+    "sections": [
+      [
+        "The challenge: make the output useful to the vehicle and operator",
+        "A detection model by itself is not a complete payload. The camera stream, companion computer, tracking workflow and gimbal or platform interface all have to connect. My work covered those interfaces across embedded vehicle applications."
+      ],
+      [
+        "Join compute, camera and transport",
+        "I integrated Jetson and Raspberry Pi companion computing, YOLOv8 and ByteTrack workflows, and camera or gimbal interfaces with RTSP and GStreamer video transport. On the USV work, Jetson Nano and an A8C gimbal connected first-person video and AI-detection workflows with operator visibility."
+      ],
+      [
+        "The delivered work",
+        "The contribution was integration of perception, video and platform interfaces. The project is presented as an embedded payload workflow rather than an unsupported accuracy or autonomy claim. Its supporting images provide the hardware context, with room for more application-specific material."
+      ]
+    ]
+  },
+  {
+    "id": "quadplane-stability",
+    "case": "vtol",
+    "title": "Investigating stability on a flying-wing QuadPlane",
+    "intro": "Configuration review, vibration analysis and flight-trial support for a 4+1 VTOL aircraft.",
+    "sections": [
+      [
+        "Start with the configuration",
+        "This engagement began with an unstable flying-wing QuadPlane. I rebuilt and reviewed the Pixhawk 6C and ArduPlane setup, including motor and servo assignments, calibration and QuadPlane settings."
+      ],
+      [
+        "Read the response, not just the settings",
+        "I reviewed attitude tracking, IMU clipping, vibration and FFT data to connect the reported behaviour with the recorded response. That analysis informed configuration corrections and PID-tuning support."
+      ],
+      [
+        "Close the loop with the client",
+        "The delivery combined a technical report, troubleshooting guidance and remote support for successful client flight trials. The work covered configuration and diagnostics; the client carried out the physical tests."
+      ]
+    ]
+  },
+  {
+    "id": "helicopter-log-review",
+    "case": "helicopter",
+    "title": "From helicopter logs to the next test plan",
+    "intro": "Reviewing configuration, vibration and estimator behaviour without overstating the validation reached.",
+    "sections": [
+      [
+        "Separate the symptoms",
+        "The supplied logs raised questions around position drift, altitude and yaw tracking. I reviewed swashplate and servo mapping, governor and RPM behaviour, motor interlock, failsafes, yaw response and power-bus data."
+      ],
+      [
+        "Connect the subsystems",
+        "The diagnostic work also covered vibration and notch filtering, external INS and EKF3 configuration, and rangefinder settings. Each finding needed to connect a recorded symptom with a check or corrective recommendation."
+      ],
+      [
+        "State the test boundary",
+        "The latest supplied evidence supported a static run-up review and recommendations for further hover testing. I documented findings and acceptance criteria for subsequent tests. This is not a claim of a completed post-fix flight campaign."
+      ]
+    ]
+  },
+  {
+    "id": "fixed-wing-workshop-package",
+    "case": "fixed-wing-design",
+    "title": "Turning a fixed-wing concept into a workshop package",
+    "intro": "Organizing airframe geometry, interfaces and fabrication information so that a concept can progress toward a build.",
+    "sections": [
+      [
+        "Design around the build approach",
+        "The study developed a modular twin-tractor fixed-wing concept using accessible foam structures and tube reinforcement. I prepared parametric geometry, mechanical interfaces and assembly information around that approach."
+      ],
+      [
+        "Make the handoff usable",
+        "The package included foam-cutting templates, CNC part information, tube-stock planning, assembly views, part lists and printable workshop guides. The aim was to connect the CAD model to an understandable build sequence."
+      ],
+      [
+        "Keep preparation distinct from validation",
+        "The delivered checks were CAD and preparation checks. Physical structural validation, final equipment fits and flight testing remain separate activities. No manufactured aircraft or flight result is implied by the documentation package."
+      ]
+    ]
+  },
+  {
+    "id": "vision-to-landing-target",
+    "case": "precision-landing",
+    "title": "From camera detections to a landing-target interface",
+    "intro": "Planning a Jetson Nano and AprilTag precision-landing proof of concept.",
+    "sections": [
+      [
+        "Define each coordinate frame",
+        "The proposal connected tag detection and pose estimation to a flight-controller interface. Camera calibration, target dimensions and coordinate transforms were explicit parts of the architecture, because a detected marker alone is not a usable control input."
+      ],
+      [
+        "Design the handoff",
+        "I documented the MAVLink integration path, setup requirements and acceptance criteria. The accompanying illustrations show the proposed data path, pose-estimation checks and staged test plan."
+      ],
+      [
+        "Verify in stages",
+        "This delivery was an architecture and implementation proposal. It did not establish completed hardware integration or flight validation. The test plan separates offline review, bench work and supervised trials."
+      ]
+    ]
+  },
+  {
+    "id": "rover-motor-interfaces",
+    "case": "rover",
+    "title": "Connecting an autopilot to rover motor control",
+    "intro": "CUAV X7, dual VESC and ArduRover integration.",
+    "sections": [
+      [
+        "Connect the control chain",
+        "My work linked the CUAV X7 autopilot, ArduRover configuration and dual VESC motor-control interfaces. The focus was the path between commanded vehicle motion and the motor controllers."
+      ],
+      [
+        "Keep the system view",
+        "Motor control also depends on the communication and configuration around it. I worked on those interfaces alongside broader coordination and docking concepts."
+      ],
+      [
+        "Identify the delivered scope",
+        "The delivered work covered motor-control integration and platform configuration. Docking and coordination remained concept work, rather than an operational autonomous service."
+      ]
+    ]
+  },
+  {
+    "id": "docking-actuator-interfaces",
+    "case": "drone-rover-docking",
+    "title": "Building the interfaces for a drone-to-rover dock",
+    "intro": "Actuators, isolated power and autopilot trigger logic.",
+    "sections": [
+      [
+        "Start at the mechanism",
+        "The docking architecture used four synchronized actuators. I developed the motor-driver and isolated power interfaces needed to connect that mechanism to the rest of the system."
+      ],
+      [
+        "Connect the trigger logic",
+        "The integration path combined CUAV X7+ AUX and RC-PWM interfaces with sensor inputs and MAVLink handshakes. This made the control handoff an explicit part of the proof of concept."
+      ],
+      [
+        "Separate the dock from full autonomy",
+        "The result was a docking proof of concept and an integration path. It was not evidence of an autonomous moving-rover landing or delivery service."
+      ]
+    ]
+  },
+  {
+    "id": "rescue-vessel-control-chain",
+    "case": "rescue-usv",
+    "title": "Mapping the control chain of a rescue vessel",
+    "intro": "System architecture, engine interfaces and navigation planning.",
+    "sections": [
+      [
+        "Work across vessel subsystems",
+        "I prepared the architecture and BOM around rudder and throttle control, power, safety equipment and navigation. The work included CUAV V6X and ArduRover configuration planning."
+      ],
+      [
+        "Make interfaces visible",
+        "The documentation specified RTK, AIS, NMEA2000, companion compute and communications interfaces. Original engine, rudder and controller photographs provide physical context for the integration work."
+      ],
+      [
+        "Describe the evidence accurately",
+        "The engagement supports design, documentation and integration responsibilities. It does not establish measured sea-trial performance, a certified autonomy level or an operational rescue deployment."
+      ]
+    ]
+  },
+  {
+    "id": "fpv-build-planning",
+    "case": "bom",
+    "title": "Planning a repeatable FPV workshop",
+    "intro": "Component compatibility, supplier research and build quantities.",
+    "sections": [
+      [
+        "Plan more than one aircraft",
+        "I prepared equipment and component plans for 3-inch, 5-inch and 7-inch FPV configurations. Each configuration needed a coherent set of parts rather than a list of individually attractive components."
+      ],
+      [
+        "Organize the handoff",
+        "Four structured workbooks covered workshop equipment and the three aircraft configurations. They organized component options, compatibility questions, supplier research and production quantities."
+      ],
+      [
+        "Keep planning distinct from assembly",
+        "The verified delivery was the planning and documentation package. It does not imply that every item was procured or every planned configuration assembled."
+      ]
+    ]
+  },
+  {
+    "id": "baseboard-design-handoff",
+    "case": "baseboard-review",
+    "title": "Making a baseboard review actionable",
+    "intro": "Connectivity, interfaces and the source assets needed for handoff.",
+    "sections": [
+      [
+        "Review connections together",
+        "I reviewed schematic and PCB connectivity, interface routing, power questions and connectors with the engineer. The contribution was review and coordination around the design."
+      ],
+      [
+        "Track the missing assets",
+        "The handoff checklist also covered libraries, footprints and connector 3D models. Those source assets mattered to making the project portable and the correction list usable."
+      ],
+      [
+        "Keep ownership precise",
+        "This was engineering review and coordination. Sole PCB design ownership, board manufacture and successful bring-up are not claimed."
+      ]
+    ]
+  },
+  {
+    "id": "fixed-wing-simulation-workflow",
+    "case": "mini-talon-simulation",
+    "title": "Testing a fixed-wing mission in simulation",
+    "intro": "Mini Talon, Gazebo, ArduPlane and QGroundControl.",
+    "sections": [
+      [
+        "Set up the virtual aircraft",
+        "I configured the Mini Talon model and a virtual runway in Gazebo. The simulation connected to ArduPlane and QGroundControl so the aircraft model and mission workflow could be considered together."
+      ],
+      [
+        "Prepare the mission",
+        "The work included AUTO-mode waypoint missions and parameter checks. This provided a repeatable environment for examining mission preparation before physical flight work."
+      ],
+      [
+        "Keep simulation results in context",
+        "The delivery was a simulation and mission-testing workflow. A successful simulated mission is not physical flight-test evidence."
+      ]
+    ]
+  },
+  {
+    "id": "surface-vessel-system-tradeoffs",
+    "case": "usv-system-study",
+    "title": "Comparing surface-vessel system choices",
+    "intro": "Propulsion, control interfaces and equipment planning.",
+    "sections": [
+      [
+        "Compare the whole system",
+        "I compared propulsion and control-system options while organizing equipment interfaces. The goal was to develop a coherent preliminary system study."
+      ],
+      [
+        "Make the planning usable",
+        "Supplier-linked material, an equipment comparison, a planning cost model and a technical presentation supported the handoff. Vessel equipment was kept distinct from reusable workshop and test tools."
+      ],
+      [
+        "Preserve the project boundary",
+        "This was concept and planning work. It was separate from the twin-waterjet electronics integration project and did not establish a constructed or commissioned vessel."
+      ]
+    ]
+  },
+  {
+    "id": "altitude-diagnostic-boundaries",
+    "case": "gps-denied-altitude",
+    "title": "Investigating altitude without GPS",
+    "intro": "Log analysis, interface discussion and comparative tuning.",
+    "sections": [
+      [
+        "Review the observed behaviour",
+        "I provided log-analysis and configuration support, with comparative Pixhawk-based tuning experiments to inform the troubleshooting discussion."
+      ],
+      [
+        "Discuss the interface",
+        "The work considered Raspberry Pi and barometric-data interface options. The client implemented the custom firmware and reported bench operation of the virtual barometer."
+      ],
+      [
+        "Attribute the implementation correctly",
+        "My contribution was diagnostic support, configuration guidance and test observations. The client firmware implementation and a final flight-validation campaign are not claimed as my work."
+      ]
+    ]
+  },
+  {
+    "id": "heavy-lift-log-review",
+    "case": "heavy-lift",
+    "title": "Reading the response of a heavy-lift multirotor",
+    "intro": "Remote analysis and live flight-test discussions.",
+    "sections": [
+      [
+        "Look across the recorded response",
+        "I reviewed PID and rate tracking alongside motor imbalance, vibration, clipping, estimator and compass faults, GPS behaviour and battery response. The work connected symptoms across the aircraft systems."
+      ],
+      [
+        "Support the next test",
+        "Remote discussions with the test team combined log findings, filter and PID recommendations, configuration checks and follow-up review. The support also included separate Matek H743 and CUAV X7+ platform engagements."
+      ],
+      [
+        "Describe the relationship carefully",
+        "The portfolio records support to a DARPA Lift Challenge participating team. It does not imply employment by DARPA, endorsement or a competition result."
+      ]
+    ]
+  },
+  {
+    "id": "surface-vessel-electronics",
+    "case": "usv",
+    "title": "Taking a USV from architecture to water tests",
+    "intro": "The full system: waterjet propulsion, autopilot navigation and onboard vision.",
+    "sections": [
+      [
+        "Start with the complete system",
+        "I worked on this USV from system architecture and component selection through electrical integration and water tests. The work connected propulsion, power, navigation and the operator interfaces as one platform."
+      ],
+      [
+        "Connect control and perception",
+        "I integrated differential-thrust waterjet control and autopilot navigation, together with FPV and AI detection using Jetson Nano and an A8C gimbal camera. Power work included ESC/BMS interfaces and pre-charge/main-contactor troubleshooting."
+      ],
+      [
+        "Bring it onto the water",
+        "The project included water testing of the integrated platform. The actual vessel is confidential, so the public portfolio uses clearly labeled reference imagery alongside separately identified component photographs."
+      ]
+    ]
+  }
+]
