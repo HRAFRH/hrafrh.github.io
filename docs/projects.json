@@ -1,21 +1,72 @@
 [
   {
+    "id": "delivery-drone",
+    "title": "Heavy-lift delivery drone: 20 km mission",
+    "domain": "air",
+    "category": "Air / Heavy-lift delivery UAV",
+    "context": "Client engineering integration and remote field support",
+    "status": "20.25 km logged mission; payload-release interface tested",
+    "problem": "Develop and commission a heavy-lift delivery quadcopter with a payload-release mechanism. The Saudi Arabia project used a reported 5 kg rice payload; the matching mission log records 20.25 km of total out-and-return travel.",
+    "contribution": "Supported the delivery platform through ground-station connectivity, radio and sensor checks, Pixhawk-family autopilot configuration, flight modes, failsafes, staged field tests and live video-call guidance. Worked on the payload-release interface and reviewed flight logs to connect aircraft behaviour with configuration and next-test decisions.",
+    "delivery": "A configured delivery platform, remote field-test guidance, payload-release operation and documented flight review. The 21 January record identifies Pixhawk6X and ArduCopter 4.6.3, with a 35.67-minute armed interval and 10.11 km maximum displacement from the arming position.",
+    "scope": "The 20.25 km distance is verified by GPS-position integration and cross-checked against groundspeed. It is total out-and-return travel, not a one-way radius. The 5 kg payload and delivery outcome are confirmed by the project owner; the log records release commands but does not measure payload mass. The attached report documents the radio failsafe, vibration/clipping and power-telemetry findings.",
+    "image": "media/delivery-drone/delivery-aircraft.webp",
+    "caption": "Supplied screenshot of the heavy-lift delivery quadcopter, cropped and rotated for presentation.",
+    "photo_verified": true,
+    "tags": [
+      "Heavy-lift delivery",
+      "Pixhawk6X",
+      "ArduCopter 4.6.3",
+      "Payload release",
+      "Remote field support",
+      "Mission Planner / QGroundControl",
+      "Flight-log analysis"
+    ],
+    "gallery": [
+      {
+        "src": "media/delivery-drone/delivery-aircraft.webp",
+        "caption": "Heavy-lift delivery aircraft during field preparation."
+      },
+      {
+        "src": "media/delivery-drone/remote-support.webp",
+        "caption": "Remote guidance during setup and field testing; this is not footage of the 20 km mission."
+      }
+    ],
+    "work_samples": [
+      {
+        "src": "media/delivery-drone/mission-profile.webp",
+        "caption": "Measured GPS distance and relative-to-home altitude from the 21 January delivery-drone log. Coordinates omitted."
+      },
+      {
+        "src": "media/delivery-drone/gripper-modes.webp",
+        "caption": "Logged gripper PWM output and flight-mode sequence."
+      },
+      {
+        "src": "media/delivery-drone/vibration-clipping.webp",
+        "caption": "Vibration and clipping evidence, with follow-up findings explained in the report."
+      }
+    ],
+    "papers": [
+      "delivery-drone-flight-review"
+    ]
+  },
+  {
     "id": "heavy-lift",
     "category": "Air / UAV & UAS",
-    "title": "Heavy-lift flight-control support",
+    "title": "DARPA Lift Challenge heavy-lift support",
     "context": "Engineering development and integration",
     "status": "Remote analysis and field-test support",
-    "problem": "Diagnose instability and support tuning across large multirotor development platforms.",
+    "problem": "Support the development and flight-control investigation of a heavy-lift aircraft for a DARPA Lift Challenge participating team.",
     "delivery": "Diagnostic findings, filter and PID-tuning recommendations, configuration support and test-review documentation.",
     "scope": "The published portfolio identifies DARPA Lift Challenge team support. This describes engineering support to a participating team, not employment by DARPA, official endorsement or a competition outcome.",
-    "contribution": "Supported a U.S. heavy-lift team through remote flight-log review and live test discussions, examining PID/rate tracking, motor imbalance, vibration and clipping, estimator and compass faults, GPS behaviour and battery response. Completed additional setup and tuning engagements on 17-inch Matek H743 and 30-inch CUAV X7+ platforms.",
+    "contribution": "Supported a U.S. heavy-lift team through remote flight-log review and live test discussions, examining PID/rate tracking, motor imbalance, vibration and clipping, estimator and compass faults, GPS behaviour and battery response.",
     "image": "media/upwork/heavy-lift-workshop.jpg",
     "caption": "Original project workshop photograph.",
     "domain": "air",
     "tags": [
-      "Multirotor",
-      "Electrical architecture",
-      "GNSS/RTK"
+      "Heavy-lift aircraft",
+      "DARPA Lift Challenge team support",
+      "Flight-control review"
     ],
     "gallery": [
       {
@@ -25,14 +76,6 @@
       {
         "src": "media/upwork/heavy-lift-avionics.jpg",
         "caption": "Original heavy-lift project integration photograph."
-      },
-      {
-        "src": "media/claude/05_heavy_lift_multirotors/03-17kg-quad-frame.webp",
-        "caption": "17 kg ArduPilot quadcopter frame"
-      },
-      {
-        "src": "media/claude/05_heavy_lift_multirotors/04-pixhawk-cube-quad.webp",
-        "caption": "Quadcopter with Pixhawk Cube and custom electronics"
       }
     ],
     "papers": [

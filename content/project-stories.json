@@ -1,5 +1,29 @@
 [
   {
+    "id": "delivery-drone-distance-release",
+    "case": "delivery-drone",
+    "title": "From initial delivery-drone tests to a 20 km mission",
+    "intro": "Remote commissioning, payload-release integration and a flight record that separates achievement from the next engineering checks.",
+    "sections": [
+      [
+        "Build a repeatable setup",
+        "The delivery project began with ground-station connectivity and configuration work. I supported radio and sensor checks, autopilot setup, flight modes and failsafes, then guided the on-site team through staged tests over video calls. This aircraft is separate from the drone-to-rover carrier and the DARPA heavy-lift work."
+      ],
+      [
+        "Match each result to the right flight",
+        "The supplied 7 January file records early commissioning tests. A later 21 January file in the same project archive matches the long-distance mission: GPS integration gives 20.25 km of total out-and-return travel, a 10.11 km maximum displacement and 35.67 minutes armed. The project used a reported 5 kg rice payload with a release mechanism."
+      ],
+      [
+        "Follow the release and return sequence",
+        "The later record contains AUTO mission progression, a radio-failsafe transition to RTL and gripper release commands. I have kept those events together in the report so the distance result is not confused with a 20 km one-way radius or an uninterrupted automatic round trip."
+      ],
+      [
+        "Use the logs to define the next checks",
+        "The review also identifies vibration and accelerometer clipping, a takeoff thrust-loss-check event and current readings that need validation before energy estimates are useful. The attached report includes plots, screenshots, source identity and recommendations. Flight locations and raw logs remain private."
+      ]
+    ]
+  },
+  {
     "id": "fixed-wing-from-airframe-to-mission",
     "case": "fixed-wing",
     "title": "Printing and integrating a twin-pusher fixed-wing aircraft",

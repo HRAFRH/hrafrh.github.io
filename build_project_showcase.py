@@ -5,7 +5,7 @@ data=json.loads((ROOT/'content/projects.json').read_text(encoding='utf-8'));by={
 def e(x):return html.escape(str(x).replace('\u2014',', ').replace('\u2013','-'),quote=True)
 ids=['fixed-wing','vtol','cube-vtol','tiltrotor','talon-vtol','helicopter','heavy-lift','multirotor','fpv-10','inav-fpv','s500','drone-rover-docking','usv','rescue-usv','hybrid-wheeled-uav','vision']
 names=['Fixed-wing UAV development','Flying-wing VTOL','2.2 m Cube Orange QuadPlane','3D-printed tiltrotor VTOL','Micro Talon VTOL conversion','Single-rotor helicopter','Heavy-lift multirotors','Pixhawk multirotor development','10-inch autonomous FPV quadcopter','3-inch INAV FPV aircraft','S500 sensor-equipped quadcopter','Drone-to-rover docking system','Twin-waterjet unmanned surface vehicle','Autonomous rescue-boat integration','Hybrid aircraft and ground-drive system','Embedded vision and camera payloads']
-titles=dict(zip(ids,names));labels={'air':'UAV & UAS','land':'Ground robotics','sea':'USV & marine autonomy','avionics':'Avionics & perception'}
+ids.insert(6,'delivery-drone');names.insert(6,'Heavy-lift delivery drone: 20 km mission');titles=dict(zip(ids,names));titles['heavy-lift']='DARPA Lift Challenge heavy-lift support';labels={'air':'UAV & UAS','land':'Ground robotics','sea':'USV & marine autonomy','avionics':'Avionics & perception'}
 def visual(d,pre='',kind='cover'):
  if d.get('reference_images'):im=d['reference_images'][0];src=im['src'];cap=im['caption']
  elif d.get('photo_verified') and d.get('image'):src=d['image'];cap=d['caption']
@@ -24,7 +24,7 @@ def page(title,body,pre='../'):
  return prefix+body+suffix
 start=home.index('<section class="section" id="projects">');end=home.index('<section class="section"><div class="section-title"><h2>Technical documents',start)
 show='<section class="section" id="projects"><div class="section-title"><h2>Engineering projects</h2><a href="projects/">Browse all projects →</a></div><p class="section-note">Aircraft builds, complete robotic systems and marine platforms. Open each project directly for the engineering work, photographs, test material and documents.</p><div class="showcase-index"><a href="#project-aircraft">Aircraft</a><a href="#project-rotorcraft">Rotorcraft</a><a href="#project-systems">Robotics &amp; marine systems</a></div>'
-for anchor,title,subset in [('project-aircraft','Fixed-wing & VTOL aircraft',ids[:5]),('project-rotorcraft','Multirotors & single-rotor helicopter',ids[5:11]),('project-systems','Ground robotics, USVs & avionics',ids[11:])]:
+for anchor,title,subset in [('project-aircraft','Fixed-wing & VTOL aircraft',ids[:5]),('project-rotorcraft','Multirotors & single-rotor helicopter',ids[5:12]),('project-systems','Ground robotics, USVs & avionics',ids[12:])]:
  show+='<section class="showcase-group" id="'+anchor+'"><h3 class="showcase-heading">'+e(title)+'</h3><div class="project-grid">'+''.join(card(id) for id in subset)+'</div></section>'
 show+='</section>';home=home[:start]+show+home[end:];(D/'index.html').write_text(home,encoding='utf-8')
 filters='<button data-domain-filter="" aria-pressed="true">All projects</button>'+''.join('<button data-domain-filter="'+k+'" aria-pressed="false">'+e(v)+'</button>' for k,v in labels.items())

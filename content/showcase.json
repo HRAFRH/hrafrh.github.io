@@ -6,6 +6,7 @@
     "tiltrotor",
     "talon-vtol",
     "helicopter",
+    "delivery-drone",
     "heavy-lift",
     "multirotor",
     "fpv-10",
@@ -24,7 +25,8 @@
     "tiltrotor": "3D-printed tiltrotor VTOL",
     "talon-vtol": "Micro Talon VTOL conversion",
     "helicopter": "Single-rotor helicopter",
-    "heavy-lift": "Heavy-lift multirotors",
+    "delivery-drone": "Heavy-lift delivery drone: 20 km mission",
+    "heavy-lift": "DARPA Lift Challenge heavy-lift support",
     "multirotor": "Pixhawk multirotor development",
     "fpv-10": "10-inch autonomous FPV quadcopter",
     "inav-fpv": "3-inch INAV FPV aircraft",
@@ -35,5 +37,5 @@
     "hybrid-wheeled-uav": "Hybrid aircraft and ground-drive system",
     "vision": "Embedded vision and camera payloads"
   },
-  "story_count": 24
+  "story_count": 25
 }

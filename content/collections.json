@@ -43,6 +43,7 @@
     "cover": "media/platforms/fpv-ten-2.jpg",
     "caption": "Original 10-inch FPV quadcopter project photograph.",
     "members": [
+      "delivery-drone",
       "fpv-10",
       "heavy-lift",
       "multirotor",

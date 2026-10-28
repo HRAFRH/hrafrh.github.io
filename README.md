@@ -2,7 +2,7 @@
 
 [Visit the portfolio](https://hrafrh.github.io/)
 
-Sixteen individual aircraft and system projects are visible directly on the homepage and Projects page. The 35 detailed records and five platform collections remain accessible. The blog contains 24 project stories with documented challenges, contributions and validation.
+Seventeen individual aircraft and system projects are visible directly on the homepage and Projects page. The 36 detailed records and five platform collections remain accessible. The blog contains 25 project stories with documented challenges, contributions and validation.
 
 ## Maintain the site
 
@@ -10,7 +10,7 @@ Edit content/projects.json for the detailed engineering records and content/coll
 
 Run python build_portfolio.py. It generates the detailed records and then executes build_collections.py to assemble the main platform pages. Commit the source and generated docs directory. GitHub Pages publishes main, /docs.
 
-Blog entries are maintained in the generator and content/additional-blog.json. Report metadata is in content/papers.json and content/vtol-media.json. The searchable Documents library organizes 13 public report versions across five document types; build_document_library.py generates the library after the platform and resume builders.
+Blog entries are maintained in the generator and content/additional-blog.json. Report metadata is in content/papers.json and content/vtol-media.json. The searchable Documents library organizes 14 public reports across five document types; build_document_library.py generates the library after the platform and resume builders.
 
 ## Public material
 

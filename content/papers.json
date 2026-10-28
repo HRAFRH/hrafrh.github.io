@@ -372,5 +372,37 @@
     "group": "Flight diagnostics",
     "stage": "Diagnostic report",
     "page_count": 4
+  },
+  {
+    "id": "delivery-drone-flight-review",
+    "title": "Delivery-drone mission and flight-log review",
+    "subtitle": "20.25 km out-and-return mission, release interface and test findings",
+    "case": "delivery-drone",
+    "group": "Flight diagnostics",
+    "stage": "Retrospective log analysis",
+    "page_count": 8,
+    "language": "English",
+    "description": "An eight-page review comparing early commissioning logs with the matching 21 January mission, including mission distance, control tracking, release commands, vibration, failsafes, power telemetry and project screenshots.",
+    "scope": "The 20.25 km distance is verified by GPS-position integration and cross-checked against groundspeed. It is total out-and-return travel, not a one-way radius. The 5 kg payload and delivery outcome are confirmed by the project owner; the log records release commands but does not measure payload mass. The attached report documents the radio failsafe, vibration/clipping and power-telemetry findings.",
+    "source": "Retrospective engineering report prepared for the Achraf RAHIBE portfolio, 28 October 2026. Raw flight logs retained privately.",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "file": "reports/delivery-drone-flight-review.pdf",
+    "images": [
+      "media/delivery-drone/report-page-1.webp",
+      "media/delivery-drone/report-page-3.webp"
+    ],
+    "captions": [
+      "Report cover: verified mission metrics, supplied aircraft screenshot and evidence boundaries.",
+      "Mission-profile page: GPS distance and altitude plots without geographic coordinates."
+    ]
   }
 ]
