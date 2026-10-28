@@ -91,7 +91,7 @@
     "status": "Mission and interface integration",
     "problem": "Fixed-wing aircraft development across V-tail, pusher and twin-motor conventional-tail configurations, connecting airframe design with autonomous missions.",
     "delivery": "Integrated aircraft configurations, simulation workflows, autonomous mission setup and field-test support.",
-    "scope": "The photographs document my printing, assembly and avionics integration of Titan Dynamics Tornado V2 airframes. The 3% infill and single-wall ABS settings describe my build configuration; structural strength is not quantified here. The flight-review illustration is location-redacted and is not a source of geographic or quantitative flight data.",
+    "scope": "Project photographs document printing, assembly and avionics integration of Titan Dynamics Tornado V2 airframes. The flight-review visual is an AI-assisted, location-redacted illustration with the map and timestamps removed.",
     "contribution": "Built and integrated multiple fixed-wing configurations, connecting airframe fabrication, propulsion and avionics with simulation, flight tests and autonomous mission setup. The Tornado V2 examples use the Titan Dynamics airframe design: I printed and assembled the structures, integrated Pixhawk 6C avionics and twin-pusher propulsion, and worked on configuration, control-surface checks and log review. Other work includes V-tail, pusher and twin-motor conventional-tail layouts, differential thrust, Gazebo/SITL checks and FPV interfaces.",
     "image": "media/fixed-wing-build/tornado-twin-pusher.webp",
     "caption": "Tornado V2 twin-pusher fixed-wing aircraft, with two propulsion motors and a conventional tail.",
@@ -148,7 +148,7 @@
       },
       {
         "src": "media/fixed-wing-build/flight-review-location-redacted.png",
-        "caption": "Location-redacted flight-review illustration. AI-assisted editing removes the satellite map and identifiers; this visual is not a source of precise trajectory or performance measurements."
+        "caption": "Flight-log review illustration with the map, location details and timestamps removed. AI-assisted redaction; schematic trajectory only."
       }
     ],
     "papers": [],
@@ -710,8 +710,7 @@
       "configuration": "Four lift motors plus forward propulsion",
       "material": "ABS",
       "infill": "3%",
-      "walls": "1 perimeter",
-      "note": "Owner-reported printing configuration for the shown airframe builds; not a universal strength rating."
+      "walls": "1 perimeter"
     }
   },
   {

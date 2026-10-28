@@ -11,11 +11,11 @@
       ],
       [
         "Balance printing weight with build practicality",
-        "I printed the shown airframe builds in ABS using 3% infill and one perimeter. Those were my lightweight fabrication settings for this build, rather than a universal strength recommendation. The photographs follow the work from wing and fuselage sections on the printer to laid-out parts and assembled aircraft."
+        "I printed the shown airframe builds in ABS using 3% infill and one perimeter, balancing airframe weight with practical rigidity for assembly and handling. The photographs follow the work from wing and fuselage sections on the printer to laid-out parts and assembled aircraft."
       ],
       [
         "Connect propulsion, surfaces and avionics",
-        "I integrated the Pixhawk 6C, twin propulsion paths, navigation and onboard wiring. The supplied technical material identifies ArduPlane 4.6.3 and a twin-pusher control-surface checklist. The integration work included surface directions, stabilization response and differential-thrust behaviour, with configuration and log review linked to the next checks."
+        "The build paired Pixhawk 6C with ArduPlane 4.6.3 and twin-pusher propulsion. I integrated navigation, power and onboard wiring, and worked through control-surface directions, stabilization response and differential-thrust checks. Configuration and log review helped connect each test to the next integration step."
       ],
       [
         "Keep the public evidence useful",
