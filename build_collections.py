@@ -39,7 +39,7 @@ for g in collections:
   sections.append(section)
  extra=''
  if g['id']=='aircraft':
-  extra='<section class="section platform-extra" id="fabrication"><p class="kicker">Airframe design & fabrication</p><h2>From printed parts to an integrated airframe</h2><p>Original Cobra VTOL build photographs show structural parts, alignment and avionics integration. These stages sit within the aircraft-development portfolio.</p><div class="gallery">'+''.join(platform_figure(x['src'],x['caption']) for x in platform_media['cobra'])+platform_figure(platform_media['workshop'],'VTOL airframe components laid out for assembly.')+'</div>'+matched_flights('cobra-airframe')+'</section>'
+  extra='<section class="section platform-extra" id="fabrication"><p class="kicker">Airframe design & fabrication</p><h2>From printed parts to an integrated airframe</h2><p>Original Cobra VTOL build photographs show structural parts, alignment and avionics integration. These stages sit within the aircraft-development portfolio.</p><div class="gallery">'+''.join(platform_figure(x['src'],x['caption']) for x in platform_media['cobra'])+'</div>'+matched_flights('cobra-airframe')+'</section>'
  if g['id']=='rotorcraft':
   extra='<section class="section platform-extra" id="bench-build"><p class="kicker">Assembly & integration</p><h2>7-inch Pixhawk build</h2><p>Another build within the multirotor portfolio, shown during assembly and field preparation.</p><div class="gallery">'+''.join(platform_figure(x['src'],x['caption']) for x in platform_media['pixhawk-seven'])+'</div>'+matched_flights('seven-pixhawk')+'</section>'
  phase_cards=''.join('<article><span>'+str(i+1).zfill(2)+'</span><h3>'+e(t)+'</h3><p>'+e(c)+'</p></article>' for i,(t,c) in enumerate(g['stages']))

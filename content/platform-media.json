@@ -1,35 +1,27 @@
 {
   "cobra": [
     {
-      "src": "media/platforms/cobra-1.jpg",
-      "caption": "Cobra airframe build and integration · original workshop photograph."
+      "src": "media/my-builds/cobra-build-1.webp",
+      "title": "Cobra VTOL on the build stand",
+      "caption": "Cobra VTOL on the build stand. Airframe and lift-motor integration during workshop preparation."
     },
     {
-      "src": "media/platforms/cobra-2.jpg",
-      "caption": "Cobra airframe build and integration · original workshop photograph."
+      "src": "media/my-builds/cobra-build-2.webp",
+      "title": "Cobra airframe and avionics assembly",
+      "caption": "Cobra airframe and avionics assembly. The workshop view shows the aircraft structure, lift propulsion and integration workspace."
     },
     {
-      "src": "media/platforms/cobra-3.jpg",
-      "caption": "Cobra airframe build and integration · original workshop photograph."
+      "src": "media/my-builds/cobra-build-3.webp",
+      "title": "Cobra wing and propulsion layout",
+      "caption": "Cobra wing and propulsion layout. An overhead assembly view showing the fixed wing and VTOL lift hardware."
     },
     {
-      "src": "media/platforms/cobra-4.jpg",
-      "caption": "Cobra airframe build and integration · original workshop photograph."
-    },
-    {
-      "src": "media/platforms/cobra-5.jpg",
-      "caption": "Cobra airframe build and integration · original workshop photograph."
-    },
-    {
-      "src": "media/platforms/cobra-6.jpg",
-      "caption": "Cobra airframe build and integration · original workshop photograph."
+      "src": "media/my-builds/cobra-build-4.webp",
+      "title": "Cobra bench integration",
+      "caption": "Cobra bench integration. Airframe, propulsion and onboard integration in the workshop."
     }
   ],
   "pixhawk-seven": [
-    {
-      "src": "media/platforms/pixhawk-seven-1.jpg",
-      "caption": "7-inch Pixhawk quadcopter build · original workshop photograph."
-    },
     {
       "src": "media/platforms/pixhawk-seven-2.jpg",
       "caption": "7-inch Pixhawk quadcopter build · original workshop photograph."
