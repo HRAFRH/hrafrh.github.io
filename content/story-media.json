@@ -1,0 +1,102 @@
+{
+  "vtol": [
+    {
+      "file": "media/journal/vtol-flight-audio-01.mp4",
+      "poster": "media/journal/vtol-flight-audio-01.jpg",
+      "title": "Hover flight",
+      "duration": 30,
+      "date": "26 August 2025",
+      "caption": "Original field audio retained. Supplied recording of the flying-wing VTOL during field testing."
+    },
+    {
+      "file": "media/journal/vtol-flight-audio-02.mp4",
+      "poster": "media/journal/vtol-flight-audio-02.jpg",
+      "title": "Low-altitude hover",
+      "duration": 14,
+      "date": "26 August 2025",
+      "caption": "Original field audio retained. Supplied recording of the flying-wing VTOL during field testing."
+    },
+    {
+      "file": "media/journal/vtol-flight-audio-03.mp4",
+      "poster": "media/journal/vtol-flight-audio-03.jpg",
+      "title": "Stability investigation",
+      "duration": 18,
+      "date": "26 August 2025",
+      "caption": "Original field audio retained. Intermediate behaviour shown for the stability investigation; not a final validation claim."
+    }
+  ],
+  "fpv-10": [
+    {
+      "file": "media/aircraft-update/ten-inch-payload-check.mp4",
+      "poster": "media/aircraft-update/ten-inch-payload-check.jpg",
+      "title": "10-inch FPV payload check",
+      "caption": "Night field footage from the 10-inch build. The clip shows a suspended load during a hover check."
+    },
+    {
+      "file": "media/journal/small-quadcopter-flight.mp4",
+      "poster": "media/journal/small-quadcopter-flight.jpg",
+      "title": "10-inch quadcopter flight excerpt",
+      "caption": "Supplied root-folder flight recording, paired with the matching 10-inch aircraft photographs. Original sound retained."
+    }
+  ],
+  "delivery-drone": [
+    {
+      "file": "media/delivery-drone/update/arabic-support-call.mp4",
+      "poster": "media/delivery-drone/update/arabic-support-call.jpg",
+      "title": "Live Arabic coaching",
+      "caption": "Remote support call with Achraf visible. Original portrait call framing and source audio retained.",
+      "duration": 72
+    },
+    {
+      "file": "media/delivery-drone/update/field-hover-close.mp4",
+      "poster": "media/delivery-drone/update/field-hover-close.jpg",
+      "title": "Outdoor hover check",
+      "caption": "A close field-flight excerpt from the client project. This clip does not by itself document the full delivery mission.",
+      "duration": 22
+    },
+    {
+      "file": "media/delivery-drone/update/field-hover-wide.mp4",
+      "poster": "media/delivery-drone/update/field-hover-wide.jpg",
+      "title": "Field-flight handling",
+      "caption": "A wider airborne excerpt from the same project collection.",
+      "duration": 18
+    },
+    {
+      "file": "media/delivery-drone/update/avionics-walkthrough.mp4",
+      "poster": "media/delivery-drone/update/avionics-walkthrough.jpg",
+      "title": "Avionics and ground-unit review",
+      "caption": "Client hardware walkthrough during configuration support.",
+      "duration": 11.6
+    },
+    {
+      "file": "media/delivery-drone/update/accessory-wiring.mp4",
+      "poster": "media/delivery-drone/update/accessory-wiring.jpg",
+      "title": "Accessory wiring checks",
+      "caption": "Close-up of wiring and accessory checks. It is not presented as footage of the payload dropping.",
+      "duration": 22.5
+    },
+    {
+      "file": "media/delivery-drone/update/parameter-review.mp4",
+      "poster": "media/delivery-drone/update/parameter-review.jpg",
+      "title": "Ground-station parameter review",
+      "caption": "The client reviews the ground-station interface during the setup workflow.",
+      "duration": 14.2
+    }
+  ],
+  "multirotor": [
+    {
+      "file": "media/aircraft-update/seven-inch-pixhawk-hover.mp4",
+      "poster": "media/aircraft-update/seven-inch-pixhawk-hover.jpg",
+      "title": "7-inch Pixhawk hover check",
+      "caption": "A short outdoor flight from the dedicated 7-inch Pixhawk build folder."
+    }
+  ],
+  "cube-vtol": [
+    {
+      "file": "media/aircraft-update/quadplane-field-walkthrough.mp4",
+      "poster": "media/aircraft-update/quadplane-field-walkthrough.jpg",
+      "title": "QuadPlane field walkthrough",
+      "caption": "A ground walkthrough of the assembled QuadPlane, including the lift motors, tail and open avionics bay."
+    }
+  ]
+}

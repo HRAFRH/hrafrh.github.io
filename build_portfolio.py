@@ -252,3 +252,5 @@ exec((ROOT/"build_aircraft_details.py").read_text(encoding="utf-8"))
 exec((ROOT/"build_delivery_case.py").read_text(encoding="utf-8"))
 
 exec((ROOT/"build_personal_brand.py").read_text(encoding="utf-8"))
+
+exec((ROOT/"build_story_journal.py").read_text(encoding="utf-8"))

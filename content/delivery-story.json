@@ -1,0 +1,106 @@
+{
+  "case": "delivery-drone",
+  "sections": [
+    [
+      "Start with the person as well as the aircraft",
+      "The client had bought a heavy-lift drone, but it was not flying. He was new to drones and unfamiliar with the flight modes and operating workflow. My role was to work through the aircraft with him while teaching the process from the beginning, in Arabic, so the instructions were useful to the person carrying out the work."
+    ],
+    [
+      "Make remote work practical",
+      "Everything was done through calls and screen sharing. I reviewed the build, prepared the parameters and guided him through calibration and setup on the computer connected to the aircraft. The system used a CUAV X7+ flight controller and a SIYI transmission system specified for up to 30 km; that product rating is separate from the range demonstrated by this mission."
+    ],
+    [
+      "Build confidence before adding a mission",
+      "I made the first steps easier by using Loiter mode for more stable position-holding practice. We worked through what each mode did and how to operate the aircraft before progressing to a planned mission. The difficulty was not simply changing parameters: the client needed a sequence he could understand, repeat and use in the field."
+    ],
+    [
+      "Prepare the power system and the release",
+      "Support included the batteries and charger, not only the flight controller. I explained the charging workflow for the mission setup, which used a reported 12S 40,000 mAh LiPo configuration. We also configured the servo-operated gripper and its mission action for the 5 kg bag of rice. The component close-ups below show different stages and battery packs from the project."
+    ],
+    [
+      "Plan the delivery, then review what happened",
+      "Once he was comfortable with the aircraft, I taught him how to prepare the mission. The client completed the payload drop and the drone returned successfully. The matching log review records 20.25 km of total out-and-return travel and a 10.11 km maximum displacement. This is roughly a 10 km outbound mission, not a 20 km one-way delivery."
+    ],
+    [
+      "Use the difficulties to improve the next test",
+      "The work involved explaining unfamiliar modes, checking the build remotely, guiding calibration and connecting the release mechanism to the mission. The log review also records a radio-failsafe transition to RTL, vibration and accelerometer clipping, and current readings that need calibration before they can support energy estimates. I keep those findings in the engineering record alongside the successful delivery outcome."
+    ],
+    [
+      "What the project taught me",
+      "A useful remote handover has to work for the person on site. In this case, teaching in Arabic, reviewing the screen together and progressing from setup to Loiter practice and then mission preparation turned the support into a practical operating workflow. The photographs and recordings preserve those stages; matching mission evidence is shown separately in the report."
+    ]
+  ],
+  "specifications": [
+    [
+      "Flight controller",
+      "CUAV X7+"
+    ],
+    [
+      "Transmission",
+      "SIYI system, manufacturer-rated up to 30 km"
+    ],
+    [
+      "Mission power configuration",
+      "12S LiPo, 40,000 mAh (reported by project owner)"
+    ],
+    [
+      "Payload release",
+      "Servo-operated gripper"
+    ],
+    [
+      "Payload",
+      "5 kg bag of rice"
+    ],
+    [
+      "Support",
+      "Arabic video calls and remote screen sharing"
+    ]
+  ],
+  "pictures": [
+    {
+      "src": "media/delivery-drone/update/mission-battery-chart.webp",
+      "title": "Battery telemetry through the mission",
+      "caption": "Battery telemetry through the mission. Original log-review chart; the location-bearing map is omitted. The displayed current channel is not used as a calibrated energy measurement."
+    },
+    {
+      "src": "media/delivery-drone/update/arabic-video-support.webp",
+      "title": "Arabic support during a video call",
+      "caption": "Arabic support during a video call. Achraf remains visible in the original portrait framing while guiding the on-site operator."
+    },
+    {
+      "src": "media/delivery-drone/update/cuav-controller.webp",
+      "title": "Flight-controller installation",
+      "caption": "Flight-controller installation. Close-up of the CUAV flight-controller installation in the client aircraft."
+    },
+    {
+      "src": "media/delivery-drone/update/siyi-ground-unit.webp",
+      "title": "SIYI ground unit and video link",
+      "caption": "SIYI ground unit and video link. Ground-control equipment and live video used during remote setup."
+    },
+    {
+      "src": "media/delivery-drone/update/battery-32ah.webp",
+      "title": "Battery used during setup",
+      "caption": "Battery used during setup. The visible label reads 12S 32,000 mAh. This setup photograph is not labelled as the reported 40,000 mAh mission pack."
+    },
+    {
+      "src": "media/delivery-drone/update/charger.webp",
+      "title": "Charging and battery preparation",
+      "caption": "Charging and battery preparation. The Ultra Power UP1200AC Plus charger during setup. I coached the client on preparing the batteries and charger for the mission."
+    },
+    {
+      "src": "media/delivery-drone/update/battery-20ah.webp",
+      "title": "Additional battery in the project collection",
+      "caption": "Additional battery in the project collection. The label reads 20,000 mAh; its role is kept distinct from the reported 40,000 mAh mission configuration."
+    },
+    {
+      "src": "media/delivery-drone/update/aircraft-ground.webp",
+      "title": "Delivery aircraft on the ground",
+      "caption": "Delivery aircraft on the ground. The heavy-lift quadcopter during on-site preparation."
+    },
+    {
+      "src": "media/delivery-drone/update/siyi-rear.webp",
+      "title": "Ground-unit hardware",
+      "caption": "Ground-unit hardware. A closer view of the ground-control unit used in this project."
+    }
+  ]
+}

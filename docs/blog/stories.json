@@ -1,25 +1,141 @@
 [
   {
-    "id": "delivery-drone-distance-release",
-    "case": "delivery-drone",
-    "title": "From initial delivery-drone tests to a 20 km mission",
-    "intro": "Remote commissioning, payload-release integration and a flight record that separates achievement from the next engineering checks.",
+    "id": "seven-inch-pixhawk-hover-check",
+    "case": "multirotor",
+    "title": "A field hover check for the 7-inch Pixhawk build",
+    "intro": "Bench photographs and a short outdoor hover clip from the 7-inch multirotor archive.",
     "sections": [
       [
-        "Build a repeatable setup",
-        "The delivery project began with ground-station connectivity and configuration work. I supported radio and sensor checks, autopilot setup, flight modes and failsafes, then guided the on-site team through staged tests over video calls. This aircraft is separate from the drone-to-rover carrier and the DARPA heavy-lift work."
+        "Set up the aircraft on the bench",
+        "The workshop photographs show the airframe, flight-control installation and wiring before outdoor testing."
       ],
       [
-        "Match each result to the right flight",
-        "The supplied 7 January file records early commissioning tests. A later 21 January file in the same project archive matches the long-distance mission: GPS integration gives 20.25 km of total out-and-return travel, a 10.11 km maximum displacement and 35.67 minutes armed. The project used a reported 5 kg rice payload with a release mechanism."
+        "Watch the first handling checks",
+        "The outdoor clip shows the aircraft lifting and holding a low hover. It captures the handling check for this build and gives context to the bench photographs."
+      ]
+    ]
+  },
+  {
+    "id": "fpv-pitch-tracking-and-vibration",
+    "case": "fpv-speedybee-log-review",
+    "title": "Reading pitch tracking and vibration on an FPV quadcopter",
+    "intro": "What an FPV flight log can tell you before changing the tune.",
+    "sections": [
+      [
+        "Compare the command with the response",
+        "I began with commanded and measured pitch. The actual response broadly followed the command, but the overshoot and oscillation gave me a reason to look at the tune and the vibration data together."
       ],
       [
-        "Follow the release and return sequence",
-        "The later record contains AUTO mission progression, a radio-failsafe transition to RTL and gripper release commands. I have kept those events together in the report so the distance result is not confused with a 20 km one-way radius or an uninterrupted automatic round trip."
+        "Use the spectrum to guide the next check",
+        "The FFT highlighted several bands to investigate. I treated motor-related vibration and possible frame resonance as different candidates and documented how to check the proposed filtering on this specific airframe."
       ],
       [
-        "Use the logs to define the next checks",
-        "The review also identifies vibration and accelerometer clipping, a takeoff thrust-loss-check event and current readings that need validation before energy estimates are useful. The attached report includes plots, screenshots, source identity and recommendations. Flight locations and raw logs remain private."
+        "Record what still needs a test",
+        "The report excerpts show the diagnosis and recommendations. The next step is to compare fresh logs after a controlled change, using the same tracking and vibration measurements."
+      ]
+    ]
+  },
+  {
+    "id": "gazebo-before-the-field",
+    "case": "multirotor-simulation",
+    "title": "Before the field: building a useful aircraft simulation",
+    "intro": "Custom models, autopilot connections and the checks I can repeat before a real flight.",
+    "sections": [
+      [
+        "Start with the aircraft I intend to fly",
+        "I simulate many of my aircraft before field testing. The purpose is practical: understand how the components and control interfaces fit together, explore behaviour, and check flight modes, parameters and mission workflows in a repeatable environment."
+      ],
+      [
+        "Go beyond a pre-built model",
+        "For the Cobra VTOL, I converted the aircraft files into a custom Gazebo model and integrated it with PX4 and ArduPilot. That lets the simulation work follow the aircraft configuration I am developing, rather than treating a generic simulator vehicle as an exact representation of the build."
+      ],
+      [
+        "Make each screenshot explain one thing",
+        "The examples here show different parts of the work: a Skywalker X8 QuadPlane model, a PX4 multirotor in a wooded world, RC and servo-channel displays, and model axes beside mission planning. One QuadPlane screenshot also preserves a command warning. It records troubleshooting, not an automatically successful test."
+      ],
+      [
+        "Take a clearer question to the field",
+        "Simulation helps me prepare configurations and decide what I need to observe during physical testing. I then use real flight tests and recorded behaviour to continue the work. A custom model is useful preparation, not a guarantee that every physical effect has been reproduced."
+      ]
+    ]
+  },
+  {
+    "id": "cobra-from-build-to-simulation",
+    "case": "cobra-vtol",
+    "title": "Cobra VTOL: connecting the workshop build to a custom model",
+    "intro": "Keeping the physical aircraft and its simulation in the same development workflow.",
+    "sections": [
+      [
+        "Build the physical interfaces",
+        "The Cobra workshop photographs show the airframe and lift-propulsion layout during assembly and integration. I worked on the aircraft as a connected structure, propulsion and avionics system."
+      ],
+      [
+        "Bring that configuration into Gazebo",
+        "I also converted the Cobra aircraft files into a custom Gazebo model and connected it to PX4 and ArduPilot. The objective was to explore the configuration and prepare useful checks before field testing."
+      ],
+      [
+        "Keep the images specific",
+        "These are Cobra assembly photographs. The separate simulation entry shows its own identified aircraft and software screenshots. A matching view of the custom Cobra simulator model can extend this story when it is available."
+      ]
+    ]
+  },
+  {
+    "id": "ranger-inav-yaw-investigation",
+    "case": "inav-fixed-wing",
+    "title": "The Ranger held level, but kept turning right",
+    "intro": "Working through a fixed-wing yaw problem with the client, one configuration check at a time.",
+    "sections": [
+      [
+        "Start with the behaviour",
+        "The Volantex Ranger was a pusher fixed wing running INAV. The client reported that it held level in stabilised modes but continued yawing to the right, with left rudder needed to counter the turn. Keeping the wings level had not solved the heading problem."
+      ],
+      [
+        "Separate the possible causes",
+        "I reviewed the configuration rather than treating every turn as a PID problem. The report identifies board-alignment offsets, the magnetometer configuration and strong yaw feed-forward as points to investigate. Rudder direction, control authority and the pusher thrust line were also part of the diagnosis. These were hypotheses to test, not five independently proven faults."
+      ],
+      [
+        "Make the next test useful",
+        "I prepared an ordered set of checks so the client could isolate one influence at a time. A separate Blackbox guide explained how to prepare the recorder and retrieve the next log. The two documents are visible below, alongside the reasoning they supported. Their settings belong to this aircraft and are not a universal fixed-wing configuration."
+      ],
+      [
+        "Keep the outcome tied to the evidence",
+        "I helped the client resolve the yaw issue. The documents shown here preserve the investigation and support work; they do not include a final post-fix flight log. Matching client photographs and flight recordings will be added when available, so another aircraft is not used as a substitute."
+      ]
+    ]
+  },
+  {
+    "id": "delivery-drone-distance-release",
+    "case": "delivery-drone",
+    "title": "From a drone that would not fly to a payload delivery",
+    "intro": "Arabic coaching, remote commissioning and a 5 kg delivery mission, one practical step at a time.",
+    "sections": [
+      [
+        "Start with the person as well as the aircraft",
+        "The client had bought a heavy-lift drone, but it was not flying. He was new to drones and unfamiliar with the flight modes and operating workflow. My role was to work through the aircraft with him while teaching the process from the beginning, in Arabic, so the instructions were useful to the person carrying out the work."
+      ],
+      [
+        "Make remote work practical",
+        "Everything was done through calls and screen sharing. I reviewed the build, prepared the parameters and guided him through calibration and setup on the computer connected to the aircraft. The system used a CUAV X7+ flight controller and a SIYI transmission system specified for up to 30 km; that product rating is separate from the range demonstrated by this mission."
+      ],
+      [
+        "Build confidence before adding a mission",
+        "I made the first steps easier by using Loiter mode for more stable position-holding practice. We worked through what each mode did and how to operate the aircraft before progressing to a planned mission. The difficulty was not simply changing parameters: the client needed a sequence he could understand, repeat and use in the field."
+      ],
+      [
+        "Prepare the power system and the release",
+        "Support included the batteries and charger, not only the flight controller. I explained the charging workflow for the mission setup, which used a reported 12S 40,000 mAh LiPo configuration. We also configured the servo-operated gripper and its mission action for the 5 kg bag of rice. The component close-ups below show different stages and battery packs from the project."
+      ],
+      [
+        "Plan the delivery, then review what happened",
+        "Once he was comfortable with the aircraft, I taught him how to prepare the mission. The client completed the payload drop and the drone returned successfully. The matching log review records 20.25 km of total out-and-return travel and a 10.11 km maximum displacement. This is roughly a 10 km outbound mission, not a 20 km one-way delivery."
+      ],
+      [
+        "Use the difficulties to improve the next test",
+        "The work involved explaining unfamiliar modes, checking the build remotely, guiding calibration and connecting the release mechanism to the mission. The log review also records a radio-failsafe transition to RTL, vibration and accelerometer clipping, and current readings that need calibration before they can support energy estimates. I keep those findings in the engineering record alongside the successful delivery outcome."
+      ],
+      [
+        "What the project taught me",
+        "A useful remote handover has to work for the person on site. In this case, teaching in Arabic, reviewing the screen together and progressing from setup to Loiter practice and then mission preparation turned the support into a practical operating workflow. The photographs and recordings preserve those stages; matching mission evidence is shown separately in the report."
       ]
     ]
   },

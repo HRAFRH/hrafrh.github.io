@@ -1,21 +1,29 @@
 [
   {
     "id": "delivery-drone",
-    "title": "Heavy-lift delivery drone: 20 km mission",
+    "title": "Heavy-lift delivery drone: remote commissioning and payload mission",
     "domain": "air",
     "category": "Air / Heavy-lift delivery UAV",
     "context": "Client engineering integration and remote field support",
-    "status": "20.25 km logged mission; payload-release interface tested",
-    "problem": "Develop and commission a heavy-lift delivery quadcopter with a payload-release mechanism. The Saudi Arabia project used a reported 5 kg rice payload; the matching mission log records 20.25 km of total out-and-return travel.",
-    "contribution": "Supported the delivery platform through ground-station connectivity, radio and sensor checks, Pixhawk-family autopilot configuration, flight modes, failsafes, staged field tests and live video-call guidance. Worked on the payload-release interface and reviewed flight logs to connect aircraft behaviour with configuration and next-test decisions.",
-    "delivery": "A configured delivery platform, remote field-test guidance, payload-release operation and documented flight review. The 21 January record identifies Pixhawk6X and ArduCopter 4.6.3, with a 35.67-minute armed interval and 10.11 km maximum displacement from the arming position.",
-    "scope": "The 20.25 km distance is verified by GPS-position integration and cross-checked against groundspeed. It is total out-and-return travel, not a one-way radius. The 5 kg payload and delivery outcome are confirmed by the project owner; the log records release commands but does not measure payload mass. The attached report documents the radio failsafe, vibration/clipping and power-telemetry findings.",
+    "status": "Payload delivery and return completed; mission log reviewed",
+    "problem": "A client came to me with a purchased drone that would not fly and no previous experience with its flight modes. I helped him commission the aircraft, learn the workflow in Arabic and progress to a payload-delivery mission.",
+    "contribution": "Reviewed the build, prepared parameters and guided calibration, radio/ground-station setup and staged flight checks through live calls and screen sharing. I taught the client the operating workflow in Arabic, beginning with Loiter-mode practice before mission planning and servo-gripper integration. Support also covered battery and charger preparation.",
+    "delivery": "Remote commissioning, practical operator coaching, mission and servo-release setup, followed by a client-confirmed delivery of a 5 kg rice payload and successful return. The matching mission log records 20.25 km of total travel and a 10.11 km maximum displacement.",
+    "scope": "Achraf confirms the payload, release and successful return. GPS-derived mission distance is documented separately in the flight-analysis report, which also records a radio-failsafe/RTL event and vibration findings. Short videos show particular setup or flight stages, not the entire long-distance mission.",
     "image": "media/delivery-drone/delivery-aircraft.webp",
     "caption": "Supplied screenshot of the heavy-lift delivery quadcopter, cropped and rotated for presentation.",
     "photo_verified": true,
     "tags": [
+      "CUAV X7+",
+      "ArduPilot",
+      "SIYI transmission",
+      "Remote screen sharing",
+      "Arabic operator coaching",
+      "Loiter",
+      "Mission planning",
+      "Servo gripper",
+      "12S LiPo",
       "Heavy-lift delivery",
-      "Pixhawk6X",
       "ArduCopter 4.6.3",
       "Payload release",
       "Remote field support",
@@ -23,6 +31,51 @@
       "Flight-log analysis"
     ],
     "gallery": [
+      {
+        "src": "media/delivery-drone/update/arabic-video-support.webp",
+        "title": "Arabic support during a video call",
+        "caption": "Arabic support during a video call. Achraf remains visible in the original portrait framing while guiding the on-site operator."
+      },
+      {
+        "src": "media/delivery-drone/update/mission-battery-chart.webp",
+        "title": "Battery telemetry through the mission",
+        "caption": "Battery telemetry through the mission. Original log-review chart; the location-bearing map is omitted. The displayed current channel is not used as a calibrated energy measurement."
+      },
+      {
+        "src": "media/delivery-drone/update/cuav-controller.webp",
+        "title": "Flight-controller installation",
+        "caption": "Flight-controller installation. Close-up of the CUAV flight-controller installation in the client aircraft."
+      },
+      {
+        "src": "media/delivery-drone/update/siyi-ground-unit.webp",
+        "title": "SIYI ground unit and video link",
+        "caption": "SIYI ground unit and video link. Ground-control equipment and live video used during remote setup."
+      },
+      {
+        "src": "media/delivery-drone/update/battery-32ah.webp",
+        "title": "Battery used during setup",
+        "caption": "Battery used during setup. The visible label reads 12S 32,000 mAh. This setup photograph is not labelled as the reported 40,000 mAh mission pack."
+      },
+      {
+        "src": "media/delivery-drone/update/charger.webp",
+        "title": "Charging and battery preparation",
+        "caption": "Charging and battery preparation. The Ultra Power UP1200AC Plus charger during setup. I coached the client on preparing the batteries and charger for the mission."
+      },
+      {
+        "src": "media/delivery-drone/update/battery-20ah.webp",
+        "title": "Additional battery in the project collection",
+        "caption": "Additional battery in the project collection. The label reads 20,000 mAh; its role is kept distinct from the reported 40,000 mAh mission configuration."
+      },
+      {
+        "src": "media/delivery-drone/update/aircraft-ground.webp",
+        "title": "Delivery aircraft on the ground",
+        "caption": "Delivery aircraft on the ground. The heavy-lift quadcopter during on-site preparation."
+      },
+      {
+        "src": "media/delivery-drone/update/siyi-rear.webp",
+        "title": "Ground-unit hardware",
+        "caption": "Ground-unit hardware. A closer view of the ground-control unit used in this project."
+      },
       {
         "src": "media/delivery-drone/delivery-aircraft.webp",
         "caption": "Heavy-lift delivery aircraft during field preparation."
@@ -115,12 +168,9 @@
         "caption": "7-inch Pixhawk quadcopter wired up on the bench"
       },
       {
-        "src": "media/claude/09_simulation_sitl_gazebo/01-gazebo-quad-sitl.webp",
-        "caption": "Quadcopter simulated in Gazebo with ArduPilot SITL"
-      },
-      {
-        "src": "media/claude/09_simulation_sitl_gazebo/03-mission-planner-sitl.webp",
-        "caption": "Mission Planner connected to a simulated multirotor"
+        "src": "media/my-builds/build-photo-36.webp",
+        "title": "7-inch Pixhawk bench setup",
+        "caption": "7-inch Pixhawk bench setup. Original photograph from the 7-inch Pixhawk folder, showing the physical aircraft and flight-control installation."
       }
     ],
     "papers": [],
@@ -152,6 +202,14 @@
       {
         "src": "media/fixed-wing-build/tornado-twin-pusher.webp",
         "caption": "Tornado V2 twin-pusher fixed-wing aircraft, with two propulsion motors and a conventional tail."
+      },
+      {
+        "src": "media/aircraft-update/compact-fixed-wing-planform.webp",
+        "caption": "Underside view of the compact twin-prop fixed wing."
+      },
+      {
+        "src": "media/aircraft-update/compact-fixed-wing-pair.webp",
+        "caption": "Two compact conventional fixed-wing airframes on the preparation bench."
       },
       {
         "src": "media/fixed-wing-build/tornado-front.webp",
@@ -192,6 +250,28 @@
       {
         "src": "media/fixed-wing-build/flight-review-location-redacted.png",
         "caption": "Flight-log review illustration with the map, location details and timestamps removed. AI-assisted redaction; schematic trajectory only."
+      },
+      {
+        "src": "media/journal/mixed-aircraft-workshop.webp",
+        "caption": "Shared fixed-wing and quadcopter workshop. A separate aircraft configuration from the Tornado; shown as workshop context."
+      },
+      {
+        "src": "assets/fixed-wing.jpg",
+        "caption": "Conventional fixed-wing aircraft from the supplied collection, distinct from the Tornado and the lift-motor QuadPlanes."
+      },
+      {
+        "src": "assets/air-field.jpg",
+        "caption": "Conventional fixed-wing aircraft from the supplied collection, distinct from the Tornado and the lift-motor QuadPlanes."
+      },
+      {
+        "src": "media/my-builds/foam-aircraft-configurations.webp",
+        "title": "Foam fixed-wing configurations",
+        "caption": "Foam fixed-wing configurations. Two physical fixed-wing configurations from the build collection. Separate from the Tornado and from simulator models."
+      },
+      {
+        "src": "media/my-builds/fixed-wing-field-workspace.webp",
+        "title": "Fixed-wing field workspace",
+        "caption": "Fixed-wing field workspace. Aircraft, radio and laptop during field preparation. No flight result is inferred from this setup photograph."
       }
     ],
     "papers": [],
@@ -238,6 +318,9 @@
       }
     ],
     "papers": [
+      "vtol-full-engineering",
+      "vtol-vibration-notches",
+      "vtol-notch-pid",
       "vtol-analysis"
     ],
     "photo_verified": true
@@ -299,16 +382,7 @@
       "Water trials",
       "ESC / BMS"
     ],
-    "gallery": [
-      {
-        "src": "media/upwork/usv-power-box.jpg",
-        "caption": "Original project electronics-enclosure photograph; not a complete-vessel photograph."
-      },
-      {
-        "src": "media/upwork/usv-navigation-box.jpg",
-        "caption": "Original project electronics-enclosure photograph; not a complete-vessel photograph."
-      }
-    ],
+    "gallery": [],
     "papers": [],
     "photo_verified": true,
     "reference_images": [
@@ -360,22 +434,17 @@
     "delivery": "Connected perception, video and platform interfaces for embedded payload workflows.",
     "scope": "Scope: embedded payload, tracking and video-interface integration.",
     "contribution": "Integrated Jetson/Raspberry Pi companion computing, YOLOv8/ByteTrack and camera/gimbal interfaces with RTSP/GStreamer video workflows. USV work included Jetson Nano and an A8C gimbal camera for first-person video and AI detection, connected with the vehicle navigation and operator-visibility workflow.",
-    "image": "assets/vision.jpg",
-    "caption": "Platform context from the supplied project collection; no performance metric is implied.",
+    "image": "",
+    "caption": "",
     "domain": "avionics",
     "tags": [
       "Jetson / Raspberry Pi",
       "YOLOv8 / ByteTrack",
       "SIYI / GStreamer"
     ],
-    "gallery": [
-      {
-        "src": "assets/vision.jpg",
-        "caption": "Platform context from the supplied project collection; no performance metric is implied."
-      }
-    ],
+    "gallery": [],
     "papers": [],
-    "photo_verified": true
+    "photo_verified": false
   },
   {
     "id": "ais",
@@ -542,14 +611,6 @@
       {
         "src": "media/claude/08_electronics_and_bench/01-custom-fc-board.webp",
         "caption": "Custom flight-controller carrier board installed on a frame"
-      },
-      {
-        "src": "media/claude/08_electronics_and_bench/02-quad-with-radio.webp",
-        "caption": "Quadcopter with radio after bench setup"
-      },
-      {
-        "src": "media/claude/08_electronics_and_bench/03-quad-top-view.webp",
-        "caption": "Top view of a wired quadcopter"
       }
     ],
     "papers": [],
@@ -690,6 +751,18 @@
         "caption": "QuadPlane field setup with its ground-control equipment."
       },
       {
+        "src": "media/aircraft-update/quadplane-wing-and-avionics.webp",
+        "caption": "QuadPlane wing, lift-motor arms and avionics bay during assembly."
+      },
+      {
+        "src": "media/aircraft-update/quadplane-internal-layout.webp",
+        "caption": "Top-down view of the installed electronics, wiring and connectors."
+      },
+      {
+        "src": "media/aircraft-update/quadplane-wiring-check.webp",
+        "caption": "Open avionics bay during wiring checks on the QuadPlane."
+      },
+      {
         "src": "media/upwork/cube-vtol-complete.jpg",
         "caption": "Assembled QuadPlane with four lift motors and separate forward propulsion."
       },
@@ -732,14 +805,6 @@
       {
         "src": "media/fixed-wing-build/quadplane-bench.webp",
         "caption": "QuadPlane assembly and propulsion integration on the bench."
-      },
-      {
-        "src": "assets/fixed-wing.jpg",
-        "caption": "4+1 QuadPlane aircraft from the supplied project collection."
-      },
-      {
-        "src": "assets/air-field.jpg",
-        "caption": "4+1 QuadPlane aircraft from the supplied project collection."
       },
       {
         "src": "media/claude/02_fixed_wing_and_3d_printed_vtol/01-talon-fixed-wing.webp",
@@ -828,14 +893,6 @@
         "caption": "Original project photograph, resized for the web."
       },
       {
-        "src": "media/claude/06_autonomous_rescue_boat_usv/01-usv-power-safety-box.webp",
-        "caption": "USV power and safety box: fuses, battery switch, shunt"
-      },
-      {
-        "src": "media/claude/06_autonomous_rescue_boat_usv/02-usv-navigation-box.webp",
-        "caption": "USV navigation and compute box"
-      },
-      {
         "src": "media/claude/06_autonomous_rescue_boat_usv/03-usv-box-layout.webp",
         "caption": "USV electrical box layout drawing with dimensions"
       },
@@ -909,6 +966,24 @@
       {
         "src": "media/claude/03_pixhawk_quadcopters/04-10in-quad-grass.webp",
         "caption": "10-inch quad on grass before a test flight"
+      },
+      {
+        "src": "media/journal/gopr7603.webp",
+        "caption": "10-inch quadcopter, matched visually to the existing project photograph. Ground setup before field checks."
+      },
+      {
+        "src": "media/journal/gopr7605.webp",
+        "caption": "10-inch quadcopter, matched visually to the existing project photograph. Ground setup before field checks."
+      },
+      {
+        "src": "media/my-builds/build-photo-13.webp",
+        "title": "10-inch FPV avionics",
+        "caption": "10-inch FPV avionics. Handheld view of the 10-inch ArduCopter build from its named source folder."
+      },
+      {
+        "src": "media/my-builds/build-photo-15.webp",
+        "title": "Two quadcopter configurations",
+        "caption": "Two quadcopter configurations. The 10-inch project collection showing distinct airframes, kept as a comparison rather than one aircraft."
       }
     ],
     "papers": [],
@@ -994,8 +1069,8 @@
       "4S power",
       "Angle / Horizon"
     ],
-    "image": "media/claude/04_fpv_builds/01-3in-fpv-cinewhoops.webp",
-    "caption": "Two 3-inch FPV cinewhoops with radio",
+    "image": "media/upwork/inav-fpv-preview.jpg",
+    "caption": "Published project photograph of the compact INAV cinewhoop configuration.",
     "gallery": [
       {
         "src": "media/upwork/inav-fpv-preview.jpg",
@@ -1012,6 +1087,15 @@
       {
         "src": "media/claude/04_fpv_builds/03-fpv-cinewhoop.webp",
         "caption": "FPV cinewhoop build"
+      },
+      {
+        "src": "media/journal/gopr7669.webp",
+        "caption": "Small-quadcopter electronics and configuration work in the supplied workshop collection."
+      },
+      {
+        "src": "media/my-builds/build-photo-32.webp",
+        "title": "Compact cinewhoop builds",
+        "caption": "Compact cinewhoop builds. Ducted-aircraft assembly and radio-control setup."
       }
     ],
     "papers": [],
@@ -1214,13 +1298,13 @@
   {
     "id": "inav-fixed-wing",
     "category": "Air / UAV & UAS",
-    "title": "INAV fixed-wing configuration review",
-    "context": "Client engineering documentation",
-    "status": "Yaw-drift diagnosis and Blackbox planning",
-    "problem": "Investigate yaw drift on a pusher fixed-wing aircraft with a SpeedyBee F405 Wing controller.",
+    "title": "Volantex Ranger: INAV yaw troubleshooting",
+    "context": "Client engineering support and documentation",
+    "status": "Yaw issue resolved with client support",
+    "problem": "A Volantex Ranger pusher aircraft held level but drifted to the right in stabilised modes. I helped the client investigate and resolve the yaw problem.",
     "contribution": "Reviewed the INAV configuration, board alignment, compass assumptions, yaw feed-forward and damper settings. Defined corrective checks and the Blackbox evidence needed for the next flight.",
-    "delivery": "An aircraft-specific configuration investigation and an ordered test plan.",
-    "scope": "The report documents analysis and recommendations. A planned Blackbox capture and final flight validation are not presented as completed results.",
+    "delivery": "Aircraft-specific configuration analysis, ordered corrective checks and Blackbox setup guidance.",
+    "scope": "The yaw issue was resolved through client support, as confirmed by Achraf. The supplied report records the diagnostic reasoning and proposed checks; it does not contain a final post-fix flight log. Client photographs and final-flight recordings will be added when supplied.",
     "image": "",
     "caption": "",
     "domain": "air",
@@ -1233,7 +1317,8 @@
     ],
     "gallery": [],
     "papers": [
-      "inav-fixed-wing"
+      "inav-fixed-wing",
+      "inav-ranger-blackbox"
     ],
     "photo_verified": false,
     "work_samples": [
@@ -1393,5 +1478,149 @@
         "caption": "Original report excerpt: Agricultural UAV propulsion feasibility. Feasibility study and CAD concept. Weight, thrust and endurance figures are planning estimates or source-component values, not measured flight results."
       }
     ]
+  },
+  {
+    "id": "multirotor-simulation",
+    "category": "Simulation / UAV & UAS",
+    "title": "Gazebo and autopilot simulation development",
+    "context": "Aircraft modelling, autopilot integration and pre-field checks",
+    "status": "Custom-model and SITL development",
+    "problem": "Use aircraft simulation to investigate configurations, flight modes, parameters and missions before taking the physical vehicle to the field.",
+    "contribution": "Simulated many of the aircraft I later flew, checking component interfaces, autopilot behaviour, flight modes, mission workflows and parameters before field tests. I also converted the Cobra VTOL aircraft files into a custom Gazebo model and connected it to PX4 and ArduPilot, rather than relying only on pre-built simulator aircraft.",
+    "delivery": "Gazebo model integration, autopilot SITL connections and repeatable pre-field checks across multirotor, fixed-wing and VTOL configurations.",
+    "scope": "Achraf confirms the custom Cobra conversion and PX4/ArduPilot integration. The visible screenshots identify the particular model and software shown; they are not presented as screenshots of Cobra unless the aircraft identity is established. Simulation checks complement, and do not replace, real flight testing.",
+    "image": "media/my-builds/px4-axes-mission.webp",
+    "caption": "PX4 model axes and mission planning. The X500 model, frame axes and ground-station mission display. This is simulation evidence, separate from physical flight photographs.",
+    "domain": "air",
+    "tags": [
+      "Gazebo",
+      "PX4",
+      "ArduPilot",
+      "SITL",
+      "Custom aircraft models",
+      "QGroundControl",
+      "MAVProxy",
+      "Flight modes",
+      "Mission testing"
+    ],
+    "gallery": [
+      {
+        "src": "media/my-builds/ardupilot-rc-sitl.webp",
+        "title": "ArduPilot SITL and RC channels",
+        "caption": "ArduPilot SITL and RC channels. Gazebo, QGroundControl, MAVProxy and RC/servo-channel panels during a simulated multirotor session."
+      },
+      {
+        "src": "media/my-builds/skywalker-x8-model.webp",
+        "title": "Skywalker X8 QuadPlane model",
+        "caption": "Skywalker X8 QuadPlane model. The Gazebo entity tree identifies skywalker_x8_quad. This is a model setup screenshot, not a photograph of the Cobra."
+      },
+      {
+        "src": "media/my-builds/px4-wooded-world.webp",
+        "title": "PX4 multirotor in a wooded world",
+        "caption": "PX4 multirotor in a wooded world. Gazebo terrain and vegetation with the connected PX4 ground station. The map shows a simulated position."
+      },
+      {
+        "src": "media/my-builds/quadplane-command-debug.webp",
+        "title": "QuadPlane command troubleshooting",
+        "caption": "QuadPlane command troubleshooting. An orange QuadPlane model, QGroundControl and MAVProxy. The displayed command warning is part of debugging, not a completed mission result."
+      },
+      {
+        "src": "media/my-builds/px4-axes-mission.webp",
+        "title": "PX4 model axes and mission planning",
+        "caption": "PX4 model axes and mission planning. The X500 model, frame axes and ground-station mission display. This is simulation evidence, separate from physical flight photographs."
+      }
+    ],
+    "papers": [],
+    "photo_verified": true,
+    "related_projects": [
+      "cobra-vtol"
+    ]
+  },
+  {
+    "id": "cobra-vtol",
+    "category": "Air / UAV & UAS",
+    "title": "Cobra VTOL build and integration",
+    "context": "Personal aircraft development",
+    "status": "Airframe and avionics integration",
+    "problem": "Bring the Cobra VTOL airframe, propulsion and avionics together as a physical aircraft, alongside a matching custom-model simulation workflow.",
+    "contribution": "Built and integrated the Cobra VTOL airframe and aircraft systems. I also converted the aircraft files into a custom Gazebo model and worked with PX4 and ArduPilot to investigate behaviour and configurations before field work.",
+    "delivery": "A physical Cobra workshop build and a custom-aircraft simulation workflow, documented separately so assembly photographs and simulation screenshots are not confused.",
+    "scope": "The photographs show physical workshop and assembly stages. The custom-model conversion is confirmed by Achraf; a matching Cobra simulator screenshot can be added when supplied. No flight metric is inferred from the workshop photographs.",
+    "image": "media/my-builds/cobra-build-1.webp",
+    "caption": "Cobra VTOL on the build stand. Airframe and lift-motor integration during workshop preparation.",
+    "domain": "air",
+    "tags": [
+      "Cobra VTOL",
+      "Aircraft assembly",
+      "Propulsion integration",
+      "Avionics",
+      "Gazebo",
+      "PX4",
+      "ArduPilot"
+    ],
+    "gallery": [
+      {
+        "src": "media/my-builds/cobra-build-1.webp",
+        "title": "Cobra VTOL on the build stand",
+        "caption": "Cobra VTOL on the build stand. Airframe and lift-motor integration during workshop preparation."
+      },
+      {
+        "src": "media/my-builds/cobra-build-2.webp",
+        "title": "Cobra airframe and avionics assembly",
+        "caption": "Cobra airframe and avionics assembly. The workshop view shows the aircraft structure, lift propulsion and integration workspace."
+      },
+      {
+        "src": "media/my-builds/cobra-build-3.webp",
+        "title": "Cobra wing and propulsion layout",
+        "caption": "Cobra wing and propulsion layout. An overhead assembly view showing the fixed wing and VTOL lift hardware."
+      },
+      {
+        "src": "media/my-builds/cobra-build-4.webp",
+        "title": "Cobra bench integration",
+        "caption": "Cobra bench integration. Airframe, propulsion and onboard integration in the workshop."
+      }
+    ],
+    "papers": [],
+    "photo_verified": true,
+    "related_projects": [
+      "multirotor-simulation"
+    ]
+  },
+  {
+    "id": "fpv-speedybee-log-review",
+    "domain": "air",
+    "category": "Air / FPV diagnostics",
+    "title": "SpeedyBee FPV flight-log and filter review",
+    "context": "Client configuration and diagnostic support",
+    "status": "Flight-log analysis and tuning recommendations",
+    "problem": "Investigate oscillation and vibration in a SpeedyBee F405-equipped FPV quadcopter running ArduCopter.",
+    "contribution": "Compared commanded and measured pitch response, reviewed the FFT and separated candidate motor-related vibration from possible airframe resonance. Prepared filtering and tuning recommendations for the next test.",
+    "delivery": "An engineering report covering the configuration review, PID tracking and vibration analysis. Selected pages show the evidence behind the recommendations.",
+    "scope": "The report presents findings and proposed changes for this aircraft. Final flight validation is not documented in the excerpt.",
+    "tags": [
+      "FPV",
+      "ArduCopter",
+      "SpeedyBee F405",
+      "FFT",
+      "PID tracking",
+      "Notch filtering"
+    ],
+    "image": "",
+    "caption": "",
+    "gallery": [],
+    "work_samples": [
+      {
+        "src": "media/aircraft-update/fpv-report-page-15.webp",
+        "caption": "Pitch command versus measured response, with notes on overshoot and oscillation."
+      },
+      {
+        "src": "media/aircraft-update/fpv-report-page-19.webp",
+        "caption": "FFT review and proposed filtering for the specific test airframe."
+      }
+    ],
+    "papers": [
+      "fpv-speedybee-log-review"
+    ],
+    "photo_verified": false
   }
 ]

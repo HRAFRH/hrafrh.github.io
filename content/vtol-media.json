@@ -2,28 +2,28 @@
   "case": "vtol",
   "videos": [
     {
-      "file": "media/vtol/selected-flight-01.mp4",
-      "poster": "media/vtol/selected-flight-01.jpg",
+      "file": "media/journal/vtol-flight-audio-01.mp4",
+      "poster": "media/journal/vtol-flight-audio-01.jpg",
       "title": "Hover flight",
       "duration": 30,
       "date": "26 August 2025",
-      "caption": "Airborne hover sequence from the supplied field trial."
+      "caption": "Original field audio retained. Supplied recording of the flying-wing VTOL during field testing."
     },
     {
-      "file": "media/vtol/selected-flight-02.mp4",
-      "poster": "media/vtol/selected-flight-02.jpg",
+      "file": "media/journal/vtol-flight-audio-02.mp4",
+      "poster": "media/journal/vtol-flight-audio-02.jpg",
       "title": "Low-altitude hover",
       "duration": 14,
       "date": "26 August 2025",
-      "caption": "A closer airborne sequence showing the aircraft above the field."
+      "caption": "Original field audio retained. Supplied recording of the flying-wing VTOL during field testing."
     },
     {
-      "file": "media/vtol/selected-flight-03.mp4",
-      "poster": "media/vtol/selected-flight-03.jpg",
+      "file": "media/journal/vtol-flight-audio-03.mp4",
+      "poster": "media/journal/vtol-flight-audio-03.jpg",
       "title": "Stability investigation",
       "duration": 18,
       "date": "26 August 2025",
-      "caption": "An intermediate flight sequence discussed in the project report for oscillation and stability review."
+      "caption": "Original field audio retained. Intermediate behaviour shown for the stability investigation; not a final validation claim."
     }
   ],
   "reports": [
@@ -45,7 +45,7 @@
     {
       "title": "Aircraft reference manual",
       "file": "media/vtol/reference-aircraft-manual.pdf",
-      "note": "Third-party reference: Super Stingray VTOL user manual, Flightory / Szymon W\u00f3jcik, \u00a9 2024. Not authored by me and not a claim that this is the same airframe."
+      "note": "Third-party reference: Super Stingray VTOL user manual, Flightory / Szymon Wójcik, © 2024. Not authored by me and not a claim that this is the same airframe."
     }
   ]
 }

@@ -14,7 +14,9 @@
       "fixed-wing-design",
       "fixed-wing",
       "mini-talon-simulation",
-      "inav-fixed-wing"
+      "inav-fixed-wing",
+      "multirotor-simulation",
+      "cobra-vtol"
     ],
     "stages": [
       [
@@ -57,7 +59,8 @@
       "gps-denied-altitude",
       "px4-yaw-diagnostics",
       "skybrush-stability",
-      "agricultural-uav-design"
+      "agricultural-uav-design",
+      "fpv-speedybee-log-review"
     ],
     "stages": [
       [
@@ -148,8 +151,8 @@
     "title": "Avionics & machine vision",
     "domain": "avionics",
     "lead": "Companion-computer interfaces, payload video, engineering design review and vision-based landing architecture.",
-    "cover": "assets/vision.jpg",
-    "caption": "Embedded vision and payload integration context from my project archive.",
+    "cover": "media/claude/08_electronics_and_bench/01-custom-fc-board.webp",
+    "caption": "Custom flight-controller board work sample; perception integration is documented separately.",
     "members": [
       "vision",
       "precision-landing",

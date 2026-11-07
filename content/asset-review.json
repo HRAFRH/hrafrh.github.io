@@ -1,0 +1,102 @@
+{
+  "date": "2026-11-06",
+  "state": "Local draft only, not published",
+  "reviewed_placements": 117,
+  "corrections": [
+    "Moved Gazebo quadrotor and SITL screenshots into a separate simulation record.",
+    "Moved conventional fixed-wing photos out of the QuadPlane gallery.",
+    "Reassigned root-folder quadcopter photographs and clip to matching 10-inch project.",
+    "Removed unverified generic frame views from vision and baseboard galleries.",
+    "Withheld duplicated power boxes where the vessel identity is ambiguous."
+  ],
+  "withheld": [
+    {
+      "case": "multirotor",
+      "asset": "media/claude/09_simulation_sitl_gazebo/01-gazebo-quad-sitl.webp",
+      "reason": "Gazebo/SITL screenshot belongs to simulation, not the physical multirotor build.",
+      "status": "Withheld pending exact project identification"
+    },
+    {
+      "case": "multirotor",
+      "asset": "media/claude/09_simulation_sitl_gazebo/03-mission-planner-sitl.webp",
+      "reason": "Gazebo/SITL screenshot belongs to simulation, not the physical multirotor build.",
+      "status": "Withheld pending exact project identification"
+    },
+    {
+      "case": "inav-fpv",
+      "asset": "media/journal/gopr7684.webp",
+      "reason": "Close-up does not establish aircraft identity; avoid assigning it to the cinewhoop.",
+      "status": "Withheld pending exact project identification"
+    },
+    {
+      "case": "baseboard-review",
+      "asset": "media/claude/08_electronics_and_bench/02-quad-with-radio.webp",
+      "reason": "General quadcopter views do not establish the reviewed custom baseboard installation.",
+      "status": "Withheld pending exact project identification"
+    },
+    {
+      "case": "baseboard-review",
+      "asset": "media/claude/08_electronics_and_bench/03-quad-top-view.webp",
+      "reason": "General quadcopter views do not establish the reviewed custom baseboard installation.",
+      "status": "Withheld pending exact project identification"
+    },
+    {
+      "case": "vision",
+      "asset": "assets/vision.jpg",
+      "reason": "Generic autopilot platform photograph does not visibly establish this vision payload.",
+      "status": "Withheld pending exact project identification"
+    },
+    {
+      "case": "usv",
+      "asset": "media/upwork/usv-power-box.jpg",
+      "reason": "The same box images appeared under two different vessels. Exact vessel assignment is not established.",
+      "status": "Withheld pending exact project identification"
+    },
+    {
+      "case": "usv",
+      "asset": "media/upwork/usv-navigation-box.jpg",
+      "reason": "The same box images appeared under two different vessels. Exact vessel assignment is not established.",
+      "status": "Withheld pending exact project identification"
+    },
+    {
+      "case": "rescue-usv",
+      "asset": "media/claude/06_autonomous_rescue_boat_usv/01-usv-power-safety-box.webp",
+      "reason": "The same box images appeared under two different vessels. Exact vessel assignment is not established.",
+      "status": "Withheld pending exact project identification"
+    },
+    {
+      "case": "rescue-usv",
+      "asset": "media/claude/06_autonomous_rescue_boat_usv/02-usv-navigation-box.webp",
+      "reason": "The same box images appeared under two different vessels. Exact vessel assignment is not established.",
+      "status": "Withheld pending exact project identification"
+    }
+  ],
+  "withheld_clips": [
+    {
+      "file": "vtol-flight-audio-04.mp4",
+      "reason": "The sampled frames do not establish a clear airborne segment. Excluded from the draft rather than labelled as a flying result."
+    },
+    {
+      "file": "vtol-flight-audio-05.mp4",
+      "reason": "The sampled frames do not establish a clear airborne segment. Excluded from the draft rather than labelled as a flying result."
+    }
+  ],
+  "my_builds_update": {
+    "reviewed_images": 48,
+    "selected_assets": 15,
+    "simulation_examples": 5,
+    "physical_builds": "Cobra, 10-inch FPV, compact cinewhoop, 7-inch Pixhawk and mixed fixed-wing collection",
+    "custom_cobra_conversion": "Confirmed by Achraf. Generic X8/X500/QuadPlane screenshots are not identified as Cobra.",
+    "state": "Unpublished local draft"
+  },
+  "delivery_revision": {
+    "date": "2026-11-07",
+    "images_added": 9,
+    "clips_added": 6,
+    "original_call_framing": true,
+    "source_audio": true,
+    "privacy": "Satellite map removed from attached chart derivative; raw logs not published",
+    "capacity_note": "32Ah/20Ah packs captioned as photographed; 40Ah mission setup attributed to owner confirmation",
+    "publication": "Local only"
+  }
+}

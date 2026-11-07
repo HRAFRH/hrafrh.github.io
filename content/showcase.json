@@ -1,5 +1,8 @@
 {
   "main_projects": [
+    "multirotor-simulation",
+    "cobra-vtol",
+    "inav-fixed-wing",
     "fixed-wing",
     "vtol",
     "cube-vtol",
@@ -35,7 +38,10 @@
     "usv": "Twin-waterjet unmanned surface vehicle",
     "rescue-usv": "Autonomous rescue-boat integration",
     "hybrid-wheeled-uav": "Hybrid aircraft and ground-drive system",
-    "vision": "Embedded vision and camera payloads"
+    "vision": "Embedded vision and camera payloads",
+    "inav-fixed-wing": "Volantex Ranger: INAV yaw troubleshooting",
+    "multirotor-simulation": "Gazebo and autopilot simulation development",
+    "cobra-vtol": "Cobra VTOL build and integration"
   },
-  "story_count": 25
+  "story_count": 30
 }

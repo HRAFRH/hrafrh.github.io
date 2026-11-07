@@ -404,5 +404,135 @@
       "Report cover: verified mission metrics, supplied aircraft screenshot and evidence boundaries.",
       "Mission-profile page: GPS distance and altitude plots without geographic coordinates."
     ]
+  },
+  {
+    "id": "inav-ranger-blackbox",
+    "title": "Ranger INAV Blackbox setup and log collection",
+    "subtitle": "Flight-recorder preparation and log extraction",
+    "case": "inav-fixed-wing",
+    "source": "Client support guide assembled by Achraf RAHIBE, with referenced INAV and SpeedyBee setup instructions",
+    "language": "English",
+    "pages": [
+      1,
+      2
+    ],
+    "images": [
+      "media/documents/inav-ranger-blackbox-1.webp",
+      "media/documents/inav-ranger-blackbox-2.webp"
+    ],
+    "captions": [
+      "Blackbox setup instructions, with the source references retained.",
+      "Log extraction guidance for the next diagnostic recording."
+    ],
+    "description": "A companion guide for enabling the INAV flight recorder and collecting logs during the Ranger yaw investigation.",
+    "scope": "Setup and evidence-collection guidance. It is not a post-fix flight-validation report. Referenced third-party instructions remain attributed in the PDF.",
+    "file": "reports/inav-ranger-blackbox-guide.pdf",
+    "group": "Flight diagnostics",
+    "stage": "Client support guide",
+    "page_count": 2
+  },
+  {
+    "id": "vtol-full-engineering",
+    "title": "VTOL engineering report",
+    "subtitle": "Flying-wing VTOL engineering documentation",
+    "case": "vtol",
+    "source": "Original engineering report by Achraf RAHIBE, public edition",
+    "language": "English",
+    "pages": [
+      1,
+      3
+    ],
+    "images": [
+      "media/documents/vtol-full-engineering-1.webp",
+      "media/documents/vtol-full-engineering-3.webp"
+    ],
+    "captions": [
+      "Public report page 1: VTOL engineering report.",
+      "Public report page 3: VTOL engineering report."
+    ],
+    "description": "34-page public edition of my project report. Three map-bearing source pages are omitted.",
+    "scope": "Project-specific analysis and support documentation. Public editions retain the existing location redactions; recommendations are not standalone proof of successful validation.",
+    "file": "media/vtol/vtol-engineering-report-public.pdf",
+    "group": "Flight diagnostics",
+    "stage": "Engineering report",
+    "page_count": 34
+  },
+  {
+    "id": "vtol-vibration-notches",
+    "title": "Vibration and notch-filter analysis",
+    "subtitle": "Flying-wing VTOL engineering documentation",
+    "case": "vtol",
+    "source": "Original engineering report by Achraf RAHIBE, public edition",
+    "language": "English",
+    "pages": [
+      1,
+      3
+    ],
+    "images": [
+      "media/documents/vtol-vibration-notches-1.webp",
+      "media/documents/vtol-vibration-notches-3.webp"
+    ],
+    "captions": [
+      "Public report page 1: Vibration and notch-filter analysis.",
+      "Public report page 3: Vibration and notch-filter analysis."
+    ],
+    "description": "13-page engineering work sample covering vibration review, logging and filter setup.",
+    "scope": "Project-specific analysis and support documentation. Public editions retain the existing location redactions; recommendations are not standalone proof of successful validation.",
+    "file": "media/vtol/vibration-notch-analysis.pdf",
+    "group": "Flight diagnostics",
+    "stage": "Engineering report",
+    "page_count": 13
+  },
+  {
+    "id": "vtol-notch-pid",
+    "title": "Notch-filter and PID review",
+    "subtitle": "Flying-wing VTOL engineering documentation",
+    "case": "vtol",
+    "source": "Original engineering report by Achraf RAHIBE, public edition",
+    "language": "English",
+    "pages": [
+      1,
+      3
+    ],
+    "images": [
+      "media/documents/vtol-notch-pid-1.webp",
+      "media/documents/vtol-notch-pid-3.webp"
+    ],
+    "captions": [
+      "Public report page 1: Notch-filter and PID review.",
+      "Public report page 3: Notch-filter and PID review."
+    ],
+    "description": "5-page follow-up work sample covering compass interference, FFT and filter review.",
+    "scope": "Project-specific analysis and support documentation. Public editions retain the existing location redactions; recommendations are not standalone proof of successful validation.",
+    "file": "media/vtol/notch-pid-review.pdf",
+    "group": "Flight diagnostics",
+    "stage": "Engineering report",
+    "page_count": 5
+  },
+  {
+    "id": "fpv-speedybee-log-review",
+    "title": "FPV ArduCopter pitch tracking and vibration review",
+    "subtitle": "SpeedyBee F405 diagnostic work sample",
+    "case": "fpv-speedybee-log-review",
+    "source": "Original engineering report by Achraf RAHIBE",
+    "language": "English",
+    "pages": [
+      15,
+      19
+    ],
+    "images": [
+      "media/aircraft-update/fpv-report-page-15.webp",
+      "media/aircraft-update/fpv-report-page-19.webp"
+    ],
+    "captions": [
+      "Pitch command versus measured response, with notes on overshoot and oscillation.",
+      "FFT review and proposed filtering for the specific test airframe."
+    ],
+    "description": "Two selected pages from an FPV diagnostic report covering pitch tracking and vibration frequencies.",
+    "scope": "These excerpts document the analysis and proposed tuning for the SpeedyBee-equipped test aircraft. The report does not establish a completed post-tuning validation flight.",
+    "file": "reports/fpv-speedybee-log-review-excerpt.pdf",
+    "group": "Flight diagnostics",
+    "stage": "Diagnostic report excerpt",
+    "page_count": 2
   }
 ]
