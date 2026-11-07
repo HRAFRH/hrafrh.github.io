@@ -24,6 +24,76 @@
       "duration": 18,
       "date": "26 August 2025",
       "caption": "Original field audio retained. Intermediate behaviour shown for the stability investigation; not a final validation claim."
+    },
+    {
+      "file": "media/wing-field-tests/wing-gx010095.mp4",
+      "poster": "media/wing-field-tests/wing-gx010095.jpg",
+      "title": "Field hover from beside the operator",
+      "caption": "The silver flying wing rises just above the grass and continues out across the field.",
+      "duration": 17,
+      "date": "26 August 2025",
+      "source_file": "GX010095.MP4",
+      "source_start_seconds": 25
+    },
+    {
+      "file": "media/wing-field-tests/wing-gx010099.mp4",
+      "poster": "media/wing-field-tests/wing-gx010099.jpg",
+      "title": "Low pass beside the field track",
+      "caption": "A closer side view of the silver wing flying low alongside the field track.",
+      "duration": 11,
+      "date": "26 August 2025",
+      "source_file": "GX010099.MP4",
+      "source_start_seconds": 2
+    },
+    {
+      "file": "media/wing-field-tests/wing-gx010100.mp4",
+      "poster": "media/wing-field-tests/wing-gx010100.jpg",
+      "title": "Low-altitude handling on grass",
+      "caption": "A longer view of the wing moving across the test field at low altitude.",
+      "duration": 18,
+      "date": "26 August 2025",
+      "source_file": "GX010100.MP4",
+      "source_start_seconds": 2
+    },
+    {
+      "file": "media/wing-field-tests/wing-gx010105.mp4",
+      "poster": "media/wing-field-tests/wing-gx010105.jpg",
+      "title": "Low flight from another angle",
+      "caption": "Another view of the wing holding close to the grass during field trials.",
+      "duration": 19,
+      "date": "26 August 2025",
+      "source_file": "GX010105.MP4",
+      "source_start_seconds": 1
+    },
+    {
+      "file": "media/wing-field-tests/wing-gx010106.mp4",
+      "poster": "media/wing-field-tests/wing-gx010106.jpg",
+      "title": "Extended low flight",
+      "caption": "A wider view of the wing flying low as the camera follows it across the field.",
+      "duration": 24,
+      "date": "26 August 2025",
+      "source_file": "GX010106.MP4",
+      "source_start_seconds": 15
+    },
+    {
+      "file": "media/wing-field-tests/wing-gx010107.mp4",
+      "poster": "media/wing-field-tests/wing-gx010107.jpg",
+      "title": "Closer return pass",
+      "caption": "The silver wing comes back into clearer view across the grass.",
+      "duration": 12,
+      "date": "26 August 2025",
+      "source_file": "GX010107.MP4",
+      "source_start_seconds": 6
+    },
+    {
+      "file": "media/wing-field-tests/wing-september-00000107.mp4",
+      "poster": "media/wing-field-tests/wing-september-00000107.jpg",
+      "title": "Follow-up hover test",
+      "caption": "The same silver flying wing lifts and hovers above a paved test area during the September follow-up.",
+      "duration": 17,
+      "date": "4 September 2025",
+      "source_file": "2025-09-04_18-46-08_00000107.mp4",
+      "source_start_seconds": 1
     }
   ],
   "reports": [

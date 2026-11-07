@@ -64,7 +64,7 @@
       {
         "src": "media/delivery-drone/update/battery-20ah.webp",
         "title": "Additional battery in the project collection",
-        "caption": "Additional battery in the project collection. The label reads 20,000 mAh; its role is kept distinct from the reported 40,000 mAh mission configuration."
+        "caption": "An additional battery from the project collection, shown separately from the reported 40,000 mAh mission configuration."
       },
       {
         "src": "media/delivery-drone/update/aircraft-ground.webp",
@@ -166,11 +166,6 @@
       {
         "src": "media/claude/03_pixhawk_quadcopters/01-7in-pixhawk-quad-bench.webp",
         "caption": "7-inch Pixhawk quadcopter wired up on the bench"
-      },
-      {
-        "src": "media/my-builds/build-photo-36.webp",
-        "title": "7-inch Pixhawk bench setup",
-        "caption": "7-inch Pixhawk bench setup. Original photograph from the 7-inch Pixhawk folder, showing the physical aircraft and flight-control installation."
       }
     ],
     "papers": [],
@@ -208,10 +203,6 @@
         "caption": "Underside view of the compact twin-prop fixed wing."
       },
       {
-        "src": "media/aircraft-update/compact-fixed-wing-pair.webp",
-        "caption": "Two compact conventional fixed-wing airframes on the preparation bench."
-      },
-      {
         "src": "media/fixed-wing-build/tornado-front.webp",
         "caption": "Completed twin-pusher airframe during field preparation."
       },
@@ -240,38 +231,12 @@
         "caption": "Fuselage section during FDM printing."
       },
       {
-        "src": "media/fixed-wing-build/airframe-assembly.webp",
-        "caption": "Assembly-stage view of printed fixed-wing airframes and workshop equipment."
-      },
-      {
         "src": "media/fixed-wing-build/tornado-complete.webp",
         "caption": "Assembled Tornado V2 airframe showing propulsion and onboard interfaces."
       },
       {
         "src": "media/fixed-wing-build/flight-review-location-redacted.png",
         "caption": "Flight-log review illustration with the map, location details and timestamps removed. AI-assisted redaction; schematic trajectory only."
-      },
-      {
-        "src": "media/journal/mixed-aircraft-workshop.webp",
-        "caption": "Shared fixed-wing and quadcopter workshop. A separate aircraft configuration from the Tornado; shown as workshop context."
-      },
-      {
-        "src": "assets/fixed-wing.jpg",
-        "caption": "Conventional fixed-wing aircraft from the supplied collection, distinct from the Tornado and the lift-motor QuadPlanes."
-      },
-      {
-        "src": "assets/air-field.jpg",
-        "caption": "Conventional fixed-wing aircraft from the supplied collection, distinct from the Tornado and the lift-motor QuadPlanes."
-      },
-      {
-        "src": "media/my-builds/foam-aircraft-configurations.webp",
-        "title": "Foam fixed-wing configurations",
-        "caption": "Foam fixed-wing configurations. Two physical fixed-wing configurations from the build collection. Separate from the Tornado and from simulator models."
-      },
-      {
-        "src": "media/my-builds/fixed-wing-field-workspace.webp",
-        "title": "Fixed-wing field workspace",
-        "caption": "Fixed-wing field workspace. Aircraft, radio and laptop during field preparation. No flight result is inferred from this setup photograph."
       }
     ],
     "papers": [],
@@ -288,15 +253,15 @@
   {
     "id": "vtol",
     "category": "Air / UAV & UAS",
-    "title": "Flying-wing VTOL integration and flight tuning",
+    "title": "Flying-wing VTOL configuration rebuild and flight testing",
     "context": "Client engineering support | Fiverr",
-    "status": "Successful flight trials supported",
-    "problem": "Configure and diagnose a 4+1 flying-wing QuadPlane, addressing hover behaviour, attitude tracking and vibration through iterative test review.",
-    "delivery": "An engineering report, vibration and notch-filter analyses, configuration guidance and live support calls with the field team. Selected recordings show airborne behaviour, including one intermediate stability-investigation sequence.",
-    "scope": "Scope: configuration, diagnostic analysis and remote client test support. The recordings span field trials and ground tests at different stages of the work; individual clips do not establish final aircraft certification or an unrestricted flight release.",
-    "contribution": "Reviewed Pixhawk 6C / ArduPlane configuration, motor and servo assignments, compass and airspeed interfaces, calibration and failsafes. Analysed supplied flight logs and recordings, attitude response, vibration, clipping and FFT spectra, then documented filter and PID-tuning recommendations. Provided live field-test support through calls with the on-site team, helping interpret behaviour and agree on configuration changes and next checks.",
+    "status": "Complete configuration rebuild followed by stable client flights",
+    "problem": "The client brought me an unstable 4+1 flying wing. The initial review revealed several missing or incomplete configuration items, so I took responsibility for rebuilding the flight-control setup from scratch.",
+    "delivery": "The client team achieved stable flights after the rebuild and iterative tuning. I delivered the rebuilt configuration, a test and troubleshooting workflow, and engineering reports covering the setup and analysis.",
+    "scope": "I led configuration, analysis and remote engineering support. The client team operated the aircraft on site. The video gallery includes different stages of testing, including earlier handling checks and follow-up hover footage.",
+    "contribution": "I led the engineering work from diagnosis through flight testing. I rebuilt the Pixhawk 6C and ArduPlane QuadPlane setup, covering motor and servo outputs, sensor interfaces, calibration, flight modes and failsafes. During live calls, I guided the on-site team through checks and reviewed the recordings and flight logs. Attitude tracking, IMU clipping, vibration and FFT data informed changes to the filters and PID tuning.",
     "image": "assets/vtol.jpg",
-    "caption": "Client-supplied platform photograph.",
+    "caption": "The client’s silver flying-wing QuadPlane in the workshop.",
     "domain": "air",
     "tags": [
       "ArduPlane",
@@ -304,10 +269,6 @@
       "Flight-trial support"
     ],
     "gallery": [
-      {
-        "src": "media/vtol/airframe.jpg",
-        "caption": "Supplied photograph of the 4+1 flying-wing aircraft."
-      },
       {
         "src": "media/vtol/selected-flight-01.jpg",
         "caption": "Airborne hover, captured from the supplied flight recording at 35 seconds. Cropped for visibility."
@@ -368,7 +329,7 @@
     "delivery": "An integrated USV platform with propulsion control, autopilot navigation, onboard camera/perception interfaces and water-test work.",
     "scope": "Full-project involvement from system development to water trials, confirmed by the portfolio owner. The vessel itself is confidential; third-party reference photos are explicitly labeled and do not depict this USV.",
     "contribution": "Developed the system from architecture and component selection through electrical integration and water testing. Integrated autopilot navigation, differential-thrust waterjet control, ESC and battery/BMS interfaces, and investigated pre-charge/main-contactor switching. Integrated FPV and AI-detection workflows using Jetson Nano and an A8C gimbal camera.",
-    "image": "media/upwork/usv-power-box.jpg",
+    "image": "media/reference/usv-reference-1.svg",
     "caption": "Reference image only. The actual project USV is confidential; the pictured SL40 is not the project vessel.",
     "domain": "sea",
     "tags": [
@@ -771,40 +732,12 @@
         "caption": "Avionics and power integration inside the aircraft fuselage."
       },
       {
-        "src": "media/claude/01_vtol_quadplane/01-vtol-ground-control.webp",
-        "caption": "White VTOL quadplane on grass with radio and ground-control tablet"
-      },
-      {
-        "src": "media/claude/01_vtol_quadplane/02-vtol-on-stand.webp",
-        "caption": "Completed VTOL quadplane on its stand"
-      },
-      {
-        "src": "media/claude/01_vtol_quadplane/03-vtol-avionics.webp",
-        "caption": "VTOL fuselage open, showing avionics and battery"
-      },
-      {
         "src": "media/claude/01_vtol_quadplane/04-vtol-mission-planner-bench.webp",
         "caption": "VTOL on the bench with radio and Mission Planner on a laptop"
       },
       {
         "src": "media/claude/01_vtol_quadplane/05-vtol-field-ready.webp",
         "caption": "VTOL quadplane on grass, ready for a field test"
-      },
-      {
-        "src": "media/claude/01_vtol_quadplane/06-uav-fleet.webp",
-        "caption": "Fleet of VTOLs, flying wings and quadcopters on grass"
-      },
-      {
-        "src": "media/fixed-wing-build/quadplane-workshop.webp",
-        "caption": "4+1 QuadPlane airframes and components in the workshop."
-      },
-      {
-        "src": "media/fixed-wing-build/quadplane-field.webp",
-        "caption": "Four-lift-motor QuadPlane during field preparation."
-      },
-      {
-        "src": "media/fixed-wing-build/quadplane-bench.webp",
-        "caption": "QuadPlane assembly and propulsion integration on the bench."
       },
       {
         "src": "media/claude/02_fixed_wing_and_3d_printed_vtol/01-talon-fixed-wing.webp",
@@ -972,18 +905,9 @@
         "caption": "10-inch quadcopter, matched visually to the existing project photograph. Ground setup before field checks."
       },
       {
-        "src": "media/journal/gopr7605.webp",
-        "caption": "10-inch quadcopter, matched visually to the existing project photograph. Ground setup before field checks."
-      },
-      {
         "src": "media/my-builds/build-photo-13.webp",
         "title": "10-inch FPV avionics",
         "caption": "10-inch FPV avionics. Handheld view of the 10-inch ArduCopter build from its named source folder."
-      },
-      {
-        "src": "media/my-builds/build-photo-15.webp",
-        "title": "Two quadcopter configurations",
-        "caption": "Two quadcopter configurations. The 10-inch project collection showing distinct airframes, kept as a comparison rather than one aircraft."
       }
     ],
     "papers": [],
@@ -1077,10 +1001,6 @@
         "caption": "Faithful browser preview of my published project photograph; original local file not yet matched."
       },
       {
-        "src": "media/claude/04_fpv_builds/01-3in-fpv-cinewhoops.webp",
-        "caption": "Two 3-inch FPV cinewhoops with radio"
-      },
-      {
         "src": "media/claude/04_fpv_builds/02-fpv-flight-controller.webp",
         "caption": "FPV flight controller close-up"
       },
@@ -1091,11 +1011,6 @@
       {
         "src": "media/journal/gopr7669.webp",
         "caption": "Small-quadcopter electronics and configuration work in the supplied workshop collection."
-      },
-      {
-        "src": "media/my-builds/build-photo-32.webp",
-        "title": "Compact cinewhoop builds",
-        "caption": "Compact cinewhoop builds. Ducted-aircraft assembly and radio-control setup."
       }
     ],
     "papers": [],
@@ -1167,14 +1082,6 @@
       {
         "src": "media/platforms/tiltrotor-electronics.jpg",
         "caption": "Propulsion, servo, sensor and flight-controller integration."
-      },
-      {
-        "src": "media/claude/02_fixed_wing_and_3d_printed_vtol/02-3d-printed-vtol.webp",
-        "caption": "3D-printed VTOL airframe with four lift motors"
-      },
-      {
-        "src": "media/claude/02_fixed_wing_and_3d_printed_vtol/03-3d-printed-vtol-assembly.webp",
-        "caption": "3D-printed VTOL assembled on the ground"
       }
     ],
     "papers": [],

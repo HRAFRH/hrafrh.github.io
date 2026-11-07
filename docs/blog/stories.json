@@ -346,20 +346,20 @@
   {
     "id": "quadplane-stability",
     "case": "vtol",
-    "title": "Investigating stability on a flying-wing QuadPlane",
-    "intro": "Configuration review, vibration analysis and flight-trial support for a 4+1 VTOL aircraft.",
+    "title": "Rebuilding a flying-wing QuadPlane from scratch",
+    "intro": "A client asked me to solve an instability problem. I found missing configuration work, rebuilt the Pixhawk 6C and ArduPlane setup from scratch, and supported the team through to stable flights.",
     "sections": [
       [
-        "Start with the configuration",
-        "This engagement began with an unstable flying-wing QuadPlane. I rebuilt and reviewed the Pixhawk 6C and ArduPlane setup, including motor and servo assignments, calibration and QuadPlane settings."
+        "Why I started over",
+        "The client brought me a silver 4+1 flying wing that was unstable. I found several missing or incomplete settings during the review. I took responsibility for the flight-control configuration and rebuilt the setup from the beginning, including motor and servo outputs, calibration, sensor checks and failsafes."
       ],
       [
-        "Read the response, not just the settings",
-        "I reviewed attitude tracking, IMU clipping, vibration and FFT data to connect the reported behaviour with the recorded response. That analysis informed configuration corrections and PID-tuning support."
+        "What the early tests showed",
+        "I joined the field team on live calls, reviewed their recordings and used flight logs to trace how the wing responded. I examined attitude tracking, IMU clipping and vibration, then used FFT data to guide filter and PID changes between tests."
       ],
       [
-        "Close the loop with the client",
-        "The delivery combined a technical report, troubleshooting guidance and remote support for successful client flight trials. The work covered configuration and diagnostics; the client carried out the physical tests."
+        "From the rebuild to stable flights",
+        "The client team operated the aircraft on site while I led the configuration, analysis and remote support. After the rebuild and iterative tuning, they achieved stable flights. The recordings span several checks, so the captions describe what each clip shows."
       ]
     ]
   },
