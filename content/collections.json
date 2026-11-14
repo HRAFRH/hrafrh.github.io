@@ -158,6 +158,7 @@
       "precision-landing",
       "baseboard-review",
       "lidar-avoidance",
+      "rplidar-obstacle-avoidance",
       "safe-corridor-return",
       "sitl-mission-dashboard"
     ],

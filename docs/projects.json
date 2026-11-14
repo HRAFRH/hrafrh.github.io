@@ -1529,5 +1529,55 @@
       "fpv-speedybee-log-review"
     ],
     "photo_verified": false
+  },
+  {
+    "id": "rplidar-obstacle-avoidance",
+    "title": "360° lidar obstacle avoidance for PX4 and ArduPilot",
+    "domain": "avionics",
+    "category": "Avionics / autonomy",
+    "context": "Own development project, open source on GitHub",
+    "status": "Bench-tested on Pixhawk 6X and Cube Orange Plus; flight tests pending",
+    "problem": "Give a multirotor 360° obstacle awareness from an RPLidar A2M12 wired straight to the flight controller, without a companion computer, on PX4 where no RPLidar driver existed.",
+    "contribution": "Wrote a PX4 driver for RPLidar scanners that publishes obstacle_distance for Collision Prevention, with a host test bench that runs the real driver against a simulated lidar. Traced a lidar that froze after every PX4 cold start to the board switching its 5 V peripheral rail off during boot, and patched the Pixhawk 6X and Cube Orange Plus board files to keep the rail on, as ArduPilot does. Added a MAVLink patch so the raw scan reaches the ground station, a lidar radar instrument loaded into QGroundControl without rebuilding it, and a desktop radar app. Configured ArduPilot's native RPLidar support on the same hardware.",
+    "delivery": "Lidar streaming at 20 to 22 Hz on both flight controllers and starting first time after every cold start, with the scan shown live inside QGroundControl. Driver, patches, firmware, displays and build scripts published on GitHub.",
+    "scope": "Scope: PX4 driver and patches, ground-station displays and bench integration on two flight controllers. Collision Prevention in flight has not been tested yet.",
+    "image": "media/rplidar-obstacle-avoidance/bench-cube-orange-qgc.jpg",
+    "caption": "Bench test: Cube Orange Plus, RPLidar A2M12 and the lidar radar inside QGroundControl.",
+    "photo_verified": true,
+    "tags": [
+      "PX4",
+      "ArduPilot",
+      "RPLidar A2M12",
+      "C++ / NuttX",
+      "MAVLink",
+      "QGroundControl QML",
+      "Python",
+      "Pixhawk 6X",
+      "Cube Orange Plus"
+    ],
+    "gallery": [
+      {
+        "src": "media/rplidar-obstacle-avoidance/qgc-radar-fullscreen.png",
+        "title": "Full-screen radar in QGroundControl",
+        "caption": "Full-screen lidar radar in QGroundControl with live data from the Cube Orange Plus."
+      },
+      {
+        "src": "media/rplidar-obstacle-avoidance/bench-pixhawk6x-radar.jpg",
+        "title": "Pixhawk 6X bench test",
+        "caption": "Pixhawk 6X bench test with an early version of the desktop radar."
+      },
+      {
+        "src": "media/rplidar-obstacle-avoidance/qgc-radar-docked.png",
+        "title": "Radar in the QGroundControl Fly view",
+        "caption": "Radar instrument above the attitude indicator in QGroundControl, with QGroundControl's own obstacle ring."
+      },
+      {
+        "src": "media/rplidar-obstacle-avoidance/radar-app.png",
+        "title": "Desktop lidar radar",
+        "caption": "Desktop radar app connected to the Cube Orange Plus over USB."
+      }
+    ],
+    "papers": [],
+    "repo_url": "https://github.com/HRAFRH/rplidar-obstacle-avoidance"
   }
 ]
