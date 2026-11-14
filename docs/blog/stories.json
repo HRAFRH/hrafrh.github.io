@@ -79,7 +79,7 @@
       ],
       [
         "QGroundControl settings changed",
-        "All changes are in QGroundControl's settings file, edited with QGroundControl closed. instrumentQmlFile2 points the Fly view instrument at the radar file. showObstacleDistanceOverlay turns on QGroundControl's own obstacle ring (around the drone on the map once it has GPS, and over the video panel). The video source is set to RTSP at the SIYI A8 mini's default address through the SIYI air unit; this is not tested with the camera yet. MainFlyWindowIsMap keeps the map as the main view.\n\nforwardMavlink was turned on so the desktop radar could run next to QGroundControl, then turned back off because QGroundControl shows a UDP link error whenever nothing listens. Reverting to QGroundControl's normal instrument is one line in the same file, or a right-click on the instrument."
+        "All changes are in QGroundControl's settings file, edited with QGroundControl closed. instrumentQmlFile2 points the Fly view instrument at the radar file. showObstacleDistanceOverlay turns on QGroundControl's own obstacle ring (around the drone on the map once it has GPS, and over the video panel). The video source is set to RTSP at the SIYI A8 mini's default address through the SIYI air unit; this is not tested with the camera yet. MainFlyWindowIsMap chooses whether the map or the video fills the Fly view; clicking the small window swaps them.\n\nforwardMavlink was turned on so the desktop radar could run next to QGroundControl, then turned back off because QGroundControl shows a UDP link error whenever nothing listens. Reverting to QGroundControl's normal instrument is one line in the same file, or a right-click on the instrument."
       ],
       [
         "A desktop radar app",
