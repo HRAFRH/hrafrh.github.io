@@ -29,7 +29,7 @@ for post in ordered:
  elif d.get('work_samples'):
   image_src=d['work_samples'][0]['src'];caption=d['work_samples'][0]['caption']
  visual='<figure class="blog-image"><img src="../'+e(image_src)+'" alt="'+e(caption)+'" loading="lazy"></figure>' if image_src else ''
- copy=''.join('<p>'+e(paragraph)+'</p>' for heading,paragraph in post['sections'][:2])
+ copy=''.join('<p>'+e(paragraph)+'</p>' for heading,paragraph,*_ in post['sections'][:2])
  parent=parents[d['id']]
  entries.append('<article class="blog-card journal-entry"><div class="blog-heading"><h2>'+e(post['title'])+'</h2><time datetime="2026-10-26">26 October 2026</time></div><p class="journal-deck">'+e(post['intro'])+'</p>'+visual+'<div class="journal-copy">'+copy+'</div><p class="blog-meta">Project retrospective</p><div class="links"><a href="../projects/'+parent['id']+'/#'+d['id']+'">View the project →</a><a href="'+post['id']+'/">Read the full engineering note →</a></div></article>')
 body='<main id="main" class="wrap"><header class="blog-head"><h1>Blog</h1><p>Build notes, integration work and field testing.</p></header>'+''.join(entries)+'</main>'

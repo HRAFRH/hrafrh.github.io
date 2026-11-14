@@ -62,10 +62,13 @@ def story(post,pre,index=False):
  if d['id']=='delivery-drone':
   return delivery_narrative(ROOT,pre,3)+reports(d,pre)
  if ims:parts.append(image(ims[0],pre))
- for i,(heading,paragraph) in enumerate(post['sections']):
-  parts.append('<section class="story-chapter"><h3>'+e(heading)+'</h3><p>'+e(paragraph)+'</p></section>')
+ sec_imgs=any(len(s)>2 for s in post['sections'])
+ for i,s in enumerate(post['sections'][:2] if index and sec_imgs else post['sections']):
+  heading,paragraph=s[0],s[1]
+  parts.append('<section class="story-chapter"><h3>'+e(heading)+'</h3>'+''.join('<p>'+e(x)+'</p>' for x in paragraph.split('\n\n'))+'</section>')
+  if len(s)>2:parts.append('<div class="story-gallery">'+''.join(image(im,pre) for im in s[2] if (D/im['src']).exists())+'</div>')
   if i==0:parts.append(videos(d,pre,2 if index else None))
-  if i==1 and len(ims)>1:parts.append('<div class="story-gallery">'+''.join(image(im,pre) for im in ims[1:3] if index)+('' if index else ''.join(image(im,pre) for im in ims[1:5]))+'</div>')
+  if i==1 and len(ims)>1 and not sec_imgs:parts.append('<div class="story-gallery">'+''.join(image(im,pre) for im in ims[1:3] if index)+('' if index else ''.join(image(im,pre) for im in ims[1:5]))+'</div>')
  parts.append(reports(d,pre,1 if index else None))
  return ''.join(parts)
 entries=[]

@@ -43,5 +43,5 @@
     "multirotor-simulation": "Gazebo and autopilot simulation development",
     "cobra-vtol": "Cobra VTOL build and integration"
   },
-  "story_count": 35
+  "story_count": 31
 }
