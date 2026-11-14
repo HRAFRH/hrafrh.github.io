@@ -1536,7 +1536,7 @@
     "domain": "avionics",
     "category": "Avionics / autonomy",
     "context": "Own development project, open source on GitHub",
-    "status": "Bench-tested on Pixhawk 6X and Cube Orange Plus; flight tests pending",
+    "status": "Bench-tested on Pixhawk 6X and Cube Orange Plus; build log ongoing until flight tests",
     "problem": "Give a multirotor 360° obstacle awareness from an RPLidar A2M12 wired straight to the flight controller, without a companion computer, on PX4 where no RPLidar driver existed.",
     "contribution": "Wrote a PX4 driver for RPLidar scanners that publishes obstacle_distance for Collision Prevention, with a host test bench that runs the real driver against a simulated lidar. Traced a lidar that froze after every PX4 cold start to the board switching its 5 V peripheral rail off during boot, and patched the Pixhawk 6X and Cube Orange Plus board files to keep the rail on, as ArduPilot does. Added a MAVLink patch so the raw scan reaches the ground station, a lidar radar instrument loaded into QGroundControl without rebuilding it, and a desktop radar app. Configured ArduPilot's native RPLidar support on the same hardware.",
     "delivery": "Lidar streaming at 20 to 22 Hz on both flight controllers and starting first time after every cold start, with the scan shown live inside QGroundControl. Driver, patches, firmware, displays and build scripts published on GitHub.",
@@ -1578,6 +1578,66 @@
       }
     ],
     "papers": [],
-    "repo_url": "https://github.com/HRAFRH/rplidar-obstacle-avoidance"
+    "repo_url": "https://github.com/HRAFRH/rplidar-obstacle-avoidance",
+    "comparison": {
+      "title": "Pixhawk 6X and Cube Orange Plus side by side",
+      "note": "Both flight controllers run PX4 v1.17.0 with the same RPLidar driver and patches. Bench results with the props off.",
+      "columns": [
+        "Holybro Pixhawk 6X",
+        "CubePilot Cube Orange Plus"
+      ],
+      "rows": [
+        [
+          "PX4 build",
+          "px4_fmu-v6x_multicopter",
+          "cubepilot_cubeorangeplus_default"
+        ],
+        [
+          "Flash used",
+          "97.0 percent",
+          "99.4 percent"
+        ],
+        [
+          "Lidar port",
+          "TELEM2, /dev/ttyS4",
+          "TELEM2, /dev/ttyS1"
+        ],
+        [
+          "Scan rate",
+          "about 20 Hz, 184 samples per turn",
+          "about 22 Hz, 183 samples per turn"
+        ],
+        [
+          "Cold starts after the rail patch",
+          "4 of 4 streaming first try",
+          "streaming first try"
+        ],
+        [
+          "Errors and resyncs",
+          "0 and 0",
+          "0 and 0"
+        ],
+        [
+          "5 V rail on USB",
+          "4.2 to 4.6 V (BEC needed)",
+          "4.14 V (BEC needed)"
+        ],
+        [
+          "Boot rail fix",
+          "5 V peripheral rail kept on (PG4)",
+          "5 V peripheral rail kept on (PA8)"
+        ],
+        [
+          "ArduPilot",
+          "Lidar tested on ArduCopter 4.7.2",
+          "Not tested with the lidar"
+        ],
+        [
+          "Next",
+          "BEC, Collision Prevention outdoors, flight test",
+          "BEC, Collision Prevention outdoors, flight test"
+        ]
+      ]
+    }
   }
 ]

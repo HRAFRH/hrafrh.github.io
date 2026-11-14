@@ -58,7 +58,7 @@ extra=load('project-stories.json');existing=load('blog.json');posts=extra+[p for
 # Retain all stories, with the current flying-wing and Ranger work at the front.
 posts.sort(key=lambda p:0 if p['case']=='inav-fixed-wing' else 1 if p['case']=='vtol' else 2)
 def story(post,pre,index=False):
- d=by[post['case']];ims=images(d,pre);parts=[]
+ d=by[post['case']];ims=[im for im in post.get('images',[]) if (D/im['src']).exists()] or images(d,pre);parts=[]
  if d['id']=='delivery-drone':
   return delivery_narrative(ROOT,pre,3)+reports(d,pre)
  if ims:parts.append(image(ims[0],pre))

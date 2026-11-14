@@ -1,5 +1,163 @@
 [
   {
+    "id": "lidar-log-5-cube-orange-next-steps",
+    "case": "rplidar-obstacle-avoidance",
+    "title": "Lidar build log, part 5: the same driver on a Cube Orange Plus, and what comes next",
+    "intro": "15 November 2026. A second flight controller, and the plan to the first flight.",
+    "images": [
+      {
+        "src": "media/rplidar-obstacle-avoidance/bench-cube-orange-qgc.jpg",
+        "caption": "Cube Orange Plus bench test with the lidar and the radar in QGroundControl."
+      }
+    ],
+    "sections": [
+      [
+        "Port it to the Cube Orange Plus",
+        "The Cube Orange Plus showed the same boot-time rail switching in its PX4 board code, so it received the same kind of patch. Built for the Cube, the firmware uses 99.4 percent of flash. On the Cube, TELEM2 is a different serial device, and the lidar streamed at 22 Hz with no errors, including after a cold start."
+      ],
+      [
+        "Two boards side by side",
+        "Both flight controllers now run the same driver and the same displays. The differences are the build variant, the flash left, the serial device behind TELEM2 and the 5 V rail on USB, which is even lower on the Cube at 4.14 V. The project page compares them in one table."
+      ],
+      [
+        "What comes next",
+        "Fit a BEC for the lidar, mount it level and clear of the props, and test Collision Prevention outdoors in Position mode with the props off first. In parallel, run software-in-the-loop simulation with a simulated RPLidar to tune stopping distance and behaviour, then the first flight tests. This log continues with each step."
+      ]
+    ]
+  },
+  {
+    "id": "lidar-log-4-ground-station-radar",
+    "case": "rplidar-obstacle-avoidance",
+    "title": "Lidar build log, part 4: a lidar radar inside QGroundControl",
+    "intro": "15 November 2026. Data on the flight controller is only half the job: the pilot has to see it.",
+    "images": [
+      {
+        "src": "media/rplidar-obstacle-avoidance/qgc-radar-docked.png",
+        "caption": "The radar instrument above QGroundControl's attitude indicator, with QGroundControl's own obstacle ring."
+      },
+      {
+        "src": "media/rplidar-obstacle-avoidance/qgc-radar-fullscreen.png",
+        "caption": "Full-screen radar: front matches the flight controller's arrow, red inside the stopping distance."
+      }
+    ],
+    "sections": [
+      [
+        "Why QGroundControl showed nothing",
+        "Stock PX4 only sends OBSTACLE_DISTANCE to the ground station while Collision Prevention is running, which needs Position mode and GPS. A small MAVLink patch sends the raw scan whenever Collision Prevention is idle and streams it on USB at 10 Hz."
+      ],
+      [
+        "A radar without rebuilding QGroundControl",
+        "QGroundControl loads its Fly view instrument from a file named in its settings, and accepts a local file. The radar is a QML instrument dropped in that way: front up and aligned with the flight controller's arrow, red inside CP_DIST, yellow up to twice that, green beyond, the closest distance per side, the vehicle icon from the vehicle type and a warning when data stops. It can be moved, resized and opened full screen."
+      ],
+      [
+        "A desktop radar for the bench",
+        "A Python app finds the flight controller's USB port by itself and shows the same scan with direction cards and parking-sensor beeps. It also works next to QGroundControl through MAVLink forwarding."
+      ]
+    ]
+  },
+  {
+    "id": "lidar-log-3-frozen-lidar",
+    "case": "rplidar-obstacle-avoidance",
+    "title": "Lidar build log, part 3: the lidar that worked on ArduPilot but not on PX4",
+    "intro": "15 November 2026. The driver started on the board, sent its commands and received nothing. Finding out why took most of a day.",
+    "images": [
+      {
+        "src": "media/rplidar-obstacle-avoidance/radar-app.png",
+        "caption": "After the fix: the desktop radar with live data from PX4."
+      }
+    ],
+    "sections": [
+      [
+        "Zero bytes",
+        "The driver started automatically on TELEM2 at the right speed, but status showed bytes sent and zero received, with the motor spinning. Zero, not garbage, meant nothing reached the receive pin at all, so it was not a parsing or baud-rate problem."
+      ],
+      [
+        "Check the software path against ArduPilot",
+        "I compared every layer with the ArduPilot setup that worked the day before: same UART5, same pins, the same 256000 baud passed through NuttX, flow control off, no inversion, nothing else on the port. On paper PX4 was right."
+      ],
+      [
+        "A/B test with known-good firmware",
+        "Flashing ArduCopter back gave the same silence, until the lidar alone was power-cycled. The lidar itself had locked up, and rebooting the flight controller never helped because the lidar kept its power."
+      ],
+      [
+        "Find the cause",
+        "Starting the driver by hand a minute after boot still found a frozen lidar, so the driver's commands were not to blame. The answer was in PX4's board code: the 6X configures its 5 V peripheral rail off early in boot and switches it on later, so every PX4 cold start gives TELEM devices a short power cut in the middle of their own start-up. ArduPilot keeps that rail on."
+      ],
+      [
+        "The fix and the proof",
+        "A two-line board patch keeps the rail on from the start, as ArduPilot does. With it, the lidar streamed on the first try in four out of four full power-offs, with no restarts or errors. The patch is applied automatically by the install script."
+      ]
+    ]
+  },
+  {
+    "id": "lidar-log-2-px4-driver",
+    "case": "rplidar-obstacle-avoidance",
+    "title": "Lidar build log, part 2: writing an RPLidar driver for PX4",
+    "intro": "14 November 2026. PX4 has no RPLidar driver in any release up to v1.17.0, so I wrote one.",
+    "images": [
+      {
+        "src": "media/rplidar-obstacle-avoidance/bench-pixhawk6x-radar.jpg",
+        "caption": "Pixhawk 6X bench test with the lidar and an early version of the desktop radar."
+      }
+    ],
+    "sections": [
+      [
+        "Why PX4 needed new code",
+        "PX4's Collision Prevention reads a uORB topic called obstacle_distance: 72 sectors of 5 degrees in the vehicle frame. Without a companion computer, nothing publishes it from a 360 degree serial lidar. The new driver fills exactly that gap."
+      ],
+      [
+        "How the driver works",
+        "It talks the RPLidar legacy scan protocol: stop, read health, read device info, start scanning, then decode 5-byte samples. It keeps the closest return in each 5 degree sector and publishes one message per revolution, projected onto the horizontal plane using the vehicle attitude. Sectors swept with no return are reported as free, sectors never sampled as unknown. Parameters handle the port, an upside-down mount and a yaw offset."
+      ],
+      [
+        "Test before touching hardware",
+        "A host test bench compiles the real driver against stand-ins for PX4 and runs it against a simulated lidar: normal scanning, motor off, corrupted bytes, a health error and reset, upside down, yaw offset, no sensor, split serial reads, 30 degree pitch and a slow 5 Hz scan. The corrupted-bytes case exposed a real bug (false start-of-revolution flags), fixed with a 40 ms guard."
+      ],
+      [
+        "The firmware did not fit",
+        "The first PX4 build for the 6X failed on flash size, 20.9 KB over, although the driver itself is only 4.4 KB. The standard target was already close to full with that compiler. PX4's official multicopter variant drops fixed-wing and VTOL code and fits at 97 percent, which is the right variant for a quadcopter anyway."
+      ],
+      [
+        "Simulation on hardware, checked and set aside",
+        "I also built ArduPilot's simulation-on-hardware firmware for the 6X. It works as a bench simulator, but its proximity library is compiled out, so it cannot show the lidar. Avoidance will be tested in software-in-the-loop simulation instead."
+      ]
+    ]
+  },
+  {
+    "id": "lidar-log-1-ardupilot-bench",
+    "case": "rplidar-obstacle-avoidance",
+    "title": "Lidar build log, part 1: an RPLidar A2M12 on a Pixhawk 6X with ArduPilot",
+    "intro": "14 November 2026. The goal: 360 degree obstacle avoidance from a Slamtec RPLidar A2M12 wired straight to the flight controller, first on ArduPilot, then on PX4.",
+    "images": [
+      {
+        "src": "media/rplidar-obstacle-avoidance/missionplanner-proximity-ardupilot.png",
+        "caption": "Day one: Mission Planner's proximity view with the lidar on ArduCopter 4.7.2. The short arc in front is the laptop on the desk."
+      }
+    ],
+    "sections": [
+      [
+        "Start with the board on the bench",
+        "The flight controller I expected to be a Pixhawk 6C turned out to be a Pixhawk 6X: the PX4 version command reported PX4_FMU_V6X and board id 53, so every firmware from here on targets the 6X. ArduPilot supports the RPLidar natively, which made it the right first step: if the lidar works there, the wiring and the sensor are proven before any new code is written."
+      ],
+      [
+        "Wire the lidar to TELEM2",
+        "The A2M12 is a 3.3 V UART device at 256000 baud with five wires: red 5 V, yellow TX, green RX, black ground and blue MOTOCTL. Yellow goes to TELEM2 pin 3, green to pin 2, black to pin 6. In ArduCopter that becomes SERIAL2_PROTOCOL 11, SERIAL2_BAUD 256, flow control off and PRX1_TYPE 5."
+      ],
+      [
+        "The first trap: detected, but no data",
+        "ArduPilot found the lidar and read its model and firmware, yet no distances arrived. The motor was not spinning. MOTOCTL has an internal pull-down, so the blue wire must be tied to 3 to 5 V or the motor stays off while the sensor still answers commands. Moving the blue wire to 5 V fixed it immediately."
+      ],
+      [
+        "Confirm in three tools",
+        "The scan was checked in my own terminal viewer, in QGroundControl's MAVLink Inspector and in Mission Planner's proximity view. Left, right and back matched the room, and the front showed the laptop at 0.33 m."
+      ],
+      [
+        "What still needed fixing",
+        "Powered from the Pixhawk's own 5 V rail over USB, the supply measured 4.2 to 4.4 V, below the lidar's 4.9 V minimum. Fine for a bench test, not for flight: the lidar gets its own BEC before any flying."
+      ]
+    ]
+  },
+  {
     "id": "seven-inch-pixhawk-hover-check",
     "case": "multirotor",
     "title": "A field hover check for the 7-inch Pixhawk build",
