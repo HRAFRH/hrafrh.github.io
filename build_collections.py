@@ -27,7 +27,7 @@ for g in collections:
   for im in d.get('gallery',[]):
    if im['src'] in seen:continue
    seen.add(im['src']);figs.append(platform_figure(im['src'],im['caption']))
-  if not figs and d.get('photo_verified') and d.get('image'):
+  if not figs and (d.get('photo_verified') or d.get('image_kind')=='diagram') and d.get('image'):
    figs.append(platform_figure(d['image'],d['caption']))
   samples=''.join(platform_figure(x['src'],x['caption']) for x in d.get('work_samples',[]))
   sample_block='<h3>Engineering work samples</h3><div class="gallery technical-gallery">'+samples+'</div>' if samples else ''

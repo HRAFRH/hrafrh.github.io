@@ -8,7 +8,7 @@ names=['Fixed-wing UAV development','Flying-wing VTOL','2.2 m Cube Orange QuadPl
 ids.insert(6,'delivery-drone');names.insert(6,'Heavy-lift delivery drone: 20 km mission');titles=dict(zip(ids,names));titles['heavy-lift']='DARPA Lift Challenge heavy-lift support';labels={'air':'UAV & UAS','land':'Ground robotics','sea':'USV & marine autonomy','avionics':'Avionics & perception'}
 def visual(d,pre='',kind='cover'):
  if d.get('reference_images'):im=d['reference_images'][0];src=im['src'];cap=im['caption']
- elif d.get('photo_verified') and d.get('image'):src=d['image'];cap=d['caption']
+ elif (d.get('photo_verified') or d.get('image_kind')=='diagram') and d.get('image'):src=d['image'];cap=d['caption']
  else:return '<div class="'+kind+'"><div class="photo-pending">Project photo to be added</div></div>'
  return '<div class="'+kind+'"><img src="'+pre+e(src)+'" alt="'+e(cap)+'" loading="lazy"></div>'
 def card(id,pre=''):
@@ -35,7 +35,7 @@ body='<main id="main" class="wrap"><header class="page-head"><p class="kicker">D
 extra=json.loads((ROOT/'content/project-stories.json').read_text(encoding='utf-8'));existing=json.loads((ROOT/'content/blog.json').read_text(encoding='utf-8'));posts=extra+[p for p in existing if p['id'] not in {x['id'] for x in extra}];entries=[]
 for post in posts:
  d=by[post['case']];new=post in extra;date='28 October 2026' if new else '26 October 2026';dt='2026-10-28' if new else '2026-10-26'
- pic=visual(d,'../','blog-image') if d.get('photo_verified') or d.get('reference_images') else ''
+ pic=visual(d,'../','blog-image') if (d.get('photo_verified') or d.get('image_kind')=='diagram') or d.get('reference_images') else ''
  entries.append('<article class="blog-card journal-entry" data-story data-search="'+e(post['title']+' '+post['intro']+' '+d['title'])+'"><div class="blog-heading"><h2><a href="'+post['id']+'/">'+e(post['title'])+'</a></h2><time datetime="'+dt+'">'+date+'</time></div><p class="journal-deck">'+e(post['intro'])+'</p>'+pic+'<div class="journal-copy"><p>'+e(post['sections'][0][1])+'</p></div><div class="links"><a href="'+post['id']+'/">Read the story →</a><a href="../projects/'+d['id']+'/">View project →</a></div></article>')
  if new:
   out=D/'blog'/post['id'];out.mkdir(exist_ok=True);sections=''.join('<section><h2>'+e(h)+'</h2><p>'+e(p)+'</p></section>' for h,p,*_ in post['sections']);related=''.join('<a href="../../technical-notes/'+p+'/">Related technical document →</a>' for p in d.get('papers',[]))

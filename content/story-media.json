@@ -168,5 +168,15 @@
       "title": "QuadPlane field walkthrough",
       "caption": "A ground walkthrough of the assembled QuadPlane, including the lift motors, tail and open avionics bay."
     }
+  ],
+  "rplidar-obstacle-avoidance": [
+    {
+      "file": "media/rplidar-obstacle-avoidance/optical-flow-bench.mp4",
+      "poster": "media/rplidar-obstacle-avoidance/optical-flow-bench.jpg",
+      "title": "Bench test: Position mode without GPS",
+      "caption": "15 November 2026, props off. With the source switch on optical flow only, the mode switch goes to Position, PX4 reports Ready and arms; on GPS only it is Not Ready. The laptop screen is blurred because the map showed the location; the QGroundControl states are in the screenshots below.",
+      "duration": 35,
+      "date": "15 November 2026"
+    }
   ]
 }

@@ -37,8 +37,9 @@ def photo(d,pre='',kind='cover'):
  if d.get('reference_images'):
   r=d['reference_images'][0]
   return '<div class="'+kind+'"><img src="'+pre+e(r['src'])+'" alt="'+e(r['caption'])+'" loading="lazy"></div>'
- if d.get('image') and d.get('photo_verified'):
-  return f'<div class="{kind}"><img src="{pre}{d["image"]}" alt="{e(d["title"])} project photograph" loading="lazy"></div>'
+ if d.get('image') and (d.get('photo_verified') or d.get('image_kind')=='diagram'):
+  kind_word='diagram' if d.get('image_kind')=='diagram' else 'project photograph'
+  return f'<div class="{kind}"><img src="{pre}{d["image"]}" alt="{e(d["title"])} {kind_word}" loading="lazy"></div>'
  return f'<div class="{kind}"><div class="photo-pending" aria-label="Project photograph pending">Project photo to be added</div></div>'
 
 
@@ -112,7 +113,7 @@ for i,d in enumerate(data):
  pre='../../';out=D/'projects'/d['id'];out.mkdir(parents=True,exist_ok=True)
  gallery=[]
  for im in d.get('gallery',[]):
-  if im['src'].endswith('.svg') or not d.get('photo_verified'):continue
+  if im['src'].endswith('.svg') or not (d.get('photo_verified') or d.get('image_kind')=='diagram'):continue
   gallery.append(f'<figure><button data-full="{pre}{im["src"]}" data-alt="{e(im["caption"])}" aria-label="Inspect project photograph"><img src="{pre}{im["src"]}" alt="{e(im["caption"])}" loading="lazy"></button><figcaption>{e(im["caption"])}</figcaption></figure>')
  gallery_html=f'<section class="section"><div class="section-title"><h2>Project photographs</h2></div><div class="gallery">{"".join(gallery)}</div></section>' if gallery else ''
  samples=[]
@@ -215,7 +216,7 @@ blog=D/'blog';blog.mkdir(exist_ok=True)
 cards=[]
 for post in posts:
  d=next(x for x in data if x['id']==post['case'])
- cover=('<img src="../'+e(d['image'])+'" alt="'+e(d['title'])+' project photograph" loading="lazy">') if d.get('photo_verified') else '<div class="photo-pending">Project photo to be added</div>'
+ cover=('<img src="../'+e(d['image'])+'" alt="'+e(d['title'])+' project photograph" loading="lazy">') if (d.get('photo_verified') or d.get('image_kind')=='diagram') else '<div class="photo-pending">Project photo to be added</div>'
  cards.append('<article class="blog-card"><div class="blog-heading"><h2><a href="'+post['id']+'/">'+e(post['title'])+'</a></h2><time datetime="2026-10-26">26 October 2026</time></div><figure class="blog-image">'+cover+'</figure><p class="blog-excerpt">'+e(post['intro'])+'</p><a href="'+post['id']+'/">Read engineering note →</a></article>')
  out=blog/post['id'];out.mkdir(exist_ok=True)
  dcover=photo(d,'../../','case-cover')

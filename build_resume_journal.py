@@ -24,7 +24,7 @@ for post in ordered:
  d=next(x for x in data if x['id']==post['case']);image_src='';caption=''
  if d.get('reference_images'):
   image_src=d['reference_images'][0]['src'];caption=d['reference_images'][0]['caption']
- elif d.get('photo_verified'):
+ elif (d.get('photo_verified') or d.get('image_kind')=='diagram'):
   image_src=d['image'];caption=d['caption']
  elif d.get('work_samples'):
   image_src=d['work_samples'][0]['src'];caption=d['work_samples'][0]['caption']

@@ -1249,8 +1249,8 @@
     "contribution": "Reviewed Unitree L2 data through ROS 2 and MAVROS into MAVLink OBSTACLE_DISTANCE, serial mapping and proximity settings. Distinguished sensor-to-autopilot latency from GCS rendering and proposed ground verification checks.",
     "delivery": "An integration findings report covering interfaces, timing and validation.",
     "scope": "This work is an integration investigation; universal avoidance reliability or autonomous-flight completion is not claimed.",
-    "image": "",
-    "caption": "",
+    "image": "media/documents/lidar-avoidance-data-path.webp",
+    "caption": "Data path from the Unitree L2 to ArduPilot and the ground station, with the three delay suspects from the review. Diagram drawn from the report.",
     "domain": "avionics",
     "tags": [
       "Unitree L2",
@@ -1260,7 +1260,23 @@
       "Raspberry Pi",
       "OBSTACLE_DISTANCE"
     ],
-    "gallery": [],
+    "gallery": [
+      {
+        "src": "media/documents/lidar-avoidance-data-path.webp",
+        "title": "LiDAR proximity data path",
+        "caption": "Data path from the Unitree L2 to ArduPilot and the ground station, with the three delay suspects from the review. Diagram drawn from the report."
+      },
+      {
+        "src": "media/documents/lidar-avoidance-1.webp",
+        "title": "Report page 1",
+        "caption": "Original report excerpt: LiDAR proximity and latency review. Integration findings and proposed checks for the documented setup. No universal avoidance-performance claim is made."
+      },
+      {
+        "src": "media/documents/lidar-avoidance-2.webp",
+        "title": "Report page 2",
+        "caption": "Original report excerpt: LiDAR proximity and latency review. Integration findings and proposed checks for the documented setup. No universal avoidance-performance claim is made."
+      }
+    ],
     "papers": [
       "lidar-avoidance"
     ],
@@ -1274,7 +1290,8 @@
         "src": "media/documents/lidar-avoidance-2.webp",
         "caption": "Original report excerpt: LiDAR proximity and latency review. Integration findings and proposed checks for the documented setup. No universal avoidance-performance claim is made."
       }
-    ]
+    ],
+    "image_kind": "diagram"
   },
   {
     "id": "safe-corridor-return",

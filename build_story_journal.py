@@ -32,7 +32,7 @@ def image(im,pre):return '<figure class="story-photo"><a href="'+pre+e(im['src']
 def images(d,pre):
  a=[]
  if d.get('reference_images'):a=d['reference_images'][:1]
- elif d.get('photo_verified'):
+ elif (d.get('photo_verified') or d.get('image_kind')=='diagram'):
   if d.get('image'):a.append({'src':d['image'],'caption':d.get('caption','Project photograph')})
   a+=d.get('gallery',[])
  elif d.get('work_samples'):a=d['work_samples'][:1]
