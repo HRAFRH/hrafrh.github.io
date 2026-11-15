@@ -4,6 +4,8 @@ platform_media=json.loads((ROOT/'content/platform-media.json').read_text(encodin
 by_id={d['id']:d for d in data}
 assert len(collections)==5
 assert sorted(m for g in collections for m in g['members'])==sorted(by_id)
+_dates={k:v['date'] for k,v in json.loads((ROOT/'content/project-dates.json').read_text(encoding='utf-8')).items()}
+for _g in collections:_g['members'].sort(key=lambda m:_dates.get(m,''),reverse=True)
 parents={m:g for g in collections for m in g['members']}
 def platform_figure(src,caption,pre='../../'):
  return '<figure><button data-full="'+pre+e(src)+'" data-alt="'+e(caption)+'" aria-label="Inspect project image"><img src="'+pre+e(src)+'" alt="'+e(caption)+'" loading="lazy"></button><figcaption>'+e(caption)+'</figcaption></figure>'

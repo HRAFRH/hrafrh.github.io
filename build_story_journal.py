@@ -56,7 +56,13 @@ def reports(d,pre,limit=None):
 
 extra=load('project-stories.json');existing=load('blog.json');posts=extra+[p for p in existing if p['id'] not in {x['id'] for x in extra} and p['case']!='inav-fixed-wing']
 # Retain all stories, with the current flying-wing and Ranger work at the front.
-posts.sort(key=lambda p:0 if p['case']=='inav-fixed-wing' else 1 if p['case']=='vtol' else 2)
+dates={k:v['date'] for k,v in load('project-dates.json').items()}
+def post_date(p):return p.get('date') or dates.get(p['case'],'')
+MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December']
+def show_date(v):
+ if len(v)>=7:return MONTHS[int(v[5:7])-1]+' '+v[:4]
+ return '2023 or earlier' if v=='2023' else v
+posts.sort(key=post_date,reverse=True)
 def story(post,pre,index=False):
  d=by[post['case']];ims=[im for im in post.get('images',[]) if (D/im['src']).exists()] or images(d,pre);parts=[]
  if d['id']=='delivery-drone':
@@ -73,8 +79,8 @@ def story(post,pre,index=False):
  return ''.join(parts)
 entries=[]
 for post in posts:
- d=by[post['case']];entries.append('<article class="blog-card journal-entry immersive-story" data-story data-search="'+e(post['title']+' '+post['intro']+' '+d['title'])+'"><header class="story-heading"><p class="kicker">Engineering field notes · '+e(d['title'])+'</p><h2><a href="'+e(post['id'])+'/">'+e(post['title'])+'</a></h2><p class="story-deck">'+e(post['intro'])+'</p></header>'+story(post,'../',True)+'<div class="links"><a href="'+post['id']+'/">Full story and all media →</a><a href="../projects/'+d['id']+'/">Project record →</a></div></article>')
- out=D/'blog'/post['id'];out.mkdir(exist_ok=True);body='<main id="main" class="wrap story-page"><header class="article-head"><p class="breadcrumb"><a href="../">Blog</a> / Engineering field note</p><h1>'+e(post['title'])+'</h1><p class="lead">'+e(post['intro'])+'</p><p class="blog-meta">Achraf RAHIBE · Project retrospective</p></header><article class="immersive-story">'+story(post,'../../')+'<section class="scope"><h2>Project record</h2><p>'+e(d['scope'])+'</p></section><div class="links"><a href="../../projects/'+d['id']+'/">Project record →</a><a href="../">All stories →</a></div></article></main>';(out/'index.html').write_text(page(post['title'],body,'../../'),encoding='utf8')
+ d=by[post['case']];entries.append('<article class="blog-card journal-entry immersive-story" data-story data-search="'+e(post['title']+' '+post['intro']+' '+d['title'])+'"><header class="story-heading"><p class="kicker">'+e(show_date(post_date(post)))+' · '+e(d['title'])+'</p><h2><a href="'+e(post['id'])+'/">'+e(post['title'])+'</a></h2><p class="story-deck">'+e(post['intro'])+'</p></header>'+story(post,'../',True)+'<div class="links"><a href="'+post['id']+'/">Full story and all media →</a><a href="../projects/'+d['id']+'/">Project record →</a></div></article>')
+ out=D/'blog'/post['id'];out.mkdir(exist_ok=True);body='<main id="main" class="wrap story-page"><header class="article-head"><p class="breadcrumb"><a href="../">Blog</a> / Engineering field note</p><h1>'+e(post['title'])+'</h1><p class="lead">'+e(post['intro'])+'</p><p class="blog-meta">Achraf RAHIBE · '+e(show_date(post_date(post)))+'</p></header><article class="immersive-story">'+story(post,'../../')+'<section class="scope"><h2>Project record</h2><p>'+e(d['scope'])+'</p></section><div class="links"><a href="../../projects/'+d['id']+'/">Project record →</a><a href="../">All stories →</a></div></article></main>';(out/'index.html').write_text(page(post['title'],body,'../../'),encoding='utf8')
 body='<main id="main" class="wrap"><header class="blog-head"><h1>Blog</h1><p>Aircraft builds, difficult behaviours and the engineering behind the next test.</p></header><section class="journal-controls"><label for="story-search">Find a story</label><input id="story-search" type="search" placeholder="Search aircraft, tests or tools"><p id="story-count">'+str(len(posts))+' project stories</p></section>'+''.join(entries)+'<p id="story-empty" hidden>No matching stories.</p></main>';(D/'blog/index.html').write_text(page('Blog',body,'../'),encoding='utf8')
 # Make report previews visible directly in each project. Existing document-library pages already show their report pages.
 for d in projects:

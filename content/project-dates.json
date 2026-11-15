@@ -1,0 +1,162 @@
+{
+ "delivery-drone": {
+  "date": "2026",
+  "title": "Heavy-lift delivery drone: remote commissioning and payload mission"
+ },
+ "heavy-lift": {
+  "date": "2026",
+  "title": "DARPA Lift Challenge heavy-lift support"
+ },
+ "multirotor": {
+  "date": "2025",
+  "title": "Multirotor log analysis and filter tuning"
+ },
+ "fixed-wing": {
+  "date": "2025",
+  "title": "Fixed-wing UAV configurations and mission development"
+ },
+ "vtol": {
+  "date": "2025-08",
+  "title": "Flying-wing VTOL configuration rebuild and flight testing"
+ },
+ "helicopter": {
+  "date": "2025",
+  "title": "Single-rotor helicopter diagnostics"
+ },
+ "usv": {
+  "date": "2026",
+  "title": "Unmanned surface vehicle development"
+ },
+ "rover": {
+  "date": "2024",
+  "title": "Rover autopilot and motor control"
+ },
+ "vision": {
+  "date": "2026",
+  "title": "Embedded vision and payload video"
+ },
+ "ais": {
+  "date": "2025",
+  "title": "AIS reception and maritime awareness"
+ },
+ "bom": {
+  "date": "2026",
+  "title": "FPV workshop and component planning"
+ },
+ "fixed-wing-design": {
+  "date": "2025",
+  "title": "Twin-tractor fixed-wing design study"
+ },
+ "usv-system-study": {
+  "date": "2025",
+  "title": "Surface-vessel system planning"
+ },
+ "x500-airframe": {
+  "date": "2024",
+  "title": "X500 airframe and CNC preparation"
+ },
+ "modular-quadcopter": {
+  "date": "2023",
+  "title": "Modular quadcopter assembly"
+ },
+ "baseboard-review": {
+  "date": "2024",
+  "title": "Companion-computer baseboard review"
+ },
+ "precision-landing": {
+  "date": "2025",
+  "title": "Vision-based precision-landing architecture"
+ },
+ "copter-safety-documentation": {
+  "date": "2024",
+  "title": "ArduCopter geofence and failsafe documentation"
+ },
+ "gps-denied-altitude": {
+  "date": "2025",
+  "title": "GPS-denied multirotor diagnostic support"
+ },
+ "cube-vtol": {
+  "date": "2025",
+  "title": "Cube Orange 4+1 VTOL development"
+ },
+ "drone-rover-docking": {
+  "date": "2024",
+  "title": "Integrated drone-rover autonomy and docking system"
+ },
+ "rescue-usv": {
+  "date": "2025",
+  "title": "Diesel rescue-vessel autonomy system"
+ },
+ "fpv-10": {
+  "date": "2023",
+  "title": "10-inch autonomous FPV quadcopter"
+ },
+ "talon-vtol": {
+  "date": "2024",
+  "title": "Micro Talon 4+1 VTOL conversion"
+ },
+ "s500": {
+  "date": "2023",
+  "title": "S500 autopilot and sensor integration"
+ },
+ "inav-fpv": {
+  "date": "2023",
+  "title": "3-inch INAV FPV integration"
+ },
+ "mini-talon-simulation": {
+  "date": "2023",
+  "title": "Mini Talon mission simulation"
+ },
+ "tiltrotor": {
+  "date": "2023",
+  "title": "3D-printed tiltrotor VTOL integration"
+ },
+ "px4-yaw-diagnostics": {
+  "date": "2024",
+  "title": "PX4 quadrotor yaw diagnostics"
+ },
+ "skybrush-stability": {
+  "date": "2024",
+  "title": "Custom-flight-controller filter tuning"
+ },
+ "hybrid-wheeled-uav": {
+  "date": "2024",
+  "title": "Hybrid wheeled UAV: ground-drive control"
+ },
+ "inav-fixed-wing": {
+  "date": "2024",
+  "title": "Volantex Ranger: INAV yaw troubleshooting"
+ },
+ "lidar-avoidance": {
+  "date": "2024",
+  "title": "LiDAR proximity and obstacle-avoidance integration"
+ },
+ "safe-corridor-return": {
+  "date": "2024",
+  "title": "Agricultural mission safe-return design"
+ },
+ "sitl-mission-dashboard": {
+  "date": "2024",
+  "title": "Gazebo mission-dashboard simulation"
+ },
+ "agricultural-uav-design": {
+  "date": "2025",
+  "title": "Agricultural payload-UAV design study"
+ },
+ "multirotor-simulation": {
+  "date": "2023",
+  "title": "Gazebo and autopilot simulation development"
+ },
+ "cobra-vtol": {
+  "date": "2025",
+  "title": "Cobra VTOL build and integration"
+ },
+ "fpv-speedybee-log-review": {
+  "date": "2024",
+  "title": "SpeedyBee FPV flight-log and filter review"
+ },
+ "rplidar-obstacle-avoidance": {
+  "date": "2026-11",
+  "title": "360° lidar obstacle avoidance for PX4 and ArduPilot"
+ }
+}

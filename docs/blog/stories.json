@@ -141,7 +141,8 @@
         "What comes next",
         "1. Test the lidar and the optical flow together on the 6X: radar, flow panel and Collision Prevention at the same time.\n\n2. Fit the BEC for the lidar and confirm the supply is about 5 V.\n\n3. Mount everything on the quadcopter and check directions by hand.\n\n4. Software-in-the-loop simulation with a simulated RPLidar to tune stopping distance and behaviour.\n\n5. Field tests: hover in Position mode with optical flow only, then Collision Prevention outdoors, props off first.\n\n6. Test the SIYI A8 video with the obstacle ring over the camera picture.\n\nThis page will be updated with each of these steps."
       ]
-    ]
+    ],
+    "date": "2026-11-15"
   },
   {
     "id": "seven-inch-pixhawk-hover-check",
