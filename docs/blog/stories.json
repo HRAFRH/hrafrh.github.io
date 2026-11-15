@@ -3,7 +3,7 @@
     "id": "rplidar-lidar-build-log",
     "case": "rplidar-obstacle-avoidance",
     "title": "RPLidar obstacle avoidance on PX4 and ArduPilot: the complete build log",
-    "intro": "Everything about the lidar project in one place: hardware, ArduPilot setup, the new PX4 driver and its tests, the PX4 patches, the QGroundControl radar, the desktop app, two flight controllers, and what comes next. Last updated 14 November 2026.",
+    "intro": "Everything about the lidar project in one place: hardware, ArduPilot setup, the new PX4 driver and its tests, the PX4 patches, the QGroundControl radar, the desktop app, two flight controllers, optical flow for flying without GPS, the radio setup, and what comes next. Last updated 15 November 2026.",
     "images": [
       {
         "src": "media/rplidar-obstacle-avoidance/bench-cube-orange-qgc.jpg",
@@ -104,12 +104,42 @@
         "Easiest: mount it level and right side up with its front (opposite the cable) toward the drone's nose, so RPL_YAW_OFF stays 0. Turned mounts are corrected with RPL_YAW_OFF (90 if it points right, 180 if the cable points forward, 270 if it points left), and an upside-down mount with RPL_ORIENT_CFG 1. On ArduPilot the same settings are PRX1_YAW_CORR and PRX1_ORIENT. Mount it high enough that props and the GPS mast do not block the beam. After mounting, a hand in front of the drone must lower the FRONT distance; if another side reacts, the offset is wrong."
       ],
       [
+        "Flying without GPS: an optical flow sensor",
+        "Collision Prevention on PX4 works only in Position mode, and Position mode normally needs GPS. To hold position indoors or without GPS, I added a MicoAir MTF-02P: an optical flow camera and a 6 m range finder in one small board, mounted under the Pixhawk 6X with the lens down and connected to TELEM3.\n\nIt arrived speaking MSP (the iNav protocol), which PX4 cannot read. Its configuration tool, MicoAssistant, needs a USB-to-serial adapter, and I had none at hand. The Cube Orange Plus did the job instead: running ArduCopter, its serial passthrough turns a TELEM port into a USB bridge, so MicoAssistant could talk to the sensor through the Cube and switch it to MAVLink for PX4. The sensor then sent optical flow and distance at about 40 Hz each.\n\nOn PX4 the sensor feeds EKF2 (EKF2_OF_CTRL and EKF2_RNG_CTRL on, SENS_FLOW_MAXHGT 6 m). The board mounting is turned, so the direction had to be measured: I moved the board by hand along each axis and read the raw flow integrals, which gave SENS_FLOW_ROT 6 (yaw 270). One trap: while the drone sits disarmed on the ground, PX4 does not fuse the flow and its position estimate wanders when you move the board by hand, so the raw flow, not the estimated position, is the right thing to test on the bench."
+      ],
+      [
+        "A switch for the position source",
+        "I wanted to choose on the transmitter where the position comes from. PX4 has no such function, so I wrote a small PX4 module, aid_switch. It reads a 3-position switch on the radio: low uses GPS, middle uses GPS and optical flow together, high uses optical flow only. It sets EKF2_GPS_CTRL and EKF2_OF_CTRL accordingly.\n\nIt has safety rules: it acts only when the switch moves, so a choice made from the ground station stays; it refuses optical flow only while the flow is not valid (stale, zero quality or above the sensor's height limit); and if flow only is active and the flow is lost for one second, it adds GPS back. The same choice is available as three buttons, GPS, GPS+FLOW and FLOW, above the radar in QGroundControl."
+      ],
+      [
+        "The flow panel in QGroundControl",
+        "Next to the radar, a small panel shows what matters before flying without GPS: the height from the range finder, three checks (FLOW: the flow is in use and gives a height; POS: PX4 has a valid position estimate; PX4: PX4 allows arming) and one status line. Green READY: NO GPS means all three pass; orange means the position is fine but PX4 still blocks arming; red gives the reason, such as no height, too high for the flow sensor or no position yet.\n\nTwo lessons from QGroundControl 5: calling a fact group's getFact() from the panel crashed QGroundControl about 15 seconds after connecting, so the panel reads properties directly. And on PX4 the readyToFly value is never updated; QGroundControl's own Ready label uses the health and arming check report, so the panel now uses the same source and always agrees with the toolbar.",
+        [
+          {
+            "src": "media/rplidar-obstacle-avoidance/qgc-flow-ready-no-gps.png",
+            "caption": "Optical flow only, no GPS: the panel and QGroundControl both say Ready. The lidar was unplugged for this test, hence NO LIDAR DATA."
+          },
+          {
+            "src": "media/rplidar-obstacle-avoidance/qgc-gps-only-not-ready.png",
+            "caption": "Switched to GPS only: the flow is off and PX4 says Not Ready, because it waits for a GPS fix."
+          }
+        ]
+      ],
+      [
+        "The radio: RadioMaster Pocket and RP1",
+        "The transmitter is a RadioMaster Pocket with an ExpressLRS module, and the receiver a RadioMaster RP1. They would not bind: both ran ExpressLRS 3.3.1, but the radio used the FCC band rules and the receiver the European LBT (listen before talk) rules, and the two never talk to each other. Since my other receivers are LBT, the radio changed: I built the LBT firmware for the Pocket's internal module with ExpressLRS's own build tool and flashed it over the radio's WiFi. After that, binding took a few seconds.\n\nThe RP1 connects to TELEM1 of the Pixhawk 6X, which PX4 reads as CRSF (RC_CRSF_PRT_CFG on TELEM1, MAVLink moved off that port). PX4 receives about 234 packets per second with no errors. After the radio calibration: channel 6 selects the flight mode (Stabilized, Altitude, Position), channel 7 the position source, channel 10 arms. The flight mode switch needed a reboot before PX4 followed it."
+      ],
+      [
+        "Bench result: Position mode without GPS",
+        "On the bench, props off and with no GPS fix: with the switch on optical flow only and the mode switch on Position, PX4 reports Ready and arms without complaint. Moving the source switch to GPS only turns it to Not Ready straight away, because PX4 now waits for GPS. Back to optical flow, it is Ready again. Every change shows up in QGroundControl's toolbar, in the flow panel and in the messages from the flight controller."
+      ],
+      [
         "What is published",
-        "Everything is open source on GitHub: the PX4 driver and its tests, the three PX4 patches, the QGroundControl radar, the desktop app, ArduPilot parameters, built firmware for both boards and Ubuntu build scripts. Link: github.com/HRAFRH/rplidar-obstacle-avoidance"
+        "Everything is open source on GitHub: the PX4 driver and its tests, the three PX4 patches, the QGroundControl radar, the desktop app, the position source module, ArduPilot parameters, built firmware for both boards and Ubuntu build scripts. Link: github.com/HRAFRH/rplidar-obstacle-avoidance"
       ],
       [
         "What comes next",
-        "1. Fit the BEC for the lidar and confirm the supply is about 5 V.\n\n2. Mount the lidar on the drone and check directions by hand.\n\n3. Finish the flight setup (radio, flight modes, failsafes).\n\n4. Software-in-the-loop simulation with a simulated RPLidar to tune stopping distance and behaviour.\n\n5. Test Collision Prevention outdoors in Position mode, props off first, then the first flights.\n\n6. Test the SIYI A8 video with the obstacle ring over the camera picture.\n\nThis page will be updated with each of these steps."
+        "1. Test the lidar and the optical flow together on the 6X: radar, flow panel and Collision Prevention at the same time.\n\n2. Fit the BEC for the lidar and confirm the supply is about 5 V.\n\n3. Mount everything on the quadcopter and check directions by hand.\n\n4. Software-in-the-loop simulation with a simulated RPLidar to tune stopping distance and behaviour.\n\n5. Field tests: hover in Position mode with optical flow only, then Collision Prevention outdoors, props off first.\n\n6. Test the SIYI A8 video with the obstacle ring over the camera picture.\n\nThis page will be updated with each of these steps."
       ]
     ]
   },
